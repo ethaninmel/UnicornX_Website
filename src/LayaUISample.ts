@@ -34,6 +34,7 @@ class TestUI extends ui.test.TestPageUI {
 			//设置垂直对齐
 			Laya.stage.alignV = "middle";
 		this.menu.zOrder=1;
+		this.onBtnPageClick(this.why,this.whymove,"comp/bg.png");
 		
 		this.stage.on(Laya.Event.MOUSE_WHEEL, this, this.onMousewheel);
 		this.tab_lan.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.language,this.move,"comp/bg.png"]);
@@ -48,8 +49,8 @@ class TestUI extends ui.test.TestPageUI {
 		this.road4.on(Laya.Event.CLICK,this,this.onBtnRoadClick,[4]);
 		this.right_arrow.on(Laya.Event.CLICK,this,this.onBtnArrowClick,[1]);
 		this.left_arrow.on(Laya.Event.CLICK,this,this.onBtnArrowClick,[-1]);
-		this.testlink.on(Laya.Event.CLICK,this,this.onLink,["comp/bg_pure.png"]);
-		Laya.timer.once(2000,this,this.loadingScene);
+		//this.testlink.on(Laya.Event.CLICK,this,this.onLink,["comp/bg_pure.png"]);
+		//Laya.timer.once(2000,this,this.loadingScene);
 	}
 	private loadingScene(){
 		this.loading.alpha=0;

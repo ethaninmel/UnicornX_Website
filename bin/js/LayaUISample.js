@@ -42,6 +42,7 @@ var TestUI = /** @class */ (function (_super) {
         //设置垂直对齐
         Laya.stage.alignV = "middle";
         _this.menu.zOrder = 1;
+        _this.onBtnPageClick(_this.why, _this.whymove, "comp/bg.png");
         _this.stage.on(Laya.Event.MOUSE_WHEEL, _this, _this.onMousewheel);
         _this.tab_lan.on(Laya.Event.CLICK, _this, _this.onBtnPageClick, [_this.language, _this.move, "comp/bg.png"]);
         _this.tab_roadmap.on(Laya.Event.CLICK, _this, _this.onBtnPageClick, [_this.roadmap, _this.roadmapmove, "comp/bg_pure.png"]);
@@ -55,9 +56,9 @@ var TestUI = /** @class */ (function (_super) {
         _this.road4.on(Laya.Event.CLICK, _this, _this.onBtnRoadClick, [4]);
         _this.right_arrow.on(Laya.Event.CLICK, _this, _this.onBtnArrowClick, [1]);
         _this.left_arrow.on(Laya.Event.CLICK, _this, _this.onBtnArrowClick, [-1]);
-        _this.testlink.on(Laya.Event.CLICK, _this, _this.onLink, ["comp/bg_pure.png"]);
-        Laya.timer.once(2000, _this, _this.loadingScene);
         return _this;
+        //this.testlink.on(Laya.Event.CLICK,this,this.onLink,["comp/bg_pure.png"]);
+        //Laya.timer.once(2000,this,this.loadingScene);
     }
     TestUI.prototype.loadingScene = function () {
         this.loading.alpha = 0;
