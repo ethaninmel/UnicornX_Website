@@ -10,11 +10,13 @@ P 08A92020 btn_roadmap.png
 P E92E6390 btn_selection.png
 P C4810B97 btn_tab1.png
 P CAE1D0C5 btn_terms.png
-P 5FF5B6FF btn_why.png
+P D9DB5FAE btn_why.png
+P 5FF5B6FF btn_why1.png
 R 097436CD container_panek.png
 R FF95D98E earth_bg.png
 P FF864413 earth_box.png
 P 772D776E fb.png
+P 22413161 frame.png
 P 5E984A6B github.png
 P 9EDA959E hscroll$bar.png
 P 1AB768D4 hscroll$down.png

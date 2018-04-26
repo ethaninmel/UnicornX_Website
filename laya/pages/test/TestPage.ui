@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":82,
-    "selecteID":155,
+    "selectedBox":149,
+    "selecteID":143,
     "props":{"width":715,"sceneColor":"#ffffff","height":402},
     "nodeParent":-1,
     "label":"View",
@@ -140,18 +140,17 @@
                 },
                 {
                     "type":"Button",
-                    "props":{"y":10,"x":220,"width":71,"var":"tab_why","stateNum":"2","skin":"comp/btn_why.png","sizeGrid":"0,0,0,0","height":6},
+                    "props":{"y":10,"x":196,"width":71,"var":"tab_why","stateNum":"2","skin":"comp/btn_why.png","height":6},
                     "nodeParent":45,
                     "label":"Button(tab_why)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":89,
+                    "compId":268,
                     "child":[
-                        ],
-                    "$HIDDEN":false
+                        ]
                 }],
-            "$HIDDEN":false
+            "$HIDDEN":true
         },
         {
             "x":15,
@@ -197,13 +196,14 @@
             "props":{"y":804,"x":0,"width":715,"var":"roadmap","height":402},
             "nodeParent":1,
             "label":"Box(roadmap)",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":66,
             "child":[
                 {
+                    "x":30,
                     "type":"Box",
                     "props":{"width":715,"height":402},
                     "nodeParent":66,
@@ -216,6 +216,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"EffectAnimation",
                     "props":{"var":"roadmapmove","skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
                     "nodeParent":66,
@@ -228,6 +229,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":62,"x":356,"width":21,"skin":"comp/roadmapbar.png","height":294},
                     "nodeParent":66,
@@ -239,6 +241,7 @@
                     "compId":130,
                     "child":[
                         {
+                            "x":45,
                             "type":"Tab",
                             "props":{"y":30,"var":"roadmap_bar","space":30,"selectedIndex":0,"direction":"vertical","centerX":0.5},
                             "nodeParent":130,
@@ -250,6 +253,7 @@
                             "compId":149,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Button",
                                     "props":{"y":0,"x":4,"width":30,"var":"road0","stateNum":"2","skin":"comp/btn_selection.png","name":"item0","height":23},
                                     "nodeParent":149,
@@ -262,6 +266,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Button",
                                     "props":{"y":42,"x":4,"width":30,"var":"road1","stateNum":"2","skin":"comp/btn_selection.png","name":"item1","height":23},
                                     "nodeParent":149,
@@ -274,6 +279,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Button",
                                     "props":{"y":84,"x":4,"width":30,"var":"road2","stateNum":"2","skin":"comp/btn_selection.png","name":"item2","height":23},
                                     "nodeParent":149,
@@ -286,6 +292,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Button",
                                     "props":{"y":126,"x":4,"width":30,"var":"road3","stateNum":"2","skin":"comp/btn_selection.png","name":"item3","height":23},
                                     "nodeParent":149,
@@ -298,6 +305,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Button",
                                     "props":{"y":168,"x":4,"width":30,"var":"road4","stateNum":"2","skin":"comp/btn_selection.png","name":"item4","height":23},
                                     "nodeParent":149,
@@ -311,6 +319,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":11,"width":32,"var":"roadmap_sec","skin":"comp/selected_bg.png","height":62,"centerX":0.5},
                             "nodeParent":130,
@@ -324,6 +333,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":120,"x":500,"width":151,"skin":"comp/side_deco.png","height":188},
                     "nodeParent":66,
@@ -335,7 +345,7 @@
                     "child":[
                         ]
                 }],
-            "$HIDDEN":true
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -351,7 +361,7 @@
             "child":[
                 {
                     "type":"Image",
-                    "props":{"y":130,"x":552,"width":121,"skin":"comp/side_deco.png","height":150},
+                    "props":{"y":130,"x":552,"width":121,"skin":"comp/side_deco.png","height":150,"alpha":0.8},
                     "nodeParent":72,
                     "label":"Image",
                     "isOpen":false,
@@ -479,6 +489,150 @@
                             "isAniNode":true,
                             "hasChild":false,
                             "compId":101,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Box",
+                    "props":{"y":64,"x":500,"var":"frame1"},
+                    "nodeParent":72,
+                    "label":"Box(frame1)",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":273,
+                    "child":[
+                        {
+                            "type":"Label",
+                            "props":{"y":27,"x":1,"width":186,"text":"Universal Account","height":23,"fontSize":13,"font":"Font_eng","color":"#06acf9","bold":true,"align":"center"},
+                            "nodeParent":273,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":269,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"skin":"comp/frame.png"},
+                            "nodeParent":273,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":272,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Box",
+                    "props":{"y":158,"x":492},
+                    "nodeParent":72,
+                    "label":"Box",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":274,
+                    "child":[
+                        {
+                            "type":"Label",
+                            "props":{"y":27,"x":1,"width":186,"text":"Crowdfunding System","height":23,"fontSize":13,"font":"Font_eng","color":"#06acf9","bold":true,"align":"center"},
+                            "nodeParent":274,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":275,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"skin":"comp/frame.png"},
+                            "nodeParent":274,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":276,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Box",
+                    "props":{"y":161,"x":143},
+                    "nodeParent":72,
+                    "label":"Box",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":280,
+                    "child":[
+                        {
+                            "type":"Label",
+                            "props":{"y":27,"x":1,"width":186,"text":"Framework","height":23,"fontSize":13,"font":"Font_eng","color":"#06acf9","bold":true,"align":"center"},
+                            "nodeParent":280,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":281,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"skin":"comp/frame.png"},
+                            "nodeParent":280,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":282,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Box",
+                    "props":{"y":257,"x":151},
+                    "nodeParent":72,
+                    "label":"Box",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":283,
+                    "child":[
+                        {
+                            "type":"Label",
+                            "props":{"y":27,"x":1,"width":186,"text":"Assets Exchange","height":23,"fontSize":13,"font":"Font_eng","color":"#06acf9","bold":true,"align":"center"},
+                            "nodeParent":283,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":284,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"y":-2,"x":-2,"skin":"comp/frame.png"},
+                            "nodeParent":283,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":285,
                             "child":[
                                 ]
                         }]
@@ -745,14 +899,13 @@
             "props":{"y":804,"x":0,"width":715,"var":"why","height":402},
             "nodeParent":1,
             "label":"Box(why)",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":82,
             "child":[
                 {
-                    "x":30,
                     "type":"EffectAnimation",
                     "props":{"var":"whymove","skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
                     "nodeParent":82,
@@ -765,7 +918,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":0,"width":715,"height":402},
                     "nodeParent":82,
@@ -777,7 +929,6 @@
                     "compId":129,
                     "child":[
                         {
-                            "x":45,
                             "type":"Button",
                             "props":{"y":191.5,"x":524,"width":32,"var":"right_arrow","stateNum":"1","skin":"comp/btn_arrow.png","height":75},
                             "nodeParent":129,
@@ -790,7 +941,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Button",
                             "props":{"y":191.5,"x":210,"width":32,"var":"left_arrow","stateNum":"1","skin":"comp/btn_arrow.png","scaleX":-1,"height":75},
                             "nodeParent":129,
@@ -803,7 +953,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":142,"x":373,"width":397,"skin":"comp/upper_circle.png","height":58,"anchorY":0.5,"anchorX":0.5},
                             "nodeParent":129,
@@ -816,7 +965,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":330,"x":370,"width":69,"skin":"comp/lower_circle.png","rotation":90,"height":294,"anchorY":0.5,"anchorX":0.5},
                             "nodeParent":129,
@@ -830,7 +978,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"y":229,"x":364,"width":288,"var":"why_card0","skin":"comp/container_panek.png","height":102,"anchorY":0.5,"anchorX":0.5},
                     "nodeParent":82,
@@ -842,7 +989,6 @@
                     "compId":155,
                     "child":[
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"y":10,"x":10,"var":"left_dis0","skin":"../laya/icons/components/Animation.png","name":"left_dis","effect":"test/shift_left_dis.efc"},
                             "nodeParent":155,
@@ -855,7 +1001,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"y":10,"x":10,"var":"left_down0","skin":"../laya/icons/components/Animation.png","name":"left_down","effect":"test/shift_left_down.efc"},
                             "nodeParent":155,
@@ -868,7 +1013,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"y":10,"x":10,"var":"right_dis0","skin":"../laya/icons/components/Animation.png","name":"right_dis","effect":"test/shift_right_dis.efc"},
                             "nodeParent":155,
@@ -881,7 +1025,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"y":10,"x":10,"var":"right_down0","skin":"../laya/icons/components/Animation.png","name":"right_down","effect":"test/shift_right_down.efc"},
                             "nodeParent":155,
@@ -894,7 +1037,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"var":"left_app0","skin":"../laya/icons/components/Animation.png","effect":"test/shift_left_app.efc"},
                             "nodeParent":155,
@@ -907,7 +1049,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"var":"left_up0","skin":"../laya/icons/components/Animation.png","effect":"test/shift_left_up.efc"},
                             "nodeParent":155,
@@ -920,7 +1061,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"var":"right_app0","skin":"../laya/icons/components/Animation.png","effect":"test/shift_right_app.efc"},
                             "nodeParent":155,
@@ -933,7 +1073,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"var":"right_up0","skin":"../laya/icons/components/Animation.png","effect":"test/shift_right_up.efc"},
                             "nodeParent":155,
@@ -946,9 +1085,8 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"TextArea",
-                            "props":{"y":34,"x":14,"width":262,"text":"The game developers could publish their demos and whitepapers to users in Unicorn ecosystem to raise money by equity financing for their gaming projects.","mouseEnabled":false,"height":60,"fontSize":12,"font":"Microsoft YaHei","editable":false,"color":"#74d8e2","align":"center"},
+                            "props":{"y":34,"x":6,"width":276,"text":"The game developers could publish their demos and whitepapers to users in Unicorn ecosystem to raise money by equity financing for their gaming projects.","mouseEnabled":false,"height":60,"fontSize":12,"font":"Microsoft YaHei","editable":false,"color":"#74d8e2","align":"center"},
                             "nodeParent":155,
                             "label":"TextArea",
                             "isDirectory":false,
@@ -959,9 +1097,8 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"TextArea",
-                            "props":{"y":8,"x":16,"width":262,"text":"Crowdfunding","mouseEnabled":false,"height":28,"fontSize":22,"font":"Font_eng","editable":false,"color":"#f4c753","bold":true,"align":"center"},
+                            "props":{"y":8,"x":7,"width":276,"text":"Crowdfunding","mouseEnabled":false,"height":28,"fontSize":22,"font":"Font_eng","editable":false,"color":"#f4c753","bold":true,"align":"center"},
                             "nodeParent":155,
                             "label":"TextArea",
                             "isDirectory":false,
@@ -974,7 +1111,6 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"y":229,"x":508,"width":288,"var":"why_card1","skin":"comp/container_panek.png","scaleY":0.8,"scaleX":0.8,"height":102,"anchorY":0.5,"anchorX":0.5,"alpha":0.1},
                     "nodeParent":82,
@@ -986,7 +1122,6 @@
                     "compId":159,
                     "child":[
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"var":"left_dis1","skin":"../laya/icons/components/Animation.png","name":"left_dis","effect":"test/shift_left_dis.efc"},
                             "nodeParent":159,
@@ -999,7 +1134,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"var":"left_down1","skin":"../laya/icons/components/Animation.png","name":"left_down","effect":"test/shift_left_down.efc"},
                             "nodeParent":159,
@@ -1012,7 +1146,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"var":"right_dis1","skin":"../laya/icons/components/Animation.png","name":"right_dis","effect":"test/shift_right_dis.efc"},
                             "nodeParent":159,
@@ -1025,7 +1158,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"var":"right_down1","skin":"../laya/icons/components/Animation.png","name":"right_down","effect":"test/shift_right_down.efc"},
                             "nodeParent":159,
@@ -1038,7 +1170,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"var":"right_up1","skin":"../laya/icons/components/Animation.png","effect":"test/shift_right_up.efc"},
                             "nodeParent":159,
@@ -1051,7 +1182,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"var":"right_app1","skin":"../laya/icons/components/Animation.png","effect":"test/shift_right_app.efc"},
                             "nodeParent":159,
@@ -1064,7 +1194,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"var":"left_up1","skin":"../laya/icons/components/Animation.png","effect":"test/shift_left_up.efc"},
                             "nodeParent":159,
@@ -1077,7 +1206,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"var":"left_app1","skin":"../laya/icons/components/Animation.png","effect":"test/shift_left_app.efc"},
                             "nodeParent":159,
@@ -1090,9 +1218,8 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"TextArea",
-                            "props":{"y":34,"x":13,"width":262,"text":"We provide a decentralized exchange for all game coins issued on our platform. Each game has their own cryptocurrency and could exchange on Unicorn Platform. ","mouseEnabled":false,"height":60,"fontSize":12,"font":"Microsoft YaHei","editable":false,"color":"#74d8e2","align":"center"},
+                            "props":{"y":34,"x":6,"width":276,"text":"We provide a decentralized exchange for all game coins issued on our platform. Each game has their own cryptocurrency and could be exchanged on Unicorn Platform. ","mouseEnabled":false,"height":60,"fontSize":12,"font":"Microsoft YaHei","editable":false,"color":"#74d8e2","align":"center"},
                             "nodeParent":159,
                             "label":"TextArea",
                             "isDirectory":false,
@@ -1103,9 +1230,8 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"TextArea",
-                            "props":{"y":8,"x":15,"width":262,"text":"Assets Exchange","mouseEnabled":false,"height":28,"fontSize":22,"font":"Font_eng","editable":false,"color":"#f4c753","bold":true,"align":"center"},
+                            "props":{"y":8,"x":6,"width":278,"text":"Assets Exchange","mouseEnabled":false,"height":28,"fontSize":22,"font":"Font_eng","editable":false,"color":"#f4c753","bold":true,"align":"center"},
                             "nodeParent":159,
                             "label":"TextArea",
                             "isDirectory":false,
@@ -1118,12 +1244,11 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"y":229,"x":652,"width":288,"var":"why_card2","skin":"comp/container_panek.png","scaleY":0.64,"scaleX":0.64,"height":102,"anchorY":0.5,"anchorX":0.5,"alpha":0},
                     "nodeParent":82,
                     "label":"Image(why_card2)",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -1227,7 +1352,7 @@
                         },
                         {
                             "type":"TextArea",
-                            "props":{"y":34,"x":17,"width":262,"text":"Different companies can look up their smart contracts and trust each other, which means they can collaborate better than before on Unicorn Platform.","mouseEnabled":false,"height":60,"fontSize":12,"font":"Microsoft YaHei","editable":false,"color":"#74d8e2","align":"center"},
+                            "props":{"y":34,"x":7,"width":275,"text":"Different companies can look up their smart contracts and trust each other, which means they can collaborate better than before on Unicorn Platform.","mouseEnabled":false,"height":60,"fontSize":12,"font":"Microsoft YaHei","editable":false,"color":"#74d8e2","align":"center"},
                             "nodeParent":160,
                             "label":"TextArea",
                             "isDirectory":false,
@@ -1239,7 +1364,7 @@
                         },
                         {
                             "type":"TextArea",
-                            "props":{"y":8,"x":19,"width":262,"text":"Collaboration","mouseEnabled":false,"height":28,"fontSize":22,"font":"Font_eng","editable":false,"color":"#f4c753","bold":true,"align":"center"},
+                            "props":{"y":8,"x":9,"width":272,"text":"Collaboration","mouseEnabled":false,"height":28,"fontSize":22,"font":"Font_eng","editable":false,"color":"#f4c753","bold":true,"align":"center"},
                             "nodeParent":160,
                             "label":"TextArea",
                             "isDirectory":false,
@@ -1248,15 +1373,15 @@
                             "compId":265,
                             "child":[
                                 ]
-                        }]
+                        }],
+                    "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"y":229,"x":220,"width":288,"var":"why_card3","skin":"comp/container_panek.png","scaleY":0.8,"scaleX":0.8,"height":102,"anchorY":0.5,"anchorX":0.5,"alpha":0.1},
                     "nodeParent":82,
                     "label":"Image(why_card3)",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -1360,7 +1485,7 @@
                         },
                         {
                             "type":"TextArea",
-                            "props":{"y":36,"x":14,"width":262,"text":"It gives game developers and small studios a chance to take advantages of cloud service from the blockchain system to build up their game in a fast way.","mouseEnabled":false,"height":60,"fontSize":12,"font":"Microsoft YaHei","editable":false,"color":"#74d8e2","align":"center"},
+                            "props":{"y":36,"x":9,"width":273,"text":"It gives game developers and small studios a chance to take advantages of cloud service from the blockchain system to build up their game in a fast way.","mouseEnabled":false,"height":60,"fontSize":12,"font":"Microsoft YaHei","editable":false,"color":"#74d8e2","align":"center"},
                             "nodeParent":194,
                             "label":"TextArea",
                             "isDirectory":false,
@@ -1372,7 +1497,7 @@
                         },
                         {
                             "type":"TextArea",
-                            "props":{"y":10,"x":16,"width":262,"text":"Framework","mouseEnabled":false,"height":28,"fontSize":22,"font":"Font_eng","editable":false,"color":"#f4c753","bold":true,"align":"center"},
+                            "props":{"y":10,"x":5,"width":279,"text":"Framework","mouseEnabled":false,"height":28,"fontSize":22,"font":"Font_eng","editable":false,"color":"#f4c753","bold":true,"align":"center"},
                             "nodeParent":194,
                             "label":"TextArea",
                             "isDirectory":false,
@@ -1381,9 +1506,10 @@
                             "compId":267,
                             "child":[
                                 ]
-                        }]
+                        }],
+                    "$HIDDEN":false
                 }],
-            "$HIDDEN":false
+            "$HIDDEN":true
         },
         {
             "x":15,
