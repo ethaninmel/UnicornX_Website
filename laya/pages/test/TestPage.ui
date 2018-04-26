@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":149,
-    "selecteID":143,
+    "selectedBox":45,
+    "selecteID":286,
     "props":{"width":715,"sceneColor":"#ffffff","height":402},
     "nodeParent":-1,
     "label":"View",
@@ -18,13 +18,14 @@
             "props":{"y":0,"x":0},
             "nodeParent":1,
             "label":"Box",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":256,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":0,"width":715,"var":"background","skin":"comp/bg_pure.png","sizeGrid":"30,4,4,4","height":402},
                     "nodeParent":256,
@@ -40,6 +41,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":60,"x":371,"width":130,"height":99,"centerX":0.5,"anchorX":0.5},
                     "nodeParent":256,
@@ -52,6 +54,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Button",
                     "props":{"y":324,"width":121,"visible":false,"stateNum":"1","skin":"comp/btn.png","labelFont":"labelfont","labelColors":"#fff","label":"Learn More","height":35,"centerX":1,"anchorX":0.5},
                     "nodeParent":256,
@@ -70,13 +73,14 @@
             "props":{"y":0,"x":0,"width":715,"var":"menu","skin":"comp/menu_bar.png","layoutEnabled":true,"height":36,"disabled":false},
             "nodeParent":1,
             "label":"Image(menu)",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":45,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":13,"x":110,"width":124,"skin":"comp/lightpoint.png","height":24},
                     "nodeParent":45,
@@ -89,6 +93,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Button",
                     "props":{"y":10,"x":452,"width":38,"var":"tab_roadmap","stateNum":"2","skin":"comp/btn_roadmap.png","sizeGrid":"0,0,0,0","height":6},
                     "nodeParent":45,
@@ -102,6 +107,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Button",
                     "props":{"y":10,"x":516,"width":47,"var":"tab_lan","stateNum":"2","skin":"comp/btn_tab1.png","sizeGrid":"0,0,0,0","height":6},
                     "nodeParent":45,
@@ -114,6 +120,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Button",
                     "props":{"y":10,"x":394,"width":32,"var":"tab_term","stateNum":"2","skin":"comp/btn_terms.png","sizeGrid":"0,0,0,0","height":6},
                     "nodeParent":45,
@@ -126,6 +133,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Button",
                     "props":{"y":10,"x":307,"width":70,"var":"tab_doc","stateNum":"2","skin":"comp/btn_doc.png","sizeGrid":"0,0,0,0","height":6},
                     "nodeParent":45,
@@ -139,6 +147,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Button",
                     "props":{"y":10,"x":196,"width":71,"var":"tab_why","stateNum":"2","skin":"comp/btn_why.png","height":6},
                     "nodeParent":45,
@@ -149,8 +158,21 @@
                     "compId":268,
                     "child":[
                         ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":0,"x":131,"skin":"comp/logo.png","scaleY":0.4,"scaleX":0.4},
+                    "nodeParent":45,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":286,
+                    "child":[
+                        ]
                 }],
-            "$HIDDEN":true
+            "$HIDDEN":false
         },
         {
             "x":15,
