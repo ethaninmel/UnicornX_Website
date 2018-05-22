@@ -42,7 +42,7 @@ var TestUI = /** @class */ (function (_super) {
         //设置垂直对齐
         Laya.stage.alignV = "middle";
         _this.menu.zOrder = 1;
-        _this.onBtnPageClick(_this.why, _this.whymove, "comp/bg.png");
+        //this.onBtnPageClick(this.why,this.whymove,"comp/bg.png");
         _this.stage.on(Laya.Event.MOUSE_WHEEL, _this, _this.onMousewheel);
         _this.tab_lan.on(Laya.Event.CLICK, _this, _this.onBtnPageClick, [_this.language, _this.move, "comp/bg.png"]);
         _this.tab_roadmap.on(Laya.Event.CLICK, _this, _this.onBtnPageClick, [_this.roadmap, _this.roadmapmove, "comp/bg_pure.png"]);

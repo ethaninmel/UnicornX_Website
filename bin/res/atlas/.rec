@@ -1,6 +1,10 @@
 D .
 D comp
+R 33218B5B bar_back.PNG
+P 8F051D34 bar_jianchen.PNG
+R 38A9196E bar_top.PNG
 P 4562E8A6 bg.png
+P F3009E61 bg_countdown.PNG
 R 7138BFF5 bg_pure.png
 P A2AF89AB bitcointalk.png
 P 20F1A1B7 btn.png
@@ -13,6 +17,9 @@ P CAE1D0C5 btn_terms.png
 P D9DB5FAE btn_why.png
 P 5FF5B6FF btn_why1.png
 R 097436CD container_panek.png
+R 2AE310F8 count_background.PNG
+R D452C245 count_title.PNG
+R 1BACD8CE countdown_number.PNG
 R FF95D98E earth_bg.png
 P FF864413 earth_box.png
 P 772D776E fb.png
@@ -33,6 +40,8 @@ R 6E5CE209 loadingcontainer.png
 P A07F5022 logo.png
 R 0B530020 lower_circle.png
 P 52DE8F45 medium.png
+R BC4AF787 member_background.PNG
+P 9B973AA5 member_yelowLine.PNG
 P 97434E5B menu_bar.png
 R A7CD79FE message_box.png
 P 9E4DD730 progress$bar.png

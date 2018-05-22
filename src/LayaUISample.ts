@@ -34,7 +34,7 @@ class TestUI extends ui.test.TestPageUI {
 			//设置垂直对齐
 			Laya.stage.alignV = "middle";
 		this.menu.zOrder=1;
-		this.onBtnPageClick(this.why,this.whymove,"comp/bg.png");
+		//this.onBtnPageClick(this.why,this.whymove,"comp/bg.png");
 		
 		this.stage.on(Laya.Event.MOUSE_WHEEL, this, this.onMousewheel);
 		this.tab_lan.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.language,this.move,"comp/bg.png"]);
