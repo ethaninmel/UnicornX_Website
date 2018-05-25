@@ -43,6 +43,9 @@ var TestUI = /** @class */ (function (_super) {
         Laya.stage.alignV = "middle";
         _this.menu.zOrder = 1;
         //this.onBtnPageClick(this.why,this.whymove,"comp/bg.png");
+        //console.log(this.mask.x);
+        //console.log(this.bar_head.x);
+        console.log();
         _this.stage.on(Laya.Event.MOUSE_WHEEL, _this, _this.onMousewheel);
         _this.tab_lan.on(Laya.Event.CLICK, _this, _this.onBtnPageClick, [_this.language, _this.move, "comp/bg.png"]);
         _this.tab_roadmap.on(Laya.Event.CLICK, _this, _this.onBtnPageClick, [_this.roadmap, _this.roadmapmove, "comp/bg_pure.png"]);
@@ -73,7 +76,7 @@ var TestUI = /** @class */ (function (_super) {
         }
         if (e.delta < 0) {
             newy = this.y - 10;
-            if (newy < -this.height / 2)
+            if (newy < -this.height * 2)
                 return;
             this.y = newy;
         }

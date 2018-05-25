@@ -35,13 +35,21 @@ class TestUI extends ui.test.TestPageUI {
 			Laya.stage.alignV = "middle";
 		this.menu.zOrder=1;
 		//this.onBtnPageClick(this.why,this.whymove,"comp/bg.png");
+		//console.log(this.mask.x);
+		//console.log(this.bar_head.x);
+		console.log();
 		
 		this.stage.on(Laya.Event.MOUSE_WHEEL, this, this.onMousewheel);
-		this.tab_lan.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.language,this.move,"comp/bg.png"]);
-		this.tab_roadmap.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.roadmap,this.roadmapmove,"comp/bg_pure.png"]);
-		this.tab_term.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.term,this.termmove,"comp/bg_pure.png"]);
-		this.tab_why.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.why,this.whymove,"comp/bg.png"]);
-		this.tab_doc.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.doc,this.docmove,"comp/bg.png"]);
+		// this.tab_lan.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.language,this.move,"comp/bg.png"]);
+		// this.tab_roadmap.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.roadmap,this.roadmapmove,"comp/bg_pure.png"]);
+		// this.tab_term.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.term,this.termmove,"comp/bg_pure.png"]);
+		// this.tab_why.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.why,this.whymove,"comp/bg.png"]);
+		// this.tab_doc.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.doc,this.docmove,"comp/bg.png"]);
+
+
+		this.tab_roadmap.on(Laya.Event.CLICK,this,this.onNavClick,["roadmap"]);
+		this.tab_term.on(Laya.Event.CLICK,this,this.onNavClick,["term"]);
+		this.tab_doc.on(Laya.Event.CLICK,this,this.onNavClick,["doc"]);
 		this.road0.on(Laya.Event.CLICK,this,this.onBtnRoadClick,[0]);
 		this.road1.on(Laya.Event.CLICK,this,this.onBtnRoadClick,[1]);
 		this.road2.on(Laya.Event.CLICK,this,this.onBtnRoadClick,[2]);
@@ -52,6 +60,20 @@ class TestUI extends ui.test.TestPageUI {
 		//this.testlink.on(Laya.Event.CLICK,this,this.onLink,["comp/bg_pure.png"]);
 		//Laya.timer.once(2000,this,this.loadingScene);
 	}
+
+
+
+
+	private onNavClick(){
+		var move:number = 0;
+		switch 
+		Laya.timer.frameLoop(100,this,[]);
+	}
+
+	private onNav(){
+		
+	}
+
 	private loadingScene(){
 		this.loading.alpha=0;
 	}
@@ -65,7 +87,7 @@ class TestUI extends ui.test.TestPageUI {
 		}
 		if (e.delta<0){
 			newy=this.y-10;
-			if(newy<-this.height/2)
+			if(newy<-this.height*2)
 				return;
 			this.y=newy;
 		}

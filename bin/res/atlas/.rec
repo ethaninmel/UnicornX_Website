@@ -1,11 +1,12 @@
 D .
 D comp
-R 33218B5B bar_back.PNG
+R 8B7D1C81 bar_back.PNG
 P 8F051D34 bar_jianchen.PNG
 R 38A9196E bar_top.PNG
 P 4562E8A6 bg.png
 P F3009E61 bg_countdown.PNG
-R 7138BFF5 bg_pure.png
+R 2CC7D421 bg_pure.png
+R 932626BD bg_sky.png
 P A2AF89AB bitcointalk.png
 P 20F1A1B7 btn.png
 P A91ADC0E btn_arrow.png
@@ -69,6 +70,7 @@ P 37F11559 wechat.png
 P 6920F377 weibo.png
 P BE642EFD yoku.png
 P BC5118A8 youtube.png
+P A0B9A493 光暈.PNG
 D template
 D template/ScrollBar
 P A4FD74DB BackProgressBar$bar.png
