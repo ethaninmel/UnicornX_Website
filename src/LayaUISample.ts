@@ -64,13 +64,40 @@ class TestUI extends ui.test.TestPageUI {
 
 
 
-	private onNavClick(){
-		var move:number = 0;
-		switch 
-		Laya.timer.frameLoop(100,this,[]);
+	private onNavClick(item:string){
+		var position:number = 0;
+		switch(item){
+			case "roadmap":
+				position = -this.height*2;
+				break;
+			case "term":
+				position = -this.height;
+				break;
+		}
+
+		console.log(this.page.y);
+		console.log(position);
+
+		Laya.timer.loop(100,this,this.onNav,[position]);
 	}
 
-	private onNav(){
+	private onNav(position:number){
+		
+		console.log(this.page.y);
+		console.log(position);
+		if(Math.abs(this.page.y-position)<50){
+			this.page.y -= this.page.y-position;
+			Laya.timer.clear(this,this.onNav);
+			console.log(1);
+		}
+		else if(this.page.y>position){
+			this.page.y -= 50; 
+			console.log(2);
+		}
+		else if(this.page.y<=position){
+			this.page.y += 50; 
+			console.log(3);
+		}
 		
 	}
 
@@ -80,16 +107,16 @@ class TestUI extends ui.test.TestPageUI {
 	private onMousewheel(e: laya.events.Event):void{
 		var newy:number;
 		if (e.delta>0){
-			newy=this.y+10;
+			newy=this.page.y+10;
 			if(newy>0)
 				return;
-			this.y=newy;
+			this.page.y=newy;
 		}
 		if (e.delta<0){
-			newy=this.y-10;
+			newy=this.page.y-10;
 			if(newy<-this.height*2)
 				return;
-			this.y=newy;
+			this.page.y=newy;
 		}
 		this.menu.y=-this.y;
 	}

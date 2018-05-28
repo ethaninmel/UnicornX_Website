@@ -47,11 +47,14 @@ var TestUI = /** @class */ (function (_super) {
         //console.log(this.bar_head.x);
         console.log();
         _this.stage.on(Laya.Event.MOUSE_WHEEL, _this, _this.onMousewheel);
-        _this.tab_lan.on(Laya.Event.CLICK, _this, _this.onBtnPageClick, [_this.language, _this.move, "comp/bg.png"]);
-        _this.tab_roadmap.on(Laya.Event.CLICK, _this, _this.onBtnPageClick, [_this.roadmap, _this.roadmapmove, "comp/bg_pure.png"]);
-        _this.tab_term.on(Laya.Event.CLICK, _this, _this.onBtnPageClick, [_this.term, _this.termmove, "comp/bg_pure.png"]);
-        _this.tab_why.on(Laya.Event.CLICK, _this, _this.onBtnPageClick, [_this.why, _this.whymove, "comp/bg.png"]);
-        _this.tab_doc.on(Laya.Event.CLICK, _this, _this.onBtnPageClick, [_this.doc, _this.docmove, "comp/bg.png"]);
+        // this.tab_lan.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.language,this.move,"comp/bg.png"]);
+        // this.tab_roadmap.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.roadmap,this.roadmapmove,"comp/bg_pure.png"]);
+        // this.tab_term.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.term,this.termmove,"comp/bg_pure.png"]);
+        // this.tab_why.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.why,this.whymove,"comp/bg.png"]);
+        // this.tab_doc.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.doc,this.docmove,"comp/bg.png"]);
+        _this.tab_roadmap.on(Laya.Event.CLICK, _this, _this.onNavClick, ["roadmap"]);
+        _this.tab_term.on(Laya.Event.CLICK, _this, _this.onNavClick, ["term"]);
+        _this.tab_doc.on(Laya.Event.CLICK, _this, _this.onNavClick, ["doc"]);
         _this.road0.on(Laya.Event.CLICK, _this, _this.onBtnRoadClick, [0]);
         _this.road1.on(Laya.Event.CLICK, _this, _this.onBtnRoadClick, [1]);
         _this.road2.on(Laya.Event.CLICK, _this, _this.onBtnRoadClick, [2]);
@@ -63,22 +66,53 @@ var TestUI = /** @class */ (function (_super) {
         //this.testlink.on(Laya.Event.CLICK,this,this.onLink,["comp/bg_pure.png"]);
         //Laya.timer.once(2000,this,this.loadingScene);
     }
+    TestUI.prototype.onNavClick = function (item) {
+        var position = 0;
+        switch (item) {
+            case "roadmap":
+                position = -this.height * 2;
+                break;
+            case "term":
+                position = -this.height;
+                break;
+        }
+        console.log(this.page.y);
+        console.log(position);
+        Laya.timer.loop(100, this, this.onNav, [position]);
+    };
+    TestUI.prototype.onNav = function (position) {
+        console.log(this.page.y);
+        console.log(position);
+        if (Math.abs(this.page.y - position) < 50) {
+            this.page.y -= this.page.y - position;
+            Laya.timer.clear(this, this.onNav);
+            console.log(1);
+        }
+        else if (this.page.y > position) {
+            this.page.y -= 50;
+            console.log(2);
+        }
+        else if (this.page.y <= position) {
+            this.page.y += 50;
+            console.log(3);
+        }
+    };
     TestUI.prototype.loadingScene = function () {
         this.loading.alpha = 0;
     };
     TestUI.prototype.onMousewheel = function (e) {
         var newy;
         if (e.delta > 0) {
-            newy = this.y + 10;
+            newy = this.page.y + 10;
             if (newy > 0)
                 return;
-            this.y = newy;
+            this.page.y = newy;
         }
         if (e.delta < 0) {
-            newy = this.y - 10;
+            newy = this.page.y - 10;
             if (newy < -this.height * 2)
                 return;
-            this.y = newy;
+            this.page.y = newy;
         }
         this.menu.y = -this.y;
     };
