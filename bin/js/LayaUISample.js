@@ -78,22 +78,22 @@ var TestUI = /** @class */ (function (_super) {
         }
         console.log(this.page.y);
         console.log(position);
-        Laya.timer.loop(100, this, this.onNav, [position]);
+        Laya.timer.loop(10, this, this.onNav, [position]);
     };
     TestUI.prototype.onNav = function (position) {
         console.log(this.page.y);
         console.log(position);
-        if (Math.abs(this.page.y - position) < 50) {
+        if (Math.abs(this.page.y - position) < 20) {
             this.page.y -= this.page.y - position;
             Laya.timer.clear(this, this.onNav);
             console.log(1);
         }
         else if (this.page.y > position) {
-            this.page.y -= 50;
+            this.page.y -= 20;
             console.log(2);
         }
         else if (this.page.y <= position) {
-            this.page.y += 50;
+            this.page.y += 20;
             console.log(3);
         }
     };
