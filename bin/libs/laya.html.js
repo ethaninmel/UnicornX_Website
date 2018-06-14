@@ -78,9 +78,9 @@ var HTMLParse=(function(){
 		}
 	}
 
-	HTMLParse.char255=String.fromCharCode(255);
-	HTMLParse.spacePattern=/&nbsp;|&#160;/g;
-	HTMLParse.char255AndOneSpacePattern=new RegExp(String.fromCharCode(255)+"|(\\s+)","g");
+	__static(HTMLParse,
+	['char255',function(){return this.char255=String.fromCharCode(255);},'spacePattern',function(){return this.spacePattern=/&nbsp;|&#160;/g;},'char255AndOneSpacePattern',function(){return this.char255AndOneSpacePattern=new RegExp(String.fromCharCode(255)+"|(\\s+)","g");}
+	]);
 	return HTMLParse;
 })()
 
@@ -715,7 +715,9 @@ var HTMLElement=(function(_super){
 		}
 	}
 
-	HTMLElement._EMPTYTEXT={text:null,words:null};
+	__static(HTMLElement,
+	['_EMPTYTEXT',function(){return this._EMPTYTEXT={text:null,words:null};}
+	]);
 	return HTMLElement;
 })(Sprite)
 
@@ -996,7 +998,9 @@ var HTMLLinkElement=(function(_super){
 		l.load(url,/*laya.net.Loader.TEXT*/"text");
 	});
 
-	HTMLLinkElement._cuttingStyle=new RegExp("((@keyframes[\\s\\t]+|)(.+))[\\t\\n\\r\\\s]*{","g");
+	__static(HTMLLinkElement,
+	['_cuttingStyle',function(){return this._cuttingStyle=new RegExp("((@keyframes[\\s\\t]+|)(.+))[\\t\\n\\r\\\s]*{","g");}
+	]);
 	return HTMLLinkElement;
 })(HTMLElement)
 
