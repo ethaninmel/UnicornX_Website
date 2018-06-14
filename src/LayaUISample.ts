@@ -199,7 +199,7 @@ class TestUI extends ui.test.TestPageUI {
 		this.ani3.stop();
 		this.ani2.play(0,false);
 		this.roadmap.mouseEnabled = false;
-		Laya.timer.once(5000,this,this.playPoint1);
+		Laya.timer.once(4000,this,this.playPoint1);
 		
 	}
 

@@ -182,7 +182,7 @@ var TestUI = /** @class */ (function (_super) {
         this.ani3.stop();
         this.ani2.play(0, false);
         this.roadmap.mouseEnabled = false;
-        Laya.timer.once(5000, this, this.playPoint1);
+        Laya.timer.once(4000, this, this.playPoint1);
     };
     TestUI.prototype.playPoint1 = function () {
         this.ani_toPoint1.play(0, false);
