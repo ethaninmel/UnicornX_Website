@@ -1,0 +1,631 @@
+if (!String.prototype.startsWith) {
+  Object.defineProperty(String.prototype, 'startsWith', {
+    enumerable: false,
+    configurable: false,
+    writable: false,
+    value: function(searchString, position) {
+      position = position || 0;
+      return this.indexOf(searchString, position) === position;
+    }
+  });
+}
+
+// https://stackoverflow.com/a/979995/4256005
+function parse_query_string(query) {
+  var vars = query.split("&");
+  var query_string = {};
+  for (var i = 0; i < vars.length; i++) {
+    if ("" === vars[i]) {
+        continue;
+    }
+    var pair = vars[i].split("=");
+    var key = decodeURIComponent(pair[0]);
+    var value = decodeURIComponent(pair[1]);
+    // If first entry with this name
+    if (typeof query_string[key] === "undefined") {
+      query_string[key] = decodeURIComponent(value);
+      // If second entry with this name
+    } else if (typeof query_string[key] === "string") {
+      var arr = [query_string[key], decodeURIComponent(value)];
+      query_string[key] = arr;
+      // If third or later entry with this name
+    } else {
+      query_string[key].push(decodeURIComponent(value));
+    }
+  }
+  return query_string;
+}
+
+//var query_string = "a=1&b=3&c=m2-m3-m4-m5";
+//var parsed_qs = parse_query_string(query_string);
+//console.log(parsed_qs.c);
+
+function ico_copyAddress(e) {
+	e.preventDefault();
+	// copy in any case
+	var $temp = jQuery("<input>");
+	jQuery("body").append($temp);
+
+	var id = jQuery(e.target).data("input-id");
+	console.log("Copy from: ", id);
+
+	var value = jQuery("#" + id).val();
+	console.log("Value to copy: ", value);
+
+	$temp.val(value).select();		
+	document.execCommand("copy");
+	$temp.remove();
+
+    alert(window.ico.str_copied_msg);
+}
+
+function checkMMNetworkMismatch(cb) {
+    if (window.ico.web3metamask) {
+        // https://ethereum.stackexchange.com/a/23905/34760
+        window.ico.web3metamask.version.getNetwork(function(err, netId) {
+            if (err) {
+                console.log(err); 
+                cb.call(null, err, null);
+                return;
+            }
+            var mm_network_mismatch = false;
+            switch (netId) {
+                case "1":
+                    mm_network_mismatch = (-1 === window.ico.web3Endpoint.indexOf('mainnet'));
+                    break
+//                    case "2":
+//                        console.log('This is the deprecated Morden test network.')
+//                        break
+                case "3":
+                    mm_network_mismatch = (-1 === window.ico.web3Endpoint.indexOf('ropsten'));
+                    break
+                case "4":
+                    mm_network_mismatch = (-1 === window.ico.web3Endpoint.indexOf('rinkeby'));
+                    break;
+                case "42":
+                    mm_network_mismatch = (-1 === window.ico.web3Endpoint.indexOf('kovan'));
+                    break;
+                default: {
+                    console.log('This is an unknown network.')
+                    mm_network_mismatch = true;
+                }
+            }
+            cb.call(null, null, mm_network_mismatch);
+        });
+    } else {
+        // no MM. can not mismatch
+        cb.call(null, null, false);
+    }
+}
+
+function doBuyTokens(e) {
+	e.preventDefault();
+    checkMMNetworkMismatch(function(err, mm_network_mismatch) {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        if (mm_network_mismatch) {
+            alert(window.ico.str_mm_network_mismatch);
+            return;
+        }
+        window.ico.web3metamask.eth.getAccounts(function (err, accounts) {
+
+            if (err) {
+                console.log(err);
+                return;
+            }
+
+            if (0 === accounts.length) {
+                console.log("Metamask account not found");
+                alert("Sign in into your metamask account please.");
+                return;
+            }
+
+            var v = jQuery("#etherInput").val();
+            if ("" === v) {
+                v = "0";
+            }
+            var input = jQuery('.ethereum-ico-quantity #etherInput');
+            var val = parseFloat(v);
+            var min = parseFloat(input.attr('min'));
+            if (val < min) {
+                val = min;
+            }
+            val = 1000000000000000000 * val;
+            var data = "0x";
+            
+            // Can not use referral link and Data setting simultaneously
+            // The Data setting has a priority.
+            // try to get data from referral link
+            var args = parse_query_string(location.search);
+            if ('undefined' !== typeof(args['icoreferral'])) {
+                data = args['icoreferral'];
+            } else if ('undefined' !== typeof(args['?icoreferral'])) {
+                data = args['?icoreferral'];
+            }
+
+            var address = accounts[0];
+            var transactionObject = {
+                from: address,
+                to: window.ico.crowdsaleAddress,
+                value: val,
+                gas: window.ico.gasLimit,
+                gasPrice: window.ico.gasPrice * Math.pow(10, 9),
+                data: data,
+                nonce: '0x00'
+            };
+            window.ico.web3.eth.getTransactionCount(address, function(err, res) {
+                if (err) {
+                    console.log(err);
+                    console.log("Network error. Check your infuraApiKey settings.");
+                    return;
+                }
+                console.log("Current address nonce value: ", res);
+                nonce = parseInt(res);
+                transactionObject.nonce = "0x" + nonce.toString(16);
+                console.log(transactionObject);
+                window.ico.web3metamask.eth.sendTransaction(transactionObject, function (err, transactionHash) {
+                    if (err) {
+                        console.log(err);
+                        alert("You have rejected the token buy operation.");
+                        return;
+                    }
+                    console.log(transactionHash);
+                    alert("Success! Tx hash: " + transactionHash);
+                });
+            });
+
+        });
+    });
+}
+
+function changeEtherAmount() {
+	var v = jQuery("#etherInput").val();
+	if ("" === v) {
+		v = "0";
+	}
+	var val = parseFloat(v);
+	var input = jQuery('.ethereum-ico-quantity #etherInput');
+	var min = parseFloat(input.attr('min'));
+	if (val < min) {
+		val = min;
+		input.val(val.toFixed(2));
+	}
+    jQuery("#rateeth").text(input.val());
+	jQuery("#rateToken").text((tokenRate * val).toFixed(2));
+    var rateData = JSON.parse(window.ico.rateData);
+
+	if (rateData) {
+        var coins = JSON.parse(window.ico.coins);
+		for (var i = 0; i < coins.length; i++) {
+			var coin = coins[i];
+            var rateDataFiat = JSON.parse(window.ico.rateDataFiat);
+			if (window.ico.tokenName === coin) {
+                var tokenRate = parseFloat(window.ico.tokenRate);
+				jQuery("#rate" + window.ico.tokenName.toLowerCase()).text(
+					(tokenRate * val).toFixed(1));
+			}
+			else if ("BTC" === coin) {
+				jQuery("#rate" + coin.toLowerCase()).text(
+					(val * parseFloat(rateData.ethbtc)).toFixed(5));
+			}
+			else if ("USD" === coin) {
+				jQuery("#rate" + coin.toLowerCase()).text(
+					(val * parseFloat(rateData.ethusd)).toFixed(2));
+			} else if (rateDataFiat && 'undefined' !== typeof rateDataFiat[coin]) {
+				jQuery("#rate" + coin.toLowerCase()).text(
+					(val * parseFloat(rateData.ethusd) * rateDataFiat[coin]).toFixed(2));
+			}
+		}
+	}
+}
+
+function openDownloadMetamaskWindow(e) {
+    e.preventDefault();
+    var metamaskWindow = window.open("https://metamask.io/", '_blank'
+        , 'location=yes,height=' + window.outerHeight + 
+            ',width=' + window.outerWidth + 
+            ',scrollbars=yes,status=yes');
+    metamaskWindow.focus();
+}
+
+// wrap user accounts source for non-metamask case
+function getUserAccounts(callback) {
+	// this function is used if no Metamask is defined
+	var _fn = function(callback) {
+        if (jQuery('#ethereum-ico-balance-account').val() !== '') {
+            var accounts = [jQuery('#ethereum-ico-balance-account').val()];
+            callback.call(null, null, accounts);
+            return;
+        }
+        callback.call(null, window.ico.str_download_metamask, []);
+	};
+	var _eth = null;
+	if ('undefined' !== typeof window.ico['web3metamask']) {
+		_fn = window.ico.web3metamask.eth.getAccounts;
+		_eth = window.ico.web3metamask.eth;
+	}
+	_fn.call(_eth, function(err, accounts) {
+		callback.call(null, err, accounts);
+	});
+}
+
+function get_erc20_contract(tokenAddress) {
+    var abi = [{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"supply","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"}];
+	return window.ico.web3.eth.contract(abi).at(tokenAddress);
+}
+
+function get_token_balance_by_account(tokenAddress, account, callback) {
+	var contract = get_erc20_contract(tokenAddress);
+	if (!contract) {
+		callback.call(null, "Failed to get contract", null);
+		return;
+	}
+	contract.balanceOf(account, callback);
+}
+
+function get_token_balance(tokenAddress, cb) {
+    getUserAccounts(function(err, accounts) {
+
+        if (err) {
+            console.log(err); 
+            cb.call(null, err, null);
+            return;
+        }
+
+        if (0 === accounts.length) {
+            console.log("Metamask account not found"); 
+            if (jQuery('#ethereum-ico-balance-account').val() !== '') {
+                accounts = [jQuery('#ethereum-ico-balance-account').val()];
+            } else {
+                cb.call(null, window.ico.str_unlock_metamask_account, null);
+                return;
+            }
+        }
+
+        get_token_balance_by_account(tokenAddress, accounts[0], function(err, balance) {
+            if (err) {
+                console.log(err); 
+                cb.call(null, window.ico.str_account_balance_failure, null);
+                return;
+            }
+            console.log("Token balance: ", balance.toNumber());
+            var tokenValue = balance.toNumber() / parseFloat(window.ico.decimals);
+            cb.call(null, null, tokenValue);
+        });
+    });
+}
+
+function init_token_balance() {
+    get_token_balance(window.ico.tokenAddress, function(err, balance){
+        if (err) {
+            console.log(err); 
+            if (err === window.ico.str_unlock_metamask_account) {
+                jQuery('.ethereum-ico-balance-account-wrapper').removeClass('hidden');
+                jQuery('.ethereum-ico-balance-account-wrapper').removeAttr('hidden');
+            }
+            else if (err === window.ico.str_download_metamask) {
+                jQuery('.ethereum-ico-balance-account-wrapper').removeClass('hidden');
+                jQuery('.ethereum-ico-balance-account-wrapper').removeAttr('hidden');
+            }
+            return;
+        }
+        jQuery('.ethereum-ico-balance-value').text(balance);
+    });
+}
+
+function ethereumIcoBalanceAccountChange() {
+    init_token_balance();
+}
+
+function ICO_init() {
+	if ("undefined" !== typeof window.ico && window.ico.initialized === true) {
+        return;
+    }
+	if ("undefined" !== typeof window.ico.web3Endpoint) {
+		jQuery('.ethereum-ico-quantity').each(function () {
+			var spinner = jQuery(this),
+					input = spinner.find('input[type="number"]'),
+					btnUp = spinner.find('.quantity-up'),
+					btnDown = spinner.find('.quantity-down'),
+					min = parseFloat(input.attr('min'));
+			step = parseFloat(input.attr('step'));
+
+			btnUp.click(function () {
+				var strVal = input.val();
+				if ("" === strVal) {
+					strVal = "0";
+				}
+				var oldValue = parseFloat(strVal);
+				var newVal = oldValue + step;
+				spinner.find("input").val(newVal.toFixed(2));
+				spinner.find("input").trigger("change");
+			});
+
+			btnDown.click(function () {
+				var strVal = input.val();
+				if ("" === strVal) {
+					strVal = "0";
+				}
+				var oldValue = parseFloat(strVal);
+				if (oldValue < min) {
+					var newVal = min;
+				} else {
+					var newVal = oldValue - step;
+				}
+				if (newVal < 0) {
+					newVal = 0;
+				}
+				spinner.find("input").val(newVal.toFixed(2));
+				spinner.find("input").trigger("change");
+			});
+
+		});
+
+		if (typeof window !== 'undefined' && typeof window.web3 !== 'undefined') {
+            var injectedProvider = window.web3.currentProvider;
+            window.ico.web3metamask = new Web3(injectedProvider)
+			jQuery("#buyTokensButton").click(doBuyTokens);
+		} else {
+            jQuery("#buyTokensButton").click(openDownloadMetamaskWindow);
+			jQuery("#buyTokensButton").text("Install Metamask!");
+		}
+        if ("undefined" !== typeof window.ico.web3Endpoint) {
+            window.ico.web3 = new Web3(new Web3.providers.HttpProvider(window.ico.web3Endpoint));
+        }
+
+		jQuery("#etherInput").change(changeEtherAmount);
+		jQuery("#etherInput").blur(changeEtherAmount);
+        
+        if (jQuery('.ethereum-ico-balance-value').text() !== '') {
+            init_token_balance();
+            jQuery("#ethereum-ico-balance-account").change(ethereumIcoBalanceAccountChange);
+        }
+
+	}
+    jQuery("#ethereum-ico-purchases-account-chk").change(changePurchasesAccountCheckbox);
+    jQuery('#ethereum-ico-purchases-account').change(changePurchasesAccount);
+    jQuery("#ethereum-ico-referral-account").change(changeReferralAccount);
+    load_transactions(window.ico.crowdsaleAddress, function(err, transactions) {
+        if (err) {
+            console.log(err);
+            return;
+        }
+
+        if (jQuery('.ethereum-ico-purchases-table').text() !== '') {
+            render_transactions(transactions, window.ico.crowdsaleAddress);
+        }
+    });
+    jQuery(".ico-copy-button").click(ico_copyAddress);
+    ico_updateReferreeAddress();
+    window.ico.initialized = true;
+}
+
+jQuery(document).ready(ICO_init);
+// proper init if loaded by ajax
+jQuery(document).ajaxComplete(function( event, xhr, settings ) {
+    // check if the loaded content contains our shortcodes
+    if (!xhr ||
+        'undefined' === typeof xhr.responseText || 
+        (
+            xhr.responseText.indexOf('ethereum-ico-shortcode') === -1 &&
+            xhr.responseText.indexOf('ethereum-ico-progress-shortcode') === -1 &&
+            xhr.responseText.indexOf('ethereum-ico-balance-shortcode') === -1 &&
+            xhr.responseText.indexOf('ethereum-ico-purchases-shortcode') === -1
+        )
+    ) {
+        return;
+    }
+    ICO_init();
+});
+
+function ico_calc_referral_link(account) {
+    var args = parse_query_string(location.search);
+    if ('undefined' !== typeof(args['icoreferral'])) {
+        delete args['icoreferral'];
+    } else if ('undefined' !== typeof(args['?icoreferral'])) {
+        delete args['?icoreferral'];
+    }
+    args['icoreferral'] = account;
+    var strargs = '';
+    for (var i in args) {
+        var key = i;
+        if (key.startsWith('?')) {
+            key = key.substr(1);
+        }
+        strargs += ('&' + key + '=' + args[i]);
+    }
+    return window.location.origin + window.location.pathname + '?' + strargs.substr(1);
+}
+
+function changeReferralAccount() {
+    var account = jQuery("#ethereum-ico-referral-account").val();
+    var referralLink = ico_calc_referral_link(account);
+    jQuery("#ethereum-ico-referral-link").val(referralLink);
+}
+
+function changePurchasesAccount() {
+    changePurchasesAccountCheckbox();
+}
+
+function changePurchasesAccountCheckbox() {
+    if (jQuery("#ethereum-ico-purchases-account-chk").prop("checked")) {
+        // 1. проверить, есть ли аккаунт. если нет, показать поле ввода адреса
+        // 2. если есть, загрузить транзакции для адреса
+        getUserAccounts(function(err, accounts) {
+
+            if (err) {
+                console.log(err); 
+                if (err === window.ico.str_unlock_metamask_account) {
+                    jQuery('.ethereum-ico-purchases-account-wrapper').removeClass('hidden');
+                    jQuery('.ethereum-ico-purchases-account-wrapper').removeAttr('hidden');
+                    if (jQuery('#ethereum-ico-purchases-account').val() !== '') {
+                        accounts = [jQuery('#ethereum-ico-purchases-account').val()];
+                    }
+                }
+                else if (err === window.ico.str_download_metamask) {
+                    jQuery('.ethereum-ico-purchases-account-wrapper').removeClass('hidden');
+                    jQuery('.ethereum-ico-purchases-account-wrapper').removeAttr('hidden');
+                    if (jQuery('#ethereum-ico-purchases-account').val() !== '') {
+                        accounts = [jQuery('#ethereum-ico-purchases-account').val()];
+                    }
+                }
+                return;
+            }
+
+            if (0 === accounts.length) {
+                console.log("Metamask account not found"); 
+                jQuery('.ethereum-ico-purchases-account-wrapper').removeClass('hidden');
+                jQuery('.ethereum-ico-purchases-account-wrapper').removeAttr('hidden');
+                if (jQuery('#ethereum-ico-purchases-account').val() !== '') {
+                    accounts = [jQuery('#ethereum-ico-purchases-account').val()];
+                }
+            }
+
+            if (accounts.length > 0) {
+                load_transactions(accounts[0], function(err, transactions) {
+                    if (err) {
+                        console.log(err);
+                        return;
+                    }
+
+                    if (jQuery('.ethereum-ico-purchases-table').text() !== '') {
+                        render_transactions(transactions, window.ico.crowdsaleAddress, accounts[0]);
+                    }
+                });
+            }
+
+        });
+    } else {
+        jQuery('.ethereum-ico-purchases-account-wrapper').addClass('hidden');
+        jQuery('.ethereum-ico-purchases-account-wrapper').attr('hidden', 'hidden');
+        load_transactions(window.ico.crowdsaleAddress, function(err, transactions) {
+            if (err) {
+                console.log(err);
+                return;
+            }
+
+            if (jQuery('.ethereum-ico-purchases-table').text() !== '') {
+                render_transactions(transactions, window.ico.crowdsaleAddress);
+            }
+        });
+    }
+}
+
+// if referree address is not set, try to obtain it from MetaMask
+function ico_updateReferreeAddress() {
+    if ('' !== jQuery("#ethereum-ico-referral-account").val()) {
+        return;
+    }
+    // 1. проверить, есть ли аккаунт. если нет, показать поле ввода адреса
+    // 2. если есть, загрузить транзакции для адреса
+    getUserAccounts(function(err, accounts) {
+        if (err) {
+            console.log(err); 
+            if (err === window.ico.str_unlock_metamask_account) {
+                jQuery('.ethereum-ico-referral-account-wrapper').removeClass('hidden');
+                jQuery('.ethereum-ico-referral-account-wrapper').removeAttr('hidden');
+            }
+            else if (err === window.ico.str_download_metamask) {
+                jQuery('.ethereum-ico-referral-account-wrapper').removeClass('hidden');
+                jQuery('.ethereum-ico-referral-account-wrapper').removeAttr('hidden');
+            }
+            return;
+        }
+
+        if (0 === accounts.length) {
+            console.log("Metamask account not found"); 
+            jQuery('.ethereum-ico-referral-account-wrapper').removeClass('hidden');
+            jQuery('.ethereum-ico-referral-account-wrapper').removeAttr('hidden');
+            return;
+        }
+        
+        jQuery("#ethereum-ico-referral-account").val(accounts[0]);
+        setTimeout(changeReferralAccount, 1);
+
+    });
+}
+
+function render_transactions(transactions, toAddress, fromAddress) {
+    // clear tbody
+    jQuery( ".ethereum-ico-purchases-table tbody" ).html("");
+
+    var blockchain_network = '';
+    if ('mainnet' !== window.ico.blockchain_network) {
+        blockchain_network = window.ico.blockchain_network + '.';
+    }
+    var count = 0;
+    for (var i = 0; i < transactions.length; i++) {
+        var t = transactions[i];
+        if (t.value === '0') {
+            continue;
+        }
+        if ('undefined' !== typeof toAddress && toAddress.toLowerCase() !== t.to.toLowerCase()) {
+            continue;
+        }
+        if ('undefined' !== typeof fromAddress && fromAddress.toLowerCase() !== t.from.toLowerCase()) {
+            continue;
+        }
+        var days = (new Date - new Date(parseInt(t.timeStamp) * 1000)) / (24 * 3600 * 1000);
+        var dateString = '';
+        if (days >= 1) {
+            dateString = Math.floor(days) + " days";
+        } else {
+            var hours = 24 * days;
+            if (hours >= 1) {
+                dateString = Math.floor(hours) + " hours";
+            } else {
+                var minutes = 60 * hours;
+                if (minutes >= 1) {
+                    dateString = Math.floor(minutes) + " minutes";
+                } else {
+                    dateString = "recently";
+                }
+            }
+        }
+        var thash = t.hash.substr(0, 8);
+        var valueEth = parseFloat(t.value) / 1000000000000000000;
+        var valueToken = valueEth * window.ico.tokenRate;
+        var tr = '<tr>';
+        tr += '<th scope="row">' + (count + 1) + '</th>';
+        tr += '<td>' + valueEth + '</td>';
+        tr += '<td>' + valueToken + '</td>';
+        tr += '<td>' + dateString + '</td>';
+        tr += '<td><a target="_blank" href="https://' + blockchain_network + 'etherscan.io/tx/' + t.hash + '">' + thash + '</td>';
+        tr += '</tr>';
+        jQuery( tr ).appendTo( ".ethereum-ico-purchases-table tbody" );
+        count++;
+        if (count >= 10) {
+            break;
+        }
+    }
+}
+
+function load_transactions(address, callback) {
+    if ('' === address) {
+        callback.call(null, "Empty address requested for load_transactions!", null);
+        return;
+    }
+    var blockchain_network = '';
+    if ('mainnet' !== window.ico.blockchain_network) {
+        blockchain_network= '-' + window.ico.blockchain_network;
+    }
+    // https://stackoverflow.com/a/42538992/4256005
+    jQuery.ajax({
+        headers:{  
+            "Accept":"application/json",//depends on your api
+            "Content-type":"application/x-www-form-urlencoded"//depends on your api
+        },
+        url: "https://api" + blockchain_network + ".etherscan.io/api?module=account&action=txlist&address=" + address + "&startblock=0&endblock=99999999&page=1&offset=100&sort=desc",
+        success:function(r) {
+            if (r.status !== "1") {
+                console.log(r.message);
+                callback.call(null, r.message, null);
+                return;
+            }
+            var trxns = r.result;
+            callback.call(null, null, trxns);
+        }
+    });
+}

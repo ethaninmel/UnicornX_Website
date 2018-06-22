@@ -1,1 +1,9 @@
-2018/06/14-14:00:33.685 34307 Reusing MANIFEST /Users/daniel/Documents/GitHub/UnicornX_Website/.laya/chrome/Default/Session Storage/MANIFEST-000001
+2018/06/22-16:45:29.755 29443 Reusing MANIFEST /Users/daniel/Documents/GitHub/UnicornX_Website/.laya/chrome/Default/Session Storage/MANIFEST-000001
+2018/06/22-16:45:29.755 29443 Recovering log #65
+2018/06/22-16:45:29.755 29443 Reusing old log /Users/daniel/Documents/GitHub/UnicornX_Website/.laya/chrome/Default/Session Storage/000065.log 
+2018/06/22-16:56:53.083 214035 Compacting 1@0 + 1@1 files
+2018/06/22-16:56:53.092 214035 Generated table #68@0: 663 keys, 16169 bytes
+2018/06/22-16:56:53.092 214035 Compacted 1@0 + 1@1 files => 16169 bytes
+2018/06/22-16:56:53.093 214035 compacted to: files[ 0 1 1 0 0 0 0 ]
+2018/06/22-16:56:53.093 214035 Delete type=2 #63
+2018/06/22-16:56:53.093 214035 Delete type=2 #66

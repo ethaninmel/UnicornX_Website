@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":427,
-    "selecteID":467,
+    "selectedBox":684,
+    "selecteID":681,
     "referenceLines":[
         {
             "value":21,
@@ -13,6 +13,16 @@
             "value":353,
             "type":0,
             "id":2
+        },
+        {
+            "value":938,
+            "type":0,
+            "id":3
+        },
+        {
+            "value":-1413,
+            "type":0,
+            "id":4
         }],
     "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
@@ -26,29 +36,28 @@
         {
             "x":15,
             "type":"Box",
-            "props":{"y":0,"x":0,"width":1920,"var":"page","height":1080},
+            "props":{"y":0,"x":0,"var":"page"},
             "nodeParent":1,
             "label":"Box(page)",
             "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "compId":399,
+            "compId":667,
             "child":[
                 {
                     "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":0,"width":1920,"var":"mainpage","height":1080},
-                    "nodeParent":399,
+                    "nodeParent":667,
                     "label":"Box(mainpage)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":427,
                     "child":[
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
                             "nodeParent":427,
@@ -61,7 +70,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"comp/bg01.PNG"},
                             "nodeParent":427,
@@ -75,7 +83,6 @@
                             "$LOCKED":true
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":443,"x":492,"width":378,"skin":"comp/earth_box.png","sizeGrid":"40,90,32,95","scaleY":2.5,"scaleX":2.5,"height":146},
                             "nodeParent":427,
@@ -88,7 +95,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":197,"x":558,"skin":"comp/title_main.PNG"},
                             "nodeParent":427,
@@ -101,7 +107,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Button",
                             "props":{"y":888,"x":573,"width":265,"stateNum":"3","skin":"comp/button_mainpage.png","labelSize":33,"labelColors":"#00BFFF,#8A2BE2,#FF4500\t","labelBold":true,"label":"Join Whitelist","height":99},
                             "nodeParent":427,
@@ -114,7 +119,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Button",
                             "props":{"y":888,"x":1066,"width":265,"toggle":false,"skin":"comp/button_mainpage.png","labelSize":33,"labelColors":"#00BFFF,#8A2BE2,#FF4500\t","labelBold":true,"label":"Whitepaper","height":99},
                             "nodeParent":427,
@@ -127,7 +131,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":529,"x":868,"skin":"comp/triangle.png","scaleY":0.6,"scaleX":0.6},
                             "nodeParent":427,
@@ -140,11 +143,10 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
-                            "props":{"y":427,"x":576,"skin":"comp/unicorn.png","scaleY":0.7,"scaleX":0.7},
+                            "props":{"y":427,"x":576,"var":"button1","skin":"comp/unicorn.png","scaleY":0.7,"scaleX":0.7},
                             "nodeParent":427,
-                            "label":"Image",
+                            "label":"Image(button1)",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
@@ -157,7 +159,7 @@
                     "x":30,
                     "type":"Box",
                     "props":{"y":1130,"x":0,"width":1920,"var":"presale","height":1080},
-                    "nodeParent":399,
+                    "nodeParent":667,
                     "label":"Box(presale)",
                     "isOpen":false,
                     "isDirectory":true,
@@ -647,7 +649,7 @@
                     "x":30,
                     "type":"Box",
                     "props":{"y":2260,"x":0,"width":1920,"var":"token","height":1080},
-                    "nodeParent":399,
+                    "nodeParent":667,
                     "label":"Box(token)",
                     "isOpen":false,
                     "isDirectory":true,
@@ -1309,13 +1311,14 @@
                                         ]
                                 }],
                             "$HIDDEN":false
-                        }]
+                        }],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
                     "type":"Box",
                     "props":{"y":3390,"x":0,"width":1920,"var":"roadmap","height":1080},
-                    "nodeParent":399,
+                    "nodeParent":667,
                     "label":"Box(roadmap)",
                     "isOpen":true,
                     "isDirectory":true,
@@ -1352,7 +1355,7 @@
                         {
                             "x":45,
                             "type":"Box",
-                            "props":{"y":66,"x":389},
+                            "props":{"y":156,"x":389},
                             "nodeParent":400,
                             "label":"Box",
                             "isOpen":false,
@@ -1526,7 +1529,7 @@
                                 },
                                 {
                                     "type":"Label",
-                                    "props":{"y":103,"x":307,"wordWrap":true,"width":781,"text":"2018 Q4 \\nRelease of the Equity Financing System\\nLaunch of ICO for game compamies on the platform\\nRelease of  the Universal Account System\\nRelease of the Exchange ","height":160,"fontSize":30,"color":"#f3e9e9","alpha":0,"align":"left"},
+                                    "props":{"y":103,"x":307,"wordWrap":true,"width":781,"visible":false,"text":"2018 Q4 \\nRelease of the Equity Financing System\\nLaunch of ICO for game compamies on the platform\\nRelease of  the Universal Account System\\nRelease of the Exchange ","height":160,"fontSize":30,"color":"#f3e9e9","alpha":0,"align":"left"},
                                     "nodeParent":529,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -1538,7 +1541,7 @@
                                 },
                                 {
                                     "type":"Label",
-                                    "props":{"y":290,"x":325,"wordWrap":true,"width":733,"text":"2019 Q2 \\nIntroduction of the Development Tool for VR and MR developers\\nSetup Exchange\\nBuild up the Supervision Mechanism","height":160,"fontSize":30,"color":"#f3e9e9","alpha":0,"align":"left"},
+                                    "props":{"y":290,"x":325,"wordWrap":true,"width":733,"visible":false,"text":"2019 Q2 \\nIntroduction of the Development Tool for VR and MR developers\\nSetup Exchange\\nBuild up the Supervision Mechanism","height":160,"fontSize":30,"color":"#f3e9e9","alpha":0,"align":"left"},
                                     "nodeParent":529,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -1550,7 +1553,7 @@
                                 },
                                 {
                                     "type":"Label",
-                                    "props":{"y":492,"x":213,"wordWrap":true,"width":781,"text":"2019 Q4 \\nRelease of the Game Devices (Mining Machine)\\nRelease of various VR Games and MR Applications","height":106,"fontSize":30,"color":"#f3e9e9","alpha":0,"align":"left"},
+                                    "props":{"y":492,"x":213,"wordWrap":true,"width":781,"visible":false,"text":"2019 Q4 \\nRelease of the Game Devices (Mining Machine)\\nRelease of various VR Games and MR Applications","height":106,"fontSize":30,"color":"#f3e9e9","alpha":0,"align":"left"},
                                     "nodeParent":529,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -1562,7 +1565,7 @@
                                 },
                                 {
                                     "type":"Label",
-                                    "props":{"y":669,"x":253,"wordWrap":true,"width":743,"text":"2020 Q1 \\nBring Blockchain Technology to the Mainstream\\nHelp all companies conduct Equity Financing","height":111,"fontSize":30,"color":"#f3e9e9","alpha":0,"align":"left"},
+                                    "props":{"y":669,"x":253,"wordWrap":true,"width":743,"visible":false,"text":"2020 Q1 \\nBring Blockchain Technology to the Mainstream\\nHelp all companies conduct Equity Financing","height":111,"fontSize":30,"color":"#f3e9e9","alpha":0,"align":"left"},
                                     "nodeParent":529,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -1598,14 +1601,30 @@
                                         ],
                                     "$HIDDEN":false
                                 }]
-                        }]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "props":{"y":101,"x":814,"skin":"comp/title_roadmap.PNG"},
+                            "nodeParent":400,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":686,
+                            "child":[
+                                ]
+                        }],
+                    "$LOCKED":true,
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":4520,"x":0,"width":1920,"var":"team","height":1080},
-                    "nodeParent":399,
-                    "label":"Box(team)",
+                    "props":{"y":4520,"x":0,"width":1920,"var":"founder","height":1080},
+                    "nodeParent":667,
+                    "label":"Box(founder)",
                     "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
@@ -1642,257 +1661,333 @@
                         {
                             "x":45,
                             "type":"Box",
-                            "props":{"y":169,"x":77,"var":"ceo"},
+                            "props":{"y":212,"x":111},
                             "nodeParent":477,
-                            "label":"Box(ceo)",
-                            "isOpen":false,
+                            "label":"Box",
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
-                            "compId":531,
+                            "compId":668,
                             "child":[
                                 {
-                                    "type":"Image",
-                                    "props":{"y":0,"x":0,"skin":"comp/member_background.PNG"},
-                                    "nodeParent":531,
-                                    "label":"Image",
-                                    "isDirectory":false,
+                                    "x":60,
+                                    "type":"Box",
+                                    "props":{"y":3,"x":634,"width":430,"var":"ceo","height":824},
+                                    "nodeParent":668,
+                                    "label":"Box(ceo)",
+                                    "isOpen":true,
+                                    "isDirectory":true,
                                     "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":487,
+                                    "hasChild":true,
+                                    "compId":531,
                                     "child":[
-                                        ]
+                                        {
+                                            "x":75,
+                                            "type":"Image",
+                                            "props":{"y":14,"x":48,"skin":"comp/member_background.PNG","scaleY":0.9,"scaleX":0.8},
+                                            "nodeParent":531,
+                                            "label":"Image",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":487,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Image",
+                                            "props":{"y":769,"x":137,"skin":"comp/bottom_circle.png","scaleY":0.25,"scaleX":0.25},
+                                            "nodeParent":531,
+                                            "label":"Image",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":484,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Image",
+                                            "props":{"y":232,"x":58,"skin":"comp/member_yelowLine.PNG"},
+                                            "nodeParent":531,
+                                            "label":"Image",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":488,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Label",
+                                            "props":{"y":248,"x":196,"text":"CEO","fontSize":55,"color":"#f6cc8d","bold":true},
+                                            "nodeParent":531,
+                                            "label":"Label",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":528,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Label",
+                                            "props":{"y":323,"x":71,"wordWrap":true,"width":347,"text":"Mike Huang graduated from the University of Melbourne, majored in Master of Information Technology. He has deep understanding on data structure and distributed algorithms.\\n\\nHe won the first prize and took the second place in Olympiad in Informatics Competition, and he was qualified to attend Tongji University without the entrance examinations. \\n\\nMr Huang is a Sun Certified Java Developer, an Oracle Certified Administrator (OCA) and an Oracle Certified Professional (OCP). \\n\\nBesides, he is also a musician, he has been invited to Chinese most popular TV music show, Heroes of Remix, to be on the same stage with PSY and Leehom Wang.","leading":1,"height":441,"fontSize":18,"color":"#eee6e6","align":"center"},
+                                            "nodeParent":531,
+                                            "label":"Label",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":538,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Image",
+                                            "props":{"y":-14,"x":171,"skin":"comp/Mike.PNG"},
+                                            "nodeParent":531,
+                                            "label":"Image",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":542,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Label",
+                                            "props":{"y":166,"x":129,"text":"Mike Huang","fontSize":45,"color":"#efdede","bold":true,"align":"center"},
+                                            "nodeParent":531,
+                                            "label":"Label",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":671,
+                                            "child":[
+                                                ]
+                                        }]
                                 },
                                 {
-                                    "type":"Image",
-                                    "props":{"y":748,"x":47,"skin":"comp/bottom_circle.png","scaleY":0.5,"scaleX":0.5},
-                                    "nodeParent":531,
-                                    "label":"Image",
-                                    "isDirectory":false,
+                                    "x":60,
+                                    "type":"Box",
+                                    "props":{"y":3,"x":0,"width":430,"var":"cto","height":824},
+                                    "nodeParent":668,
+                                    "label":"Box(cto)",
+                                    "isOpen":true,
+                                    "isDirectory":true,
                                     "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":484,
+                                    "hasChild":true,
+                                    "compId":543,
                                     "child":[
-                                        ]
+                                        {
+                                            "x":75,
+                                            "type":"Image",
+                                            "props":{"y":30,"x":43,"skin":"comp/member_background.PNG","scaleY":0.9,"scaleX":0.8},
+                                            "nodeParent":543,
+                                            "label":"Image",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":544,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Image",
+                                            "props":{"y":769,"x":137,"skin":"comp/bottom_circle.png","scaleY":0.25,"scaleX":0.25},
+                                            "nodeParent":543,
+                                            "label":"Image",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":545,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Image",
+                                            "props":{"y":232,"x":58,"skin":"comp/member_yelowLine.PNG"},
+                                            "nodeParent":543,
+                                            "label":"Image",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":546,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Label",
+                                            "props":{"y":248,"x":189,"text":"CTO","fontSize":55,"color":"#f6cc8d","bold":true},
+                                            "nodeParent":543,
+                                            "label":"Label",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":547,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Label",
+                                            "props":{"y":323,"x":72,"wordWrap":true,"width":340,"text":"Ethan Song has achieved his master degree in Information Technology at The University of Melbourne.\\n\\nHe has many years of experience in both IT and game industry. He has developed both MMORPG and CCG kind of game and has deep understanding of distributed systems.\\n\\nHe has been an active blockchain enthusiast since 2016, and has participated in several public chain projects. He has rich experience in blockchain technology and is familiar with cutting-edge technologies in blockchain industry. \\n\\nHe has been recently leading the development of several blockchain games and also other dapps.","leading":1,"height":389,"fontSize":18,"color":"#eee6e6","align":"center"},
+                                            "nodeParent":543,
+                                            "label":"Label",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":548,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Image",
+                                            "props":{"y":-14,"x":171,"skin":"comp/Ethan.PNG"},
+                                            "nodeParent":543,
+                                            "label":"Image",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":549,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Label",
+                                            "props":{"y":167,"x":121,"text":"Ethan Song","fontSize":45,"color":"#efdede","bold":true,"align":"center"},
+                                            "nodeParent":543,
+                                            "label":"Label",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":672,
+                                            "child":[
+                                                ]
+                                        }]
                                 },
                                 {
-                                    "type":"Image",
-                                    "props":{"y":232,"x":58,"skin":"comp/member_yelowLine.PNG"},
-                                    "nodeParent":531,
-                                    "label":"Image",
-                                    "isDirectory":false,
+                                    "x":60,
+                                    "type":"Box",
+                                    "props":{"y":3,"x":1268,"width":430,"var":"cfo","height":824},
+                                    "nodeParent":668,
+                                    "label":"Box(cfo)",
+                                    "isOpen":false,
+                                    "isDirectory":true,
                                     "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":488,
+                                    "hasChild":true,
+                                    "compId":550,
                                     "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Label",
-                                    "props":{"y":268,"x":189,"text":"CEO","fontSize":55,"color":"#f6cc8d","bold":true},
-                                    "nodeParent":531,
-                                    "label":"Label",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":528,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Label",
-                                    "props":{"y":349,"x":73,"wordWrap":true,"width":352,"text":"Mike Huang graduated from the University of Melbourne, majored in Master of Information Technology. He has deep understanding in data structure and distributed algorithms, he won the first prize and took the second place in Olympiad in Informatics Competition, and he was qualified to attend Tongji University without entrance examinations. Mr Huang is a Sun Certified Java Developer, an Oracle Certified Administrator (OCA) and an Oracle Certified Professional (OCP). Besides, he is also a musician, he has been invited to Chinese most popular TV music show, Heroes of Remix, to be on the same stage with PSY and Leehom Wang.","height":351,"fontSize":19,"color":"#eee6e6","align":"center"},
-                                    "nodeParent":531,
-                                    "label":"Label",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":538,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Image",
-                                    "props":{"y":36,"x":171,"skin":"comp/Mike.PNG"},
-                                    "nodeParent":531,
-                                    "label":"Image",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":542,
-                                    "child":[
-                                        ]
+                                        {
+                                            "type":"Image",
+                                            "props":{"y":27,"x":39,"skin":"comp/member_background.PNG","scaleY":0.9,"scaleX":0.8},
+                                            "nodeParent":550,
+                                            "label":"Image",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":551,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "props":{"y":769,"x":137,"skin":"comp/bottom_circle.png","scaleY":0.25,"scaleX":0.25},
+                                            "nodeParent":550,
+                                            "label":"Image",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":552,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "props":{"y":232,"x":58,"skin":"comp/member_yelowLine.PNG"},
+                                            "nodeParent":550,
+                                            "label":"Image",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":553,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Label",
+                                            "props":{"y":248,"x":189,"text":"CFO","fontSize":55,"color":"#f6cc8d","bold":true},
+                                            "nodeParent":550,
+                                            "label":"Label",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":554,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Label",
+                                            "props":{"y":323,"x":75,"wordWrap":true,"width":328,"text":"Daniel Duan earned his bachelor degree with Distinction in Computer Science at RMIT University and master degree in Computing at The University of Melbourne. \\n\\nHe is proficient in designing and developing web applications. He was a IT Manager in a manufacturing company.\\n\\nBesides the field of technology, he has rich experience in the fund management. He was Finance Manager and Investment Advisor in a private equity firm.\\n\\n","leading":3,"height":389,"fontSize":18,"color":"#eee6e6","align":"center"},
+                                            "nodeParent":550,
+                                            "label":"Label",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":555,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "props":{"y":-14,"x":171,"skin":"comp/Daniel.PNG"},
+                                            "nodeParent":550,
+                                            "label":"Image",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":556,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Label",
+                                            "props":{"y":166,"x":117,"text":"Daniel Duan","fontSize":45,"color":"#efdede","bold":true,"align":"center"},
+                                            "nodeParent":550,
+                                            "label":"Label",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":673,
+                                            "child":[
+                                                ]
+                                        }]
                                 }]
                         },
                         {
                             "x":45,
-                            "type":"Box",
-                            "props":{"y":169,"x":711,"var":"cto"},
+                            "type":"Image",
+                            "props":{"y":65,"x":807,"skin":"comp/title_founder.PNG","scaleY":1.2,"scaleX":1.2},
                             "nodeParent":477,
-                            "label":"Box(cto)",
-                            "isOpen":false,
-                            "isDirectory":true,
+                            "label":"Image",
+                            "isDirectory":false,
                             "isAniNode":true,
-                            "hasChild":true,
-                            "compId":543,
+                            "hasChild":false,
+                            "compId":687,
                             "child":[
-                                {
-                                    "type":"Image",
-                                    "props":{"skin":"comp/member_background.PNG"},
-                                    "nodeParent":543,
-                                    "label":"Image",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":544,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Image",
-                                    "props":{"y":748,"x":47,"skin":"comp/bottom_circle.png","scaleY":0.5,"scaleX":0.5},
-                                    "nodeParent":543,
-                                    "label":"Image",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":545,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Image",
-                                    "props":{"y":232,"x":58,"skin":"comp/member_yelowLine.PNG"},
-                                    "nodeParent":543,
-                                    "label":"Image",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":546,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Label",
-                                    "props":{"y":268,"x":189,"text":"CTO","fontSize":55,"color":"#f6cc8d","bold":true},
-                                    "nodeParent":543,
-                                    "label":"Label",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":547,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Label",
-                                    "props":{"y":349,"x":99,"wordWrap":true,"width":316,"text":"Blockchain Expert\\n Blockchain Project Evaluator\\n\\nLead developer of popular MMORPG for listed companies and many CCG for indie studios","height":389,"fontSize":24,"color":"#eee6e6","align":"center"},
-                                    "nodeParent":543,
-                                    "label":"Label",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":548,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Image",
-                                    "props":{"y":36,"x":171,"skin":"comp/Ethan.PNG"},
-                                    "nodeParent":543,
-                                    "label":"Image",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":549,
-                                    "child":[
-                                        ]
-                                }]
-                        },
-                        {
-                            "x":45,
-                            "type":"Box",
-                            "props":{"y":169,"x":1345,"width":498,"var":"cfo","height":842},
-                            "nodeParent":477,
-                            "label":"Box(cfo)",
-                            "isOpen":false,
-                            "isDirectory":true,
-                            "isAniNode":true,
-                            "hasChild":true,
-                            "compId":550,
-                            "child":[
-                                {
-                                    "type":"Image",
-                                    "props":{"skin":"comp/member_background.PNG"},
-                                    "nodeParent":550,
-                                    "label":"Image",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":551,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Image",
-                                    "props":{"y":748,"x":47,"skin":"comp/bottom_circle.png","scaleY":0.5,"scaleX":0.5},
-                                    "nodeParent":550,
-                                    "label":"Image",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":552,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Image",
-                                    "props":{"y":232,"x":58,"skin":"comp/member_yelowLine.PNG"},
-                                    "nodeParent":550,
-                                    "label":"Image",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":553,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Label",
-                                    "props":{"y":268,"x":189,"text":"CFO","fontSize":55,"color":"#f6cc8d","bold":true},
-                                    "nodeParent":550,
-                                    "label":"Label",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":554,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Label",
-                                    "props":{"y":349,"x":59,"wordWrap":true,"width":372,"text":"Daniel earned his bachelor degree with Distinction in Computer Science at RMIT University and master degree in Computing at The University of Melbourne. He is proficient in designing and developing web applications. He was a IT Manager in a manufacturing company.\\n\\nBesides the field of technology, he has rich experience in the fund management. He was Finance Manager and Investment Advisor in a private equity firm.\\n\\n","height":389,"fontSize":24,"color":"#eee6e6","align":"center"},
-                                    "nodeParent":550,
-                                    "label":"Label",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":555,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Image",
-                                    "props":{"y":36,"x":171,"skin":"comp/Daniel.PNG"},
-                                    "nodeParent":550,
-                                    "label":"Image",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":556,
-                                    "child":[
-                                        ]
-                                }]
+                                ]
                         }],
                     "$LOCKED":false,
                     "$HIDDEN":false
@@ -1900,8 +1995,113 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":5650,"x":0,"width":1920,"var":"advisor","height":1080},
-                    "nodeParent":399,
+                    "props":{"y":5650,"x":0,"width":1920,"var":"team","height":2160},
+                    "nodeParent":667,
+                    "label":"Box(team)",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":674,
+                    "child":[
+                        {
+                            "x":45,
+                            "type":"EffectAnimation",
+                            "props":{"skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
+                            "nodeParent":674,
+                            "label":"EffectAnimation(move)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":675,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "props":{"y":0,"x":0,"skin":"comp/bg_for8people.png"},
+                            "nodeParent":674,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":691,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "props":{"y":110,"x":681,"skin":"comp/title_teammember.PNG","scaleY":1.2,"scaleX":1.2},
+                            "nodeParent":674,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":688,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "props":{"y":853,"x":209,"text":"Giovanni Chen","fontSize":33,"color":"#eae4e4"},
+                            "nodeParent":674,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":692,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "props":{"y":625,"x":232,"width":174,"text":"Ivan Huang","height":33,"fontSize":33,"color":"#eae4e4"},
+                            "nodeParent":674,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":693,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "props":{"y":397,"x":244,"text":"Jianan Hu","fontSize":33,"color":"#eae4e4"},
+                            "nodeParent":674,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":694,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "props":{"y":1081,"x":214,"text":"Timothy Wang","fontSize":33,"color":"#eae4e4"},
+                            "nodeParent":674,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":695,
+                            "child":[
+                                ]
+                        }],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Box",
+                    "props":{"y":7860,"x":0,"width":1920,"var":"advisor","height":1080},
+                    "nodeParent":667,
                     "label":"Box(advisor)",
                     "isOpen":false,
                     "isDirectory":true,
@@ -1935,73 +2135,13 @@
                         },
                         {
                             "type":"Image",
-                            "props":{"y":159,"x":981,"skin":"comp/Kieran Nolan.png"},
+                            "props":{"y":124,"x":804,"skin":"comp/title_advisor.PNG"},
                             "nodeParent":480,
                             "label":"Image",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":616,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":683,"x":41,"skin":"comp/Zhangshuai.png"},
-                            "nodeParent":480,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":649,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":159,"x":41,"skin":"comp/AnoukPinchetti.PNG"},
-                            "nodeParent":480,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":658,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Label",
-                            "props":{"y":707,"x":324,"wordWrap":true,"width":576,"text":"Freelance Screenwriter\\nFilm Producer\\nE-sports Professional Player\\nWCG Warcraft 3 Runner-up in regional tournament\\nOnline Video Contributor","height":300,"fontSize":25,"color":"#f6f4f4"},
-                            "nodeParent":480,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":651,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Label",
-                            "props":{"y":146,"x":291,"wordWrap":true,"width":622,"text":"Blockchain Educator and Business Strategy Consultant.\\nLeading workshops and consulting on the application of Blockchain technology to a range of corporate and community issues.  Technologist with a wealth of experience throughout the IT Industry, having worked on three continents for government, banking, mining, NFP and community sectors.  Two decades of experience in the IT industry, having trained to perform in disciplines ranging from network administration to software development to business analysis, service delivery management and project management. A broad researcher and activist in the community currencies space since the '90s. Currently a Trainer for The New Money Institute, an Education Consultant for the Melbourne Blockchain Centre, and Educator and Business Strategy Consultant for Intraverse Blockchain Technologies.","height":432,"fontSize":25,"color":"#f6f4f4"},
-                            "nodeParent":480,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":660,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Label",
-                            "props":{"y":187,"x":1233,"wordWrap":true,"width":612,"text":"I’m a Melbourne-based Educational Technologist, International Speaker, CoderDojo Mentor, and Blockchain Expert driven by three tenets: innovation, disruption, and lifelong learning—and it is these key values that empower me to play my part in revolutionising the EdTech space as we know it. Over the course of a decade, I have gained extensive industry experience, specialising in education, technology, and blockchain application.","height":391,"fontSize":25,"color":"#f6f4f4"},
-                            "nodeParent":480,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":661,
+                            "compId":662,
                             "child":[
                                 ]
                         },
@@ -2010,7 +2150,7 @@
                             "props":{"y":-7365,"x":-2324},
                             "nodeParent":480,
                             "label":"Box",
-                            "isOpen":false,
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -2042,55 +2182,129 @@
                                 }]
                         },
                         {
-                            "type":"Image",
-                            "props":{"y":44,"x":804,"skin":"comp/title_advisor.PNG"},
+                            "type":"Box",
+                            "props":{"y":299,"x":335,"var":"Anouk"},
                             "nodeParent":480,
-                            "label":"Image",
-                            "isDirectory":false,
+                            "label":"Box(Anouk)",
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
-                            "compId":662,
+                            "hasChild":true,
+                            "compId":677,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"x":10,"skin":"comp/AnoukPinchetti.PNG"},
+                                    "nodeParent":677,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":658,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "type":"Image",
+                                    "props":{"y":320,"width":250,"skin":"comp/advisor_line.PNG"},
+                                    "nodeParent":677,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":664,
+                                    "child":[
+                                        ]
+                                }]
                         },
                         {
-                            "type":"Image",
-                            "props":{"y":588,"x":60,"skin":"comp/advisor_line.PNG"},
+                            "type":"Box",
+                            "props":{"y":299,"x":835,"var":"Kieran"},
                             "nodeParent":480,
-                            "label":"Image",
-                            "isDirectory":false,
+                            "label":"Box(Kieran)",
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
-                            "compId":664,
+                            "hasChild":true,
+                            "compId":678,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"x":10,"skin":"comp/KieranNolan.png"},
+                                    "nodeParent":678,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":616,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "type":"Image",
+                                    "props":{"y":320,"width":250,"skin":"comp/advisor_line.PNG"},
+                                    "nodeParent":678,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":665,
+                                    "child":[
+                                        ]
+                                }]
                         },
                         {
-                            "type":"Image",
-                            "props":{"y":588,"x":1007,"skin":"comp/advisor_line.PNG"},
+                            "type":"Box",
+                            "props":{"y":299,"x":1335,"var":"Zhang"},
                             "nodeParent":480,
-                            "label":"Image",
-                            "isDirectory":false,
+                            "label":"Box(Zhang)",
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
-                            "compId":665,
+                            "hasChild":true,
+                            "compId":680,
                             "child":[
-                                ]
-                        }]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"comp/Zhangshuai.png"},
+                                    "nodeParent":680,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":649,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "type":"Image",
+                                    "props":{"y":320,"width":250,"skin":"comp/advisor_line.PNG"},
+                                    "nodeParent":680,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":679,
+                                    "child":[
+                                        ]
+                                }]
+                        }],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":6780,"x":0,"width":1920,"var":"partner","height":1080},
-                    "nodeParent":399,
+                    "props":{"y":8990,"x":0,"width":1920,"var":"partner","height":1080},
+                    "nodeParent":667,
                     "label":"Box(partner)",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":612,
                     "child":[
                         {
+                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
                             "nodeParent":612,
@@ -2103,6 +2317,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"comp/bg_pure.png"},
                             "nodeParent":612,
@@ -2113,13 +2328,52 @@
                             "compId":614,
                             "child":[
                                 ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Box",
+                            "props":{"y":167,"x":311},
+                            "nodeParent":612,
+                            "label":"Box",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":684,
+                            "child":[
+                                {
+                                    "x":60,
+                                    "type":"Image",
+                                    "props":{"y":188,"visible":false,"skin":"comp/图层 0.png"},
+                                    "nodeParent":684,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":681,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "x":60,
+                                    "type":"Image",
+                                    "props":{"x":492,"skin":"comp/title_partners.PNG"},
+                                    "nodeParent":684,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":683,
+                                    "child":[
+                                        ]
+                                }]
                         }]
                 },
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":7860,"x":0,"var":"media","height":297},
-                    "nodeParent":399,
+                    "props":{"y":10070,"x":0,"var":"media","height":297},
+                    "nodeParent":667,
                     "label":"Box(media)",
                     "isOpen":false,
                     "isDirectory":true,
@@ -2295,7 +2549,8 @@
                             "compId":632,
                             "child":[
                                 ]
-                        }]
+                        }],
+                    "$HIDDEN":false
                 }]
         },
         {
@@ -2916,7 +3171,8 @@
                             "child":[
                                 ]
                         }]
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -2965,7 +3221,8 @@
                     "compId":250,
                     "child":[
                         ]
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -3122,7 +3379,8 @@
                     "compId":142,
                     "child":[
                         ]
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -3371,7 +3629,8 @@
                             "child":[
                                 ]
                         }]
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -3438,6 +3697,7 @@
                     "props":{"y":23,"x":1,"width":105,"skin":"comp/sidebar.png","height":343},
                     "nodeParent":72,
                     "label":"Image",
+                    "isOpen":null,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -3521,6 +3781,7 @@
                     "props":{"y":64,"x":500,"var":"frame1"},
                     "nodeParent":72,
                     "label":"Box(frame1)",
+                    "isOpen":null,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -3556,6 +3817,7 @@
                     "props":{"y":158,"x":492},
                     "nodeParent":72,
                     "label":"Box",
+                    "isOpen":null,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -3591,6 +3853,7 @@
                     "props":{"y":161,"x":143},
                     "nodeParent":72,
                     "label":"Box",
+                    "isOpen":null,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -3626,6 +3889,7 @@
                     "props":{"y":257,"x":151},
                     "nodeParent":72,
                     "label":"Box",
+                    "isOpen":null,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -3655,7 +3919,8 @@
                             "child":[
                                 ]
                         }]
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -3683,7 +3948,7 @@
                 },
                 {
                     "type":"Button",
-                    "props":{"y":20,"x":512,"var":"tab_why","stateNum":"2","skin":"comp/btn_why.png"},
+                    "props":{"y":20,"x":512,"var":"tab_why","stateNum":"2","skin":"comp/btn_whyunicornx.png"},
                     "nodeParent":456,
                     "label":"Button(tab_why)",
                     "isDirectory":false,
@@ -3695,7 +3960,7 @@
                 },
                 {
                     "type":"Button",
-                    "props":{"y":20,"x":988,"var":"tab_roadmap","stateNum":"2","skin":"comp/btn_roadmap.png"},
+                    "props":{"y":22,"x":908,"var":"tab_roadmap","stateNum":"2","skin":"comp/btn_roadmap.png"},
                     "nodeParent":456,
                     "label":"Button(tab_roadmap)",
                     "isDirectory":false,
@@ -3707,7 +3972,7 @@
                 },
                 {
                     "type":"Button",
-                    "props":{"y":20,"x":783,"var":"tab_tokensale","stateNum":"2","skin":"comp/btn_tokensale.png"},
+                    "props":{"y":22,"x":713,"var":"tab_tokensale","stateNum":"2","skin":"comp/btn_tokensale.png"},
                     "nodeParent":456,
                     "label":"Button(tab_tokensale)",
                     "isDirectory":false,
@@ -3719,7 +3984,7 @@
                 },
                 {
                     "type":"Button",
-                    "props":{"y":20,"x":1149,"var":"tab_founder","stateNum":"2","skin":"comp/btn_founder.png"},
+                    "props":{"y":22,"x":1059,"var":"tab_founder","stateNum":"2","skin":"comp/btn_founder.png"},
                     "nodeParent":456,
                     "label":"Button(tab_founder)",
                     "isDirectory":false,
@@ -3731,7 +3996,7 @@
                 },
                 {
                     "type":"Button",
-                    "props":{"y":20,"x":1312,"var":"tab_advisor","stateNum":"2","skin":"comp/btn_advisor.png"},
+                    "props":{"y":22,"x":1322,"var":"tab_advisor","stateNum":"2","skin":"comp/btn_advisor.png"},
                     "nodeParent":456,
                     "label":"Button(tab_advisor)",
                     "isDirectory":false,
@@ -3743,7 +4008,7 @@
                 },
                 {
                     "type":"Image",
-                    "props":{"y":34,"x":1021.7428571428571,"skin":"comp/lightpoint.png"},
+                    "props":{"y":34,"x":696,"skin":"comp/lightpoint.png"},
                     "nodeParent":456,
                     "label":"Image",
                     "isDirectory":false,
@@ -3752,8 +4017,33 @@
                     "compId":463,
                     "child":[
                         ]
+                },
+                {
+                    "type":"Button",
+                    "props":{"y":22,"x":1211,"var":"tab_team","stateNum":"2","skin":"comp/btn_team.png"},
+                    "nodeParent":456,
+                    "label":"Button(tab_team)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":669,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "props":{"y":22,"x":1467,"var":"tab_partner","stateNum":"2","skin":"comp/btn_partner.png"},
+                    "nodeParent":456,
+                    "label":"Button(tab_partner)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":670,
+                    "child":[
+                        ]
                 }],
-            "$LOCKED":false
+            "$LOCKED":false,
+            "$HIDDEN":false
         }],
     "animations":[
         {
@@ -4664,21 +4954,21 @@
                                 "index":10
                             },
                             {
-                                "value":1200,
+                                "value":1396,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":463,
                                 "key":"x",
-                                "index":80
+                                "index":103
                             },
                             {
-                                "value":1200,
+                                "value":1396,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":463,
                                 "label":null,
                                 "key":"x",
-                                "index":90
+                                "index":113
                             },
                             {
                                 "value":466,
@@ -4687,15 +4977,7 @@
                                 "target":463,
                                 "label":null,
                                 "key":"x",
-                                "index":170
-                            },
-                            {
-                                "value":466,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":463,
-                                "key":"x",
-                                "index":175
+                                "index":206
                             }]
                     }
                 }],

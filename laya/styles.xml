@@ -2,4 +2,6 @@
    <item name="comp/bg.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="comp/menu_bar.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="comp/bitcointalk.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="ui/back.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="ui/help.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
 </res>

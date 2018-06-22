@@ -1,0 +1,48 @@
+2018/06/18-00:44:38.103 193903 Reusing MANIFEST /Users/daniel/Documents/GitHub/UnicornX_Website/.laya/chrome/Default/IndexedDB/https_storage.y8.com_0.indexeddb.leveldb/MANIFEST-000001
+2018/06/18-01:55:18.550 147807 Level-0 table #5: started
+2018/06/18-01:55:18.636 147807 Level-0 table #5: 9283554 bytes OK
+2018/06/18-01:55:18.643 147807 Delete type=0 #3
+2018/06/18-01:55:22.819 147807 Level-0 table #7: started
+2018/06/18-01:55:22.927 147807 Level-0 table #7: 18174102 bytes OK
+2018/06/18-01:55:22.929 147807 Delete type=0 #4
+2018/06/18-01:55:22.931 147807 Compacting 1@1 + 1@2 files
+2018/06/18-01:55:22.955 147807 Generated table #8@1: 81 keys, 3039504 bytes
+2018/06/18-01:55:23.045 147807 Generated table #9@1: 5 keys, 15775906 bytes
+2018/06/18-01:55:23.080 147807 Generated table #10@1: 15 keys, 6241167 bytes
+2018/06/18-01:55:23.094 147807 Generated table #11@1: 5 keys, 2397565 bytes
+2018/06/18-01:55:23.095 147807 Generated table #12@1: 101 keys, 5822 bytes
+2018/06/18-01:55:23.095 147807 Compacted 1@1 + 1@2 files => 27459964 bytes
+2018/06/18-01:55:23.095 147807 compacted to: files[ 0 0 5 0 0 0 0 ]
+2018/06/18-01:55:23.096 147807 Delete type=2 #5
+2018/06/18-01:55:23.097 147807 Delete type=2 #7
+2018/06/18-01:55:27.085 147807 Level-0 table #14: started
+2018/06/18-01:55:27.124 147807 Level-0 table #14: 4239929 bytes OK
+2018/06/18-01:55:27.133 147807 Delete type=0 #6
+2018/06/18-01:56:01.631 147807 Level-0 table #16: started
+2018/06/18-01:56:01.660 147807 Level-0 table #16: 6918253 bytes OK
+2018/06/18-01:56:01.661 147807 Delete type=0 #13
+2018/06/18-15:41:09.007 147807 Compacting 2@0 + 0@1 files
+2018/06/18-15:41:09.010 147807 Generated table #17@0: 11 keys, 399348 bytes
+2018/06/18-15:41:09.027 147807 Generated table #18@0: 3 keys, 3839241 bytes
+2018/06/18-15:41:09.063 147807 Generated table #19@0: 5 keys, 6917938 bytes
+2018/06/18-15:41:09.063 147807 Generated table #20@0: 42 keys, 2382 bytes
+2018/06/18-15:41:09.063 147807 Compacted 2@0 + 0@1 files => 11158909 bytes
+2018/06/18-15:41:09.069 147807 compacted to: files[ 0 4 5 0 0 0 0 ]
+2018/06/18-15:41:09.069 147807 Delete type=2 #14
+2018/06/18-15:41:09.070 147807 Delete type=2 #16
+2018/06/18-15:41:09.071 147807 Expanding@1 1+1 (2382+5822 bytes) to 3+1 (10759561+5822 bytes)
+2018/06/18-15:41:09.071 147807 Compacting 3@1 + 1@2 files
+2018/06/18-15:41:09.093 147807 Generated table #21@1: 5 keys, 3839616 bytes
+2018/06/18-15:41:09.130 147807 Generated table #22@1: 5 keys, 6917938 bytes
+2018/06/18-15:41:09.131 147807 Generated table #23@1: 141 keys, 7546 bytes
+2018/06/18-15:41:09.131 147807 Compacted 3@1 + 1@2 files => 10765100 bytes
+2018/06/18-15:41:09.131 147807 compacted to: files[ 0 1 7 0 0 0 0 ]
+2018/06/18-15:41:09.132 147807 Delete type=2 #12
+2018/06/18-15:41:09.132 147807 Delete type=2 #18
+2018/06/18-15:41:09.132 147807 Delete type=2 #19
+2018/06/18-15:41:09.133 147807 Delete type=2 #20
+2018/06/19-13:18:28.408 147807 Compacting 1@1 + 2@2 files
+2018/06/19-13:18:28.447 147807 Generated table #24@1: 81 keys, 3039503 bytes
+2018/06/19-13:18:28.568 147807 Generated table #25@1: 15 keys, 16175017 bytes
+2018/06/19-13:18:28.570 147807 Compacted 1@1 + 2@2 files => 19214520 bytes
+2018/06/19-13:18:28.572 147807 compacted to: files[ 0 0 7 0 0 0 0 ]

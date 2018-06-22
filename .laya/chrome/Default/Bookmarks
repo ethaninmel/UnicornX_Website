@@ -1,0 +1,39 @@
+{
+   "checksum": "2a81d76e9682665b6618c1b460492173",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13173724504734458",
+            "id": "5",
+            "meta_info": {
+               "last_visited_desktop": "13173804470468598"
+            },
+            "name": "Bullet Force - Play Bullet Force on Crazy Games",
+            "type": "url",
+            "url": "https://www.crazygames.com/game/bullet-force-multiplayer"
+         } ],
+         "date_added": "13173541159153160",
+         "date_modified": "13173724504734458",
+         "id": "1",
+         "name": "书签栏",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13173541159153164",
+         "date_modified": "0",
+         "id": "2",
+         "name": "其他书签",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13173541159153166",
+         "date_modified": "0",
+         "id": "3",
+         "name": "移动设备书签",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

@@ -31,6 +31,7 @@ var TestUI = /** @class */ (function (_super) {
         _this.rightapps = [_this.right_app0, _this.right_app1, _this.right_app2, _this.right_app3];
         _this.rightups = [_this.right_up0, _this.right_up1, _this.right_up2, _this.right_up3];
         _this.currentTokensale = 1;
+        _this.pageLength = -9300;
         Laya.init(1920, 1080, WebGL);
         //设置适配模式
         Laya.stage.width = 1920;
@@ -47,6 +48,7 @@ var TestUI = /** @class */ (function (_super) {
         //console.log(this.mask.x);
         //console.log(this.bar_head.x);
         console.log();
+        UIConfig.closeDialogOnSide = false;
         _this.stage.on(Laya.Event.MOUSE_WHEEL, _this, _this.onMousewheel);
         // this.tab_lan.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.language,this.move,"comp/bg.png"]);
         // this.tab_roadmap.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.roadmap,this.roadmapmove,"comp/bg_pure.png"]);
@@ -58,6 +60,8 @@ var TestUI = /** @class */ (function (_super) {
         _this.tab_roadmap.on(Laya.Event.CLICK, _this, _this.onNavClick, ["roadmap"]);
         _this.tab_founder.on(Laya.Event.CLICK, _this, _this.onNavClick, ["founder"]);
         _this.tab_advisor.on(Laya.Event.CLICK, _this, _this.onNavClick, ["advisor"]);
+        _this.tab_team.on(Laya.Event.CLICK, _this, _this.onNavClick, ["team"]);
+        _this.tab_partner.on(Laya.Event.CLICK, _this, _this.onNavClick, ["partner"]);
         //this.tab_term.on(Laya.Event.CLICK,this,this.onNavClick,["term"]);
         //this.tab_doc.on(Laya.Event.CLICK,this,this.onNavClick,["doc"]);
         // this.road0.on(Laya.Event.CLICK,this,this.onBtnRoadClick,[0]);
@@ -75,8 +79,103 @@ var TestUI = /** @class */ (function (_super) {
         _this.phase4.on(Laya.Event.CLICK, _this, _this.switchTokensale, [4]);
         Laya.timer.loop(1000, _this, _this.countdown);
         _this.roadmap.on(Laya.Event.CLICK, _this, _this.roadmapAction);
+        _this.page.on(Laya.Event.CLICK, _this, _this.dragStart);
+        _this.page.on(Laya.Event.CLICK, _this, _this.dragStop);
+        _this.button1.on(Laya.Event.CLICK, _this, _this.HtmlDemo);
+        _this.Anouk.on(Laya.Event.CLICK, _this, _this.openDesc, [0]);
+        _this.Kieran.on(Laya.Event.CLICK, _this, _this.openDesc, [1]);
+        _this.Zhang.on(Laya.Event.CLICK, _this, _this.openDesc, [2]);
+        // this.Anouk.on(Laya.Event.MOUSE_OVER,this,this.openDesc,[0]);
+        // this.Kieran.on(Laya.Event.MOUSE_OVER,this,this.openDesc,[1]);
+        // this.Zhang.on(Laya.Event.MOUSE_OVER,this,this.openDesc,[2]);
+        //this.stage.on(Laya.Event.MOUSE_DOWN, this, this.onDragDown);
+        if (laya.utils.Browser.onMobile) {
+            _this.stage.on(Laya.Event.MOUSE_DOWN, _this, _this.onDrag);
+        }
         return _this;
     }
+    TestUI.prototype.onDrag = function (start) {
+        this.startY = Laya.stage.mouseY;
+        this.stage.on(Laya.Event.MOUSE_MOVE, this, this.onDragComplete);
+        Laya.stage.on(Laya.Event.MOUSE_UP, this, this.onMouseUp);
+        Laya.stage.on(Laya.Event.MOUSE_OUT, this, this.onMouseUp);
+    };
+    TestUI.prototype.onDragComplete = function () {
+        var position = this.page.y + (Laya.stage.mouseY - this.startY) / 10;
+        if (position >= this.pageLength && position <= 0) {
+            this.page.y = position;
+        }
+        else if (position > 0) {
+            this.page.y = 0;
+        }
+        else if (position < this.pageLength) {
+            this.page.y = this.pageLength;
+        }
+    };
+    TestUI.prototype.onMouseUp = function () {
+        this.stage.off(Laya.Event.MOUSE_MOVE, this, this.onDragComplete);
+        Laya.stage.off(Laya.Event.MOUSE_UP, this, this.onMouseUp);
+        Laya.stage.off(Laya.Event.MOUSE_OUT, this, this.onMouseUp);
+    };
+    TestUI.prototype.onDragDown = function () {
+        if (laya.utils.Browser.onMobile) {
+            this.stage.on(Laya.Event.MOUSE_UP, this, this.onDragUp, [Laya.stage.mouseY]);
+        }
+    };
+    TestUI.prototype.onDragUp = function (start) {
+        var move = Laya.stage.mouseY - start;
+        if (move > 0) {
+            if (this.page.y + move <= 0) {
+                this.page.y += move;
+            }
+            else {
+                this.page.y = 0;
+            }
+        }
+        else if (move < 0) {
+            if (this.page.y - move <= this.pageLength) {
+                this.page.y += move;
+            }
+            else {
+                this.page.y = this.pageLength;
+            }
+        }
+    };
+    TestUI.prototype.openDesc = function (index) {
+        var desc1;
+        var desc2;
+        var image;
+        switch (index) {
+            case 0:
+                image = "comp/AnoukPinchetti.PNG";
+                desc1 = "Blockchain Educator and Business Strategy Consultant. Leading workshops and consulting on the application of Blockchain technology to a range of corporate and community issues.\n\n";
+                desc2 = "Technologist with a wealth of experience throughout the IT Industry, having worked on three continents for government, banking, mining, NFP and community sectors.\n\nTwo decades of experience "
+                    + "in the IT industry, having trained to perform in disciplines ranging from network administration to software development to business analysis, service delivery management and project management. "
+                    + "A broad researcher and activist in the community currencies space since the '90s. Currently a Trainer for The New Money Institute, an Education Consultant for the Melbourne Blockchain Centre, and "
+                    + "Educator and Business Strategy Consultant for Intraverse Blockchain Technologies.";
+                break;
+            case 1:
+                image = "comp/KieranNolan.png";
+                desc1 = "I’m a Melbourne-based Educational Technologist, International Speaker, CoderDojo Mentor, and Blockchain Expert driven by three tenets: innovation, disruption, and lifelong learning—and it is these "
+                    + "key values that empower me to play my part in revolutionising the EdTech space as we know it. Over the course of a decade, I have gained extensive industry experience, specialising in education, "
+                    + "technology, and blockchain application.";
+                break;
+            case 2:
+                image = "comp/Zhangshuai.png";
+                desc1 = "Freelance Screenwriter\nFilm Producer\nE-sports Professional Player\nWCG Runner-up\nOnline Video Contributor";
+                break;
+        }
+        new AdvisorDialog(image, desc1, desc2).popup();
+    };
+    TestUI.prototype.HtmlDemo = function () {
+        //window.open("http://google.com", "myWindow","width=800,height=600,top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=n o, status=no");
+        var div = new GameDialog();
+        div.popup(true);
+    };
+    TestUI.prototype.dragStart = function () {
+    };
+    TestUI.prototype.dragStop = function () {
+    };
     TestUI.prototype.switchTokensale = function (clickNumber) {
         console.log("click" + clickNumber);
         if (!this.ani_1to2.isPlaying && !this.ani_2to3.isPlaying && !this.ani_3to4.isPlaying && !this.ani_4to3.isPlaying && !this.ani_3to2.isPlaying && !this.ani_2to1.isPlaying) {
@@ -141,7 +240,7 @@ var TestUI = /** @class */ (function (_super) {
         }
     };
     TestUI.prototype.countdown = function () {
-        var time = new Date("2018-06-30").valueOf() - new Date().valueOf();
+        var time = new Date("2018-07-15").valueOf() - new Date().valueOf();
         var day = Math.floor(time / 86400000);
         var hour = Math.floor((time - day * 86400000) / 3600000);
         var minute = Math.floor((time - day * 86400000 - hour * 3600000) / 60000);
@@ -205,8 +304,14 @@ var TestUI = /** @class */ (function (_super) {
             case "founder":
                 position = -(this.height + 50) * 4;
                 break;
-            case "advisor":
+            case "team":
                 position = -(this.height + 50) * 5;
+                break;
+            case "advisor":
+                position = -7860;
+                break;
+            case "partner":
+                position = -8990;
                 break;
         }
         console.log(this.page.y);
@@ -214,8 +319,6 @@ var TestUI = /** @class */ (function (_super) {
         Laya.timer.loop(10, this, this.onNav, [position]);
     };
     TestUI.prototype.onNav = function (position) {
-        console.log(this.page.y);
-        console.log(position);
         if (Math.abs(this.page.y - position) < 70) {
             this.page.y -= this.page.y - position;
             Laya.timer.clear(this, this.onNav);
@@ -243,7 +346,7 @@ var TestUI = /** @class */ (function (_super) {
         }
         if (e.delta < 0) {
             newy = this.page.y - (this.height + 50) / 10;
-            if (newy < -(this.height + 50) * 5)
+            if (newy < this.pageLength)
                 return;
             this.page.y = newy;
         }
@@ -329,6 +432,11 @@ Laya.init(1920, 1080);
 //激活资源版本控制
 // Laya.ResourceVersion.enable("version.json", Handler.create(null, beginLoad), Laya.ResourceVersion.FILENAME_VERSION);
 Laya.loader.load("res/atlas/comp.atlas", Handler.create(null, onLoaded));
+var resArray = [
+    { url: "res/atlas/ui.atlas", type: Laya.Loader.ATLAS },
+    { url: "res/atlas/comp.atlas", type: Laya.Loader.ATLAS }
+];
+Laya.loader.load(resArray, Laya.Handler.create(this, this.onLoad));
 function onLoaded() {
     //实例UI界面
     var testUI = new TestUI();
