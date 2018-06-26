@@ -31,7 +31,7 @@ var TestUI = /** @class */ (function (_super) {
         _this.rightapps = [_this.right_app0, _this.right_app1, _this.right_app2, _this.right_app3];
         _this.rightups = [_this.right_up0, _this.right_up1, _this.right_up2, _this.right_up3];
         _this.currentTokensale = 1;
-        _this.pageLength = -9300;
+        _this.pageLength = -9330;
         Laya.init(1920, 1080, WebGL);
         //设置适配模式
         Laya.stage.width = 1920;
@@ -82,9 +82,12 @@ var TestUI = /** @class */ (function (_super) {
         _this.page.on(Laya.Event.CLICK, _this, _this.dragStart);
         _this.page.on(Laya.Event.CLICK, _this, _this.dragStop);
         _this.button1.on(Laya.Event.CLICK, _this, _this.HtmlDemo);
-        _this.Anouk.on(Laya.Event.CLICK, _this, _this.openDesc, [0]);
-        _this.Kieran.on(Laya.Event.CLICK, _this, _this.openDesc, [1]);
-        _this.Zhang.on(Laya.Event.CLICK, _this, _this.openDesc, [2]);
+        _this.Aaron.on(Laya.Event.CLICK, _this, _this.openDesc, [0]);
+        _this.Anouk.on(Laya.Event.CLICK, _this, _this.openDesc, [1]);
+        _this.Jason.on(Laya.Event.CLICK, _this, _this.openDesc, [2]);
+        _this.Kieran.on(Laya.Event.CLICK, _this, _this.openDesc, [3]);
+        _this.Udaya.on(Laya.Event.CLICK, _this, _this.openDesc, [4]);
+        _this.Zhang.on(Laya.Event.CLICK, _this, _this.openDesc, [5]);
         // this.Anouk.on(Laya.Event.MOUSE_OVER,this,this.openDesc,[0]);
         // this.Kieran.on(Laya.Event.MOUSE_OVER,this,this.openDesc,[1]);
         // this.Zhang.on(Laya.Event.MOUSE_OVER,this,this.openDesc,[2]);
@@ -92,8 +95,18 @@ var TestUI = /** @class */ (function (_super) {
         if (laya.utils.Browser.onMobile) {
             _this.stage.on(Laya.Event.MOUSE_DOWN, _this, _this.onDrag);
         }
+        Laya.loader.load("test/effect.part", Laya.Handler.create(_this, _this.onAssetsLoaded), null, Laya.Loader.JSON);
         return _this;
     }
+    TestUI.prototype.onAssetsLoaded = function (settings) {
+        this.sp = new Laya.Particle2D(settings);
+        this.sp.emitter.start();
+        this.sp.play();
+        Laya.stage.addChild(this.sp);
+        this.sp.name = "particle";
+        this.sp.x = Laya.stage.width / 2;
+        this.sp.y = Laya.stage.height / 2;
+    };
     TestUI.prototype.onDrag = function (start) {
         this.startY = Laya.stage.mouseY;
         this.stage.on(Laya.Event.MOUSE_MOVE, this, this.onDragComplete);
@@ -147,22 +160,40 @@ var TestUI = /** @class */ (function (_super) {
         var image;
         switch (index) {
             case 0:
+                image = "comp/AaronHarwood.PNG";
+                desc1 = "Dr Aaron Harwood is a Senior Lecturer in the Department of Computer Science and Software Engineering at The University of Melbourne.\n\n";
+                desc2 = "His Research interests\n" + "  Parallel and Distributed Computing (Peer-to-Peer, GPU Computing)\n  Smart Mobile Systems (Streaming Data, Mobility Analysis)\n  Social Networking (Event Detection, Topic Tracking, Influence)";
+                break;
+            case 1:
                 image = "comp/AnoukPinchetti.PNG";
                 desc1 = "Blockchain Educator and Business Strategy Consultant. Leading workshops and consulting on the application of Blockchain technology to a range of corporate and community issues.\n\n";
-                desc2 = "Technologist with a wealth of experience throughout the IT Industry, having worked on three continents for government, banking, mining, NFP and community sectors.\n\nTwo decades of experience "
+                desc2 = "Technologist with a wealth of experience throughout the IT Industry, having worked on three continents for government, banking, mining, NFP and community sectors.\nTwo decades of experience "
                     + "in the IT industry, having trained to perform in disciplines ranging from network administration to software development to business analysis, service delivery management and project management. "
                     + "A broad researcher and activist in the community currencies space since the '90s. Currently a Trainer for The New Money Institute, an Education Consultant for the Melbourne Blockchain Centre, and "
                     + "Educator and Business Strategy Consultant for Intraverse Blockchain Technologies.";
                 break;
-            case 1:
-                image = "comp/KieranNolan.png";
-                desc1 = "I’m a Melbourne-based Educational Technologist, International Speaker, CoderDojo Mentor, and Blockchain Expert driven by three tenets: innovation, disruption, and lifelong learning—and it is these "
-                    + "key values that empower me to play my part in revolutionising the EdTech space as we know it. Over the course of a decade, I have gained extensive industry experience, specialising in education, "
-                    + "technology, and blockchain application.";
-                break;
             case 2:
+                image = "comp/Jason.PNG";
+                desc1 = ".\n\n";
+                desc2 = "";
+                break;
+            case 3:
+                image = "comp/KieranNolan.png";
+                desc1 = "I’m a Melbourne-based Educational Technologist, International Speaker, CoderDojo Mentor, and Blockchain Expert";
+                desc2 = "I am driven by three tenets: innovation, disruption, and lifelong learning—and it is these key values that empower me to play my part in revolutionising the EdTech space as we know it. "
+                    + "Over the course of a decade, I have gained extensive industry experience, specialising in education, technology, and blockchain application.";
+                break;
+            case 4:
+                image = "comp/UdayaParampalli.PNG";
+                desc1 = "\n\n";
+                desc2 = "Since February 2000, Dr Udaya Parampalli has been working in the Department of Computer Science and Software Engineering at the University of Melbourne, Australia. In 2008, he was a visiting "
+                    + "professor at Department of Computer Science, University of Calgary, Canada. His research interests are in the area of cryptography and sequences over finite fields and rings for communications "
+                    + "and information security.";
+                break;
+            case 5:
                 image = "comp/Zhangshuai.png";
                 desc1 = "Freelance Screenwriter\nFilm Producer\nE-sports Professional Player\nWCG Runner-up\nOnline Video Contributor";
+                desc2 = "";
                 break;
         }
         new AdvisorDialog(image, desc1, desc2).popup();
@@ -436,7 +467,7 @@ var resArray = [
     { url: "res/atlas/ui.atlas", type: Laya.Loader.ATLAS },
     { url: "res/atlas/comp.atlas", type: Laya.Loader.ATLAS }
 ];
-Laya.loader.load(resArray, Laya.Handler.create(this, this.onLoad));
+Laya.loader.load(resArray, Laya.Handler.create(this, this.onLoad), null);
 function onLoaded() {
     //实例UI界面
     var testUI = new TestUI();

@@ -15,9 +15,13 @@ var GameDialog = /** @class */ (function (_super) {
         _this.moleNum = 9;
         _this.moles = new Array();
         _this.startBtn.on(Laya.Event.CLICK, _this, _this.onStart);
-        _this.btn_close.on(Laya.Event.CLICK, _this, _this.close);
+        _this.btn_close.on(Laya.Event.CLICK, _this, _this.onClose);
         return _this;
     }
+    GameDialog.prototype.onClose = function () {
+        this.close();
+        Laya.Mouse.show();
+    };
     GameDialog.prototype.onStart = function () {
         this.start.visible = false;
         this.inGame.visible = true;
@@ -46,7 +50,7 @@ var GameDialog = /** @class */ (function (_super) {
         this.updateScoreUI();
         this.hammer.start();
         this.hammer.visible = true;
-        Laya.timer.loop(1000, this, this.onLoop);
+        Laya.timer.loop(100, this, this.onLoop);
     };
     GameDialog.prototype.gameOver = function () {
         Laya.timer.clear(this, this.onLoop);

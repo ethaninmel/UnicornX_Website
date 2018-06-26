@@ -1,6 +1,12 @@
 D .
+R 18E94E33 1-2.jpg
+R 81764B8B Giovanni Chen.PNG
+R D9F84150 pa.png
 R 26465490 preview_ico.PNG
+R 39B957DA texture.png
+R 8629C638 UdayaParampalli.PNG
 D comp
+P 5D5AC047 AaronHarwood.PNG
 R BED0883E advisor_line.PNG
 R EE237A62 advisorinfo_bg.PNG
 R 9F120C2D advisorinfo_frame.PNG
@@ -42,12 +48,16 @@ P FF864413 earth_box.png
 P 3121E950 Ethan.PNG
 P 772D776E fb.png
 P 22413161 frame.png
+P 81764B8B Giovanni Chen.PNG
 P 5E984A6B github.png
 P 9EDA959E hscroll$bar.png
 P 1AB768D4 hscroll$down.png
 P 685261D3 hscroll$up.png
 P E466EB1C hslider$bar.png
+P EECB4F4F ianhuang.PNG
 P 4C2052AE ig.png
+P 66765327 Jason.PNG
+P DD61ED64 JiaNan Hu.png
 P 92B16B6A KieranNolan.png
 R 2E2EABC3 L2_mask.PNG
 R 7D92CEF0 light.PNG
@@ -102,6 +112,7 @@ R A7BDD622 token_sale_BG.PNG
 R 186C7DC3 tokenInfo_BG.PNG
 P EF97224E triangle.png
 P B3B60F73 twitter.png
+P 8629C638 UdayaParampalli.PNG
 R 2C0C51A2 unicorn.png
 R 30A321B2 upper_circle.png
 P 52107B89 vscroll$bar.png

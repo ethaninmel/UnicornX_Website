@@ -13,10 +13,14 @@ class GameDialog extends ui.gameDialogUI{
        
         this.moles = new Array<Mole>();
         this.startBtn.on(Laya.Event.CLICK,this,this.onStart);
-        this.btn_close.on(Laya.Event.CLICK,this,this.close);
+        this.btn_close.on(Laya.Event.CLICK,this,this.onClose);
          
     }
 
+    onClose():void{       
+        this.close();
+        Laya.Mouse.show();
+    }
 
     onStart():void{
         
@@ -52,7 +56,7 @@ class GameDialog extends ui.gameDialogUI{
         this.updateScoreUI();
         this.hammer.start();
         this.hammer.visible = true;
-        Laya.timer.loop(1000,this,this.onLoop);
+        Laya.timer.loop(100,this,this.onLoop);
     }
     gameOver():void{
         Laya.timer.clear(this,this.onLoop);

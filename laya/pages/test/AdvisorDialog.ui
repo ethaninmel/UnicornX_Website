@@ -2,7 +2,7 @@
     "x":0,
     "type":"Dialog",
     "selectedBox":1,
-    "selecteID":3,
+    "selecteID":7,
     "props":{"width":1500,"sceneColor":"#000000","height":900},
     "nodeParent":-1,
     "label":"Dialog",
@@ -54,7 +54,7 @@
         {
             "x":15,
             "type":"Label",
-            "props":{"y":144,"x":483,"wordWrap":true,"width":788,"var":"desc1","leading":3,"height":280,"fontSize":33,"color":"#efe6e6","align":"left"},
+            "props":{"y":166,"x":483,"wordWrap":true,"width":788,"var":"desc1","leading":3,"height":258,"fontSize":33,"color":"#efe6e6","align":"left"},
             "nodeParent":1,
             "label":"Label(desc1)",
             "isDirectory":false,
@@ -83,12 +83,38 @@
             "props":{"y":148,"x":191,"var":"image","skin":"comp/AnoukPinchetti.PNG"},
             "nodeParent":1,
             "label":"Image(image)",
-            "isDirectory":false,
+            "isOpen":true,
+            "isDirectory":true,
             "isAniNode":true,
-            "hasChild":false,
+            "hasChild":true,
             "compId":7,
             "child":[
-                ]
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "props":{"renderType":"mask"},
+                    "nodeParent":7,
+                    "label":"Sprite",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":9,
+                    "child":[
+                        {
+                            "x":45,
+                            "type":"Rect",
+                            "props":{"y":0,"x":0,"width":292,"lineWidth":1,"height":277,"fillColor":"#ff0000"},
+                            "nodeParent":9,
+                            "label":"Rect",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":10,
+                            "child":[
+                                ]
+                        }]
+                }]
         }],
     "animations":[
         {
