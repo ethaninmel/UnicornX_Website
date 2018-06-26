@@ -201,8 +201,8 @@ class TestUI extends ui.test.TestPageUI {
 		switch (index){
 			case 0:
 				image = "comp/AaronHarwood.PNG";
-				desc1 = "Dr Aaron Harwood is a Senior Lecturer in the Department of Computer Science and Software Engineering at The University of Melbourne.\n\n"
-				desc2 =	"His Research interests\n" + "  Parallel and Distributed Computing (Peer-to-Peer, GPU Computing)\n  Smart Mobile Systems (Streaming Data, Mobility Analysis)\n  Social Networking (Event Detection, Topic Tracking, Influence)";
+				desc1 = "\nSenior Lecturer in the Department of Computer Science and Software Engineering at The University of Melbourne.\n\n"
+				desc2 =	"\nHis Research interests:\n" + " •Parallel and Distributed Computing (Peer-to-Peer, GPU Computing)\n •Smart Mobile Systems (Streaming Data, Mobility Analysis)\n •Social Networking (Event Detection, Topic Tracking, Influence)";
 				break;
 
 			case 1:
@@ -216,21 +216,24 @@ class TestUI extends ui.test.TestPageUI {
 
 			case 2:
 				image = "comp/Jason.PNG";
-				desc1 = ".\n\n"
-				desc2 =	"";
+				desc1 = "\nInternet entrepreneurs developed, senior developer of blockchain\n\n"
+				desc2 =	"He completed the sycom enterprise ERP workflow development engine in 2013. The engine supports the internal operation of large domestic tooling companies. In 2015, the unify framework mobile terminal cross-platform development engine was developed by him to create a "
+					+ "simple and easy-to-use android ios cross-platform development engine. The engine has been used in a variety of mobile apps, including grocery stores and fighting games. "
+					+ "2016 began to study cryptocurrency projects such as btc, and served as technical support for multiple projects. Established Grand Times Capital in 2017 and successfully invested in a number of blockchain projects. "
+					+ "The current return on investment in 2018 is 2000%so far.";
 				break;
 
 			case 3:
 				image = "comp/KieranNolan.png";
-				desc1 ="I’m a Melbourne-based Educational Technologist, International Speaker, CoderDojo Mentor, and Blockchain Expert";
-				desc2 =	"I am driven by three tenets: innovation, disruption, and lifelong learning—and it is these key values that empower me to play my part in revolutionising the EdTech space as we know it. "
+				desc1 ="\nMelbourne-based Educational Technologist, International Speaker, CoderDojo Mentor, and Blockchain Expert";
+				desc2 =	"\nI am driven by three tenets: innovation, disruption, and lifelong learning—and it is these key values that empower me to play my part in revolutionising the EdTech space as we know it. "
 					+"Over the course of a decade, I have gained extensive industry experience, specialising in education, technology, and blockchain application.";
 				break;
 
 			case 4:
 				image = "comp/UdayaParampalli.PNG";
-				desc1 = "\n\n"
-				desc2 =	"Since February 2000, Dr Udaya Parampalli has been working in the Department of Computer Science and Software Engineering at the University of Melbourne, Australia. In 2008, he was a visiting "
+				desc1 = "Associate Professor \nSenior Member, IEEE.\n "
+				desc2 =	"\nSince February 2000, Dr Udaya Parampalli has been working in the Department of Computer Science and Software Engineering at the University of Melbourne, Australia. In 2008, he was a visiting "
 					+ "professor at Department of Computer Science, University of Calgary, Canada. His research interests are in the area of cryptography and sequences over finite fields and rings for communications "
 					+ "and information security.";
 

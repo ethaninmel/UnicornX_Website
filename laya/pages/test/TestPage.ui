@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":674,
-    "selecteID":711,
+    "selectedBox":603,
+    "selecteID":611,
     "referenceLines":[
         {
             "value":21,
@@ -805,7 +805,7 @@
                                 },
                                 {
                                     "type":"Label",
-                                    "props":{"y":595,"x":107,"text":"20%","fontSize":33,"color":"#ea920e"},
+                                    "props":{"y":595,"x":107,"text":"21%","fontSize":33,"color":"#ea920e"},
                                     "nodeParent":567,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -823,13 +823,14 @@
                             "props":{"y":652,"x":1621,"var":"phase4","scaleY":0.8,"scaleX":0.8,"anchorY":0.5,"anchorX":0.5,"alpha":0},
                             "nodeParent":422,
                             "label":"Box(phase4)",
-                            "isOpen":false,
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
                             "compId":603,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "props":{"y":0,"x":0,"skin":"comp/token_sale_BG.PNG"},
                                     "nodeParent":603,
@@ -842,6 +843,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":5,"x":55,"text":"Phase 4","fontSize":30,"color":"#06acf9","bold":true},
                                     "nodeParent":603,
@@ -854,6 +856,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":140,"x":69,"width":141.708984375,"text":"Start Date","height":30,"fontSize":30,"color":"#06acf9","bold":true},
                                     "nodeParent":603,
@@ -866,6 +869,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":334,"x":74,"text":"End Date","fontSize":30,"color":"#06acf9","bold":true},
                                     "nodeParent":603,
@@ -878,6 +882,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":528,"x":93,"text":"Bonus","fontSize":30,"color":"#06acf9","bold":true},
                                     "nodeParent":603,
@@ -890,6 +895,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":202,"x":47,"text":"23 July, 2018 ","fontSize":33,"color":"#ea920e"},
                                     "nodeParent":603,
@@ -902,6 +908,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":399,"x":47,"text":"29 July, 2018 ","fontSize":33,"color":"#ea920e"},
                                     "nodeParent":603,
@@ -914,6 +921,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":595,"x":113,"text":"0%","fontSize":33,"color":"#ea920e"},
                                     "nodeParent":603,
@@ -1025,7 +1033,7 @@
                                 },
                                 {
                                     "type":"Label",
-                                    "props":{"y":595,"x":107,"text":"10%","fontSize":33,"color":"#ea920e"},
+                                    "props":{"y":595,"x":107,"text":"7%","fontSize":33,"color":"#ea920e"},
                                     "nodeParent":594,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -1135,7 +1143,7 @@
                                 },
                                 {
                                     "type":"Label",
-                                    "props":{"y":595,"x":107,"text":"15%","fontSize":33,"color":"#ea920e"},
+                                    "props":{"y":595,"x":107,"text":"14%","fontSize":33,"color":"#ea920e"},
                                     "nodeParent":585,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -1153,14 +1161,13 @@
                             "props":{"y":338,"x":402},
                             "nodeParent":422,
                             "label":"Box",
-                            "isOpen":true,
+                            "isOpen":false,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
                             "compId":696,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"skin":"comp/tokenInfo_BG.PNG"},
                                     "nodeParent":696,
@@ -1172,7 +1179,6 @@
                                     "compId":490,
                                     "child":[
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":12,"x":65,"text":"Token","fontSize":20,"color":"#06acf9","bold":true},
                                             "nodeParent":490,
@@ -1186,7 +1192,6 @@
                                                 ]
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":34,"x":324,"text":"UCX","fontSize":30,"color":"#0e6bf6","bold":true},
                                             "nodeParent":490,
@@ -1200,7 +1205,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"y":258,"skin":"comp/tokenInfo_BG.PNG"},
                                     "nodeParent":696,
@@ -1212,7 +1216,6 @@
                                     "compId":494,
                                     "child":[
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":15,"x":9,"width":210,"text":"Token Exchange Rate","height":20,"fontSize":17,"color":"#06acf9","bold":true},
                                             "nodeParent":494,
@@ -1225,7 +1228,6 @@
                                                 ]
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":34,"x":237,"text":"1 ETH =  3300 UCX","fontSize":30,"color":"#0e6bf6","bold":true},
                                             "nodeParent":494,
@@ -1240,7 +1242,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"y":129,"skin":"comp/tokenInfo_BG.PNG"},
                                     "nodeParent":696,
@@ -1252,7 +1253,6 @@
                                     "compId":496,
                                     "child":[
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":13,"x":39,"text":"Max supply","fontSize":20,"color":"#06acf9","bold":true},
                                             "nodeParent":496,
@@ -1265,7 +1265,6 @@
                                                 ]
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":31,"x":242,"text":"2,100,000,000 UCX","fontSize":30,"color":"#0e6bf6","bold":true},
                                             "nodeParent":496,
@@ -1279,7 +1278,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"y":386,"skin":"comp/tokenInfo_BG.PNG"},
                                     "nodeParent":696,
@@ -1291,7 +1289,6 @@
                                     "compId":498,
                                     "child":[
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":13,"x":70,"text":"Soft Cap","fontSize":20,"color":"#06acf9","bold":true},
                                             "nodeParent":498,
@@ -1304,7 +1301,6 @@
                                                 ]
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":35,"x":291,"width":63.33984375,"text":"50,000 ETH","height":30,"fontSize":30,"color":"#0e6bf6","bold":true},
                                             "nodeParent":498,
@@ -1318,7 +1314,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"y":515,"skin":"comp/tokenInfo_BG.PNG"},
                                     "nodeParent":696,
@@ -1330,7 +1325,6 @@
                                     "compId":499,
                                     "child":[
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":10,"x":56,"text":"Hard Cap","fontSize":20,"color":"#06acf9","bold":true},
                                             "nodeParent":499,
@@ -1343,7 +1337,6 @@
                                                 ]
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":33,"x":278,"text":"100,000 ETH","fontSize":30,"color":"#0e6bf6","bold":true},
                                             "nodeParent":499,
@@ -4036,14 +4029,13 @@
             "props":{"y":0,"x":0,"var":"menu","skin":"comp/menu_bar.png"},
             "nodeParent":1,
             "label":"Image(menu)",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":456,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"y":1,"x":357,"skin":"comp/logo.png"},
                     "nodeParent":456,
@@ -4056,7 +4048,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":22,"x":908,"var":"tab_roadmap","stateNum":"2","skin":"comp/btn_roadmap.png"},
                     "nodeParent":456,
@@ -4069,7 +4060,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":22,"x":713,"var":"tab_tokensale","stateNum":"2","skin":"comp/btn_tokensale.png"},
                     "nodeParent":456,
@@ -4082,7 +4072,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":22,"x":1059,"var":"tab_founder","stateNum":"2","skin":"comp/btn_founder.png"},
                     "nodeParent":456,
@@ -4095,7 +4084,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":22,"x":1322,"var":"tab_advisor","stateNum":"2","skin":"comp/btn_advisor.png"},
                     "nodeParent":456,
@@ -4108,7 +4096,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"y":34,"x":696,"skin":"comp/lightpoint.png"},
                     "nodeParent":456,
@@ -4121,7 +4108,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":22,"x":1211,"var":"tab_team","stateNum":"2","skin":"comp/btn_team.png"},
                     "nodeParent":456,
@@ -4134,7 +4120,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":22,"x":1467,"var":"tab_partner","stateNum":"2","skin":"comp/btn_partner.png"},
                     "nodeParent":456,
@@ -4147,30 +4132,17 @@
                         ]
                 },
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":20,"x":512,"width":143,"var":"tab_why","height":46},
+                    "type":"Button",
+                    "props":{"y":20,"x":512,"var":"tab_why","stateNum":"2","skin":"comp/btn_whyunicornx.png","mouseThrough":true},
                     "nodeParent":456,
-                    "label":"Box(tab_why)",
+                    "label":"Button(tab_why)",
                     "isOpen":true,
-                    "isDirectory":true,
+                    "isDirectory":false,
                     "isAniNode":true,
-                    "hasChild":true,
-                    "compId":698,
+                    "hasChild":false,
+                    "compId":646,
                     "child":[
-                        {
-                            "x":45,
-                            "type":"Button",
-                            "props":{"stateNum":"2","skin":"comp/btn_whyunicornx.png"},
-                            "nodeParent":698,
-                            "label":"Button",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":646,
-                            "child":[
-                                ]
-                        }]
+                        ]
                 }],
             "$LOCKED":false,
             "$HIDDEN":false
