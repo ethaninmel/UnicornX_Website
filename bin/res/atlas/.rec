@@ -1,10 +1,7 @@
 D .
 R 18E94E33 1-2.jpg
-R 81764B8B Giovanni Chen.PNG
 R D9F84150 pa.png
-R 26465490 preview_ico.PNG
 R 39B957DA texture.png
-R 8629C638 UdayaParampalli.PNG
 D comp
 P 5D5AC047 AaronHarwood.PNG
 R BED0883E advisor_line.PNG
@@ -76,8 +73,8 @@ P 9B973AA5 member_yelowLine.PNG
 P 97434E5B menu_bar.png
 R A7CD79FE message_box.png
 P 8DEB5E28 Mike.PNG
-R DBA4D42A partner.png
-R A3CCAE25 presale.PNG
+R 04012017 partner.png
+P A3CCAE25 presale.PNG
 P 9E4DD730 progress$bar.png
 R 6F019CE0 R_mask.PNG
 P 74DFF2B6 reddit.png
@@ -85,10 +82,10 @@ R 535561B3 RM01.PNG
 R CE2AAA2C RM02.png
 R A48DBAE8 RM03.PNG
 R 14A257D8 RM04.PNG
-R E6FEF02B roadmap_L1.PNG
-R 4E10F983 roadmap_L2.PNG
-R 172C2FFD roadmap_R1.PNG
-R 7A53C832 roadmap_R2.png
+P E6FEF02B roadmap_L1.PNG
+P 4E10F983 roadmap_L2.PNG
+P 172C2FFD roadmap_R1.PNG
+P 7A53C832 roadmap_R2.png
 R BD253B38 roadmapbar.png
 P 56B15F6B roadmapcircle.png
 P 7A184DAF roadmapcircle_selected.png
@@ -103,7 +100,7 @@ P 93706220 Tan.PNG
 P C0C5F02D telegram.png
 P 8B651EB3 title_advisor.PNG
 P 7EB9B8A5 title_founder.PNG
-R DB654A0A title_main.PNG
+P DB654A0A title_main.PNG
 P EADDBDF2 title_partners.PNG
 P 91C93BAB title_roadmap.PNG
 P BE607D1B title_teammember.PNG
@@ -113,7 +110,7 @@ R 186C7DC3 tokenInfo_BG.PNG
 P EF97224E triangle.png
 P B3B60F73 twitter.png
 P 8629C638 UdayaParampalli.PNG
-R 2C0C51A2 unicorn.png
+P 2C0C51A2 unicorn.png
 R 30A321B2 upper_circle.png
 P 52107B89 vscroll$bar.png
 P E26B933E vscroll$down.png
@@ -127,7 +124,6 @@ P BE642EFD yoku.png
 P BC5118A8 youtube.png
 P 6D02D806 Zhangshuai.png
 P A0B9A493 光暈.PNG
-R 2E9F411B 图层 0.png
 D template
 D ui
 P 90A90122 back.png

@@ -4,4 +4,11 @@
    <item name="comp/bitcointalk.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="ui/back.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="ui/help.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="comp/unicorn.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="comp/title_main.PNG" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="comp/roadmap_R1.PNG" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="comp/roadmap_R2.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="comp/roadmap_L1.PNG" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="comp/roadmap_L2.PNG" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="comp/presale.PNG" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
 </res>

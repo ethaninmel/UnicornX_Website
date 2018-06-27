@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":603,
-    "selecteID":611,
+    "selectedBox":684,
+    "selecteID":681,
     "referenceLines":[
         {
             "value":21,
@@ -2445,7 +2445,7 @@
                                 {
                                     "x":60,
                                     "type":"Image",
-                                    "props":{"y":188,"visible":false,"skin":"comp/图层 0.png"},
+                                    "props":{"y":188,"x":0,"visible":true,"skin":"comp/partner.png"},
                                     "nodeParent":684,
                                     "label":"Image",
                                     "isDirectory":false,
