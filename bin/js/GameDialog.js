@@ -50,7 +50,7 @@ var GameDialog = /** @class */ (function (_super) {
         this.updateScoreUI();
         this.hammer.start();
         this.hammer.visible = true;
-        Laya.timer.loop(100, this, this.onLoop);
+        Laya.timer.loop(1000, this, this.onLoop);
     };
     GameDialog.prototype.gameOver = function () {
         Laya.timer.clear(this, this.onLoop);

@@ -145,7 +145,7 @@ class TestUI extends ui.test.TestPageUI {
 	}
 
 	private onDragComplete():void{
-		var position:number = this.page.y +(Laya.stage.mouseY - this.startY)/10;
+		var position:number = this.page.y +(Laya.stage.mouseY - this.startY)/3;
 		if(position>=this.pageLength && position<=0){
 			 this.page.y = position;
 		}

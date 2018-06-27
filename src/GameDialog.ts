@@ -56,7 +56,7 @@ class GameDialog extends ui.gameDialogUI{
         this.updateScoreUI();
         this.hammer.start();
         this.hammer.visible = true;
-        Laya.timer.loop(100,this,this.onLoop);
+        Laya.timer.loop(1000,this,this.onLoop);
     }
     gameOver():void{
         Laya.timer.clear(this,this.onLoop);

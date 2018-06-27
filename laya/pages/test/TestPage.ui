@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":603,
-    "selecteID":611,
+    "selectedBox":1,
+    "selecteID":456,
     "referenceLines":[
         {
             "value":21,
@@ -61,13 +61,14 @@
                     "props":{"y":0,"x":0,"width":1920,"var":"mainpage","height":1080},
                     "nodeParent":667,
                     "label":"Box(mainpage)",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":427,
                     "child":[
                         {
+                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
                             "nodeParent":427,
@@ -80,6 +81,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"comp/bg01.PNG"},
                             "nodeParent":427,
@@ -93,6 +95,7 @@
                             "$LOCKED":true
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":443,"x":492,"width":378,"skin":"comp/earth_box.png","sizeGrid":"40,90,32,95","scaleY":2.5,"scaleX":2.5,"height":146},
                             "nodeParent":427,
@@ -105,6 +108,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":197,"x":558,"skin":"comp/title_main.PNG"},
                             "nodeParent":427,
@@ -117,6 +121,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Button",
                             "props":{"y":888,"x":573,"width":265,"stateNum":"3","skin":"comp/button_mainpage.png","labelSize":33,"labelColors":"#00BFFF,#8A2BE2,#FF4500\t","labelBold":true,"label":"Join Whitelist","height":99},
                             "nodeParent":427,
@@ -129,6 +134,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Button",
                             "props":{"y":888,"x":1066,"width":265,"toggle":false,"skin":"comp/button_mainpage.png","labelSize":33,"labelColors":"#00BFFF,#8A2BE2,#FF4500\t","labelBold":true,"label":"Whitepaper","height":99},
                             "nodeParent":427,
@@ -141,6 +147,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":529,"x":868,"skin":"comp/triangle.png","scaleY":0.6,"scaleX":0.6},
                             "nodeParent":427,
@@ -153,14 +160,28 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
-                            "props":{"y":427,"x":576,"var":"button1","skin":"comp/unicorn.png","scaleY":0.7,"scaleX":0.7},
+                            "props":{"y":427,"x":576,"skin":"comp/unicorn.png","scaleY":0.7,"scaleX":0.7},
                             "nodeParent":427,
-                            "label":"Image(button1)",
+                            "label":"Image",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
                             "compId":580,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Button",
+                            "props":{"y":548,"x":917,"width":41,"visible":true,"var":"button1","height":16},
+                            "nodeParent":427,
+                            "label":"Button(button1)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":719,
                             "child":[
                                 ]
                         }]
@@ -661,14 +682,13 @@
                     "props":{"y":2260,"x":0,"width":1920,"var":"token","height":1080},
                     "nodeParent":667,
                     "label":"Box(token)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":422,
                     "child":[
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
                             "nodeParent":422,
@@ -681,7 +701,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"comp/bg_pure.png"},
                             "nodeParent":422,
@@ -695,7 +714,6 @@
                             "$LOCKED":true
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":142,"x":649,"skin":"comp/title_token.PNG"},
                             "nodeParent":422,
@@ -708,7 +726,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":652,"x":1301,"var":"phase1","anchorY":0.5,"anchorX":0.5},
                             "nodeParent":422,
@@ -818,7 +835,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":652,"x":1621,"var":"phase4","scaleY":0.8,"scaleX":0.8,"anchorY":0.5,"anchorX":0.5,"alpha":0},
                             "nodeParent":422,
@@ -830,7 +846,6 @@
                             "compId":603,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"y":0,"x":0,"skin":"comp/token_sale_BG.PNG"},
                                     "nodeParent":603,
@@ -843,7 +858,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":5,"x":55,"text":"Phase 4","fontSize":30,"color":"#06acf9","bold":true},
                                     "nodeParent":603,
@@ -856,7 +870,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":140,"x":69,"width":141.708984375,"text":"Start Date","height":30,"fontSize":30,"color":"#06acf9","bold":true},
                                     "nodeParent":603,
@@ -869,7 +882,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":334,"x":74,"text":"End Date","fontSize":30,"color":"#06acf9","bold":true},
                                     "nodeParent":603,
@@ -882,7 +894,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":528,"x":93,"text":"Bonus","fontSize":30,"color":"#06acf9","bold":true},
                                     "nodeParent":603,
@@ -895,7 +906,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":202,"x":47,"text":"23 July, 2018 ","fontSize":33,"color":"#ea920e"},
                                     "nodeParent":603,
@@ -908,7 +918,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":399,"x":47,"text":"29 July, 2018 ","fontSize":33,"color":"#ea920e"},
                                     "nodeParent":603,
@@ -921,7 +930,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":595,"x":113,"text":"0%","fontSize":33,"color":"#ea920e"},
                                     "nodeParent":603,
@@ -936,7 +944,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":652,"x":1621,"var":"phase3","scaleY":0.8,"scaleX":0.8,"anchorY":0.5,"anchorX":0.5,"alpha":0},
                             "nodeParent":422,
@@ -1046,7 +1053,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":652,"x":1621,"width":280,"var":"phase2","scaleY":0.8,"scaleX":0.8,"height":686,"anchorY":0.5,"anchorX":0.5,"alpha":0.1},
                             "nodeParent":422,
@@ -1156,7 +1162,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":338,"x":402},
                             "nodeParent":422,
@@ -1358,14 +1363,13 @@
                     "props":{"y":3390,"x":0,"width":1920,"var":"roadmap","height":1080},
                     "nodeParent":667,
                     "label":"Box(roadmap)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":400,
                     "child":[
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
                             "nodeParent":400,
@@ -1378,7 +1382,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"comp/bg02.PNG"},
                             "nodeParent":400,
@@ -1391,7 +1394,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":156,"x":389},
                             "nodeParent":400,
@@ -1641,7 +1643,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":101,"x":814,"skin":"comp/title_roadmap.PNG"},
                             "nodeParent":400,
@@ -1663,14 +1664,13 @@
                     "props":{"y":4520,"x":0,"width":1920,"var":"founder","height":1080},
                     "nodeParent":667,
                     "label":"Box(founder)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":477,
                     "child":[
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
                             "nodeParent":477,
@@ -1683,7 +1683,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"comp/bg_pure.png"},
                             "nodeParent":477,
@@ -1697,7 +1696,6 @@
                             "$LOCKED":true
                         },
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":212,"x":111},
                             "nodeParent":477,
@@ -1998,7 +1996,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":65,"x":807,"skin":"comp/title_founder.PNG","scaleY":1.2,"scaleX":1.2},
                             "nodeParent":477,
@@ -2049,7 +2046,8 @@
                             "hasChild":false,
                             "compId":691,
                             "child":[
-                                ]
+                                ],
+                            "$LOCKED":true
                         },
                         {
                             "x":45,
@@ -2067,7 +2065,7 @@
                         {
                             "x":45,
                             "type":"Image",
-                            "props":{"y":563,"x":1327,"skin":"comp/JiaNan Hu.png"},
+                            "props":{"y":403,"x":1327,"skin":"comp/JiaNan Hu.png"},
                             "nodeParent":674,
                             "label":"Image",
                             "isDirectory":false,
@@ -2080,7 +2078,7 @@
                         {
                             "x":45,
                             "type":"Image",
-                            "props":{"y":563,"x":350,"skin":"comp/ianhuang.PNG"},
+                            "props":{"y":403,"x":350,"skin":"comp/ianhuang.PNG"},
                             "nodeParent":674,
                             "label":"Image",
                             "isDirectory":false,
@@ -2093,13 +2091,65 @@
                         {
                             "x":45,
                             "type":"Image",
-                            "props":{"y":563,"x":788,"skin":"comp/Giovanni Chen.PNG"},
+                            "props":{"y":403,"x":788,"skin":"comp/Giovanni Chen.PNG"},
                             "nodeParent":674,
                             "label":"Image",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
                             "compId":713,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "props":{"y":996,"x":349,"skin":"comp/1.png"},
+                            "nodeParent":674,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":715,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "props":{"y":996,"x":832,"skin":"comp/2.png"},
+                            "nodeParent":674,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":716,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "props":{"y":996,"x":1301,"skin":"comp/4.png"},
+                            "nodeParent":674,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":717,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "props":{"y":1593,"x":322,"skin":"comp/6.png"},
+                            "nodeParent":674,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":718,
                             "child":[
                                 ]
                         }],
@@ -2445,7 +2495,7 @@
                                 {
                                     "x":60,
                                     "type":"Image",
-                                    "props":{"y":188,"visible":false,"skin":"comp/图层 0.png"},
+                                    "props":{"y":188,"x":0,"skin":"comp/partner.png"},
                                     "nodeParent":684,
                                     "label":"Image",
                                     "isDirectory":false,
@@ -4026,7 +4076,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":0,"x":0,"var":"menu","skin":"comp/menu_bar.png"},
+            "props":{"y":48,"x":960,"var":"menu","skin":"comp/menu_bar.png","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"Image(menu)",
             "isOpen":false,

@@ -114,7 +114,7 @@ var TestUI = /** @class */ (function (_super) {
         Laya.stage.on(Laya.Event.MOUSE_OUT, this, this.onMouseUp);
     };
     TestUI.prototype.onDragComplete = function () {
-        var position = this.page.y + (Laya.stage.mouseY - this.startY) / 10;
+        var position = this.page.y + (Laya.stage.mouseY - this.startY) / 3;
         if (position >= this.pageLength && position <= 0) {
             this.page.y = position;
         }
