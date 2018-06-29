@@ -1,4 +1,57 @@
-2018/06/27-17:50:08.896 109827 Reusing MANIFEST /Users/daniel/Documents/GitHub/UnicornX_Website/.laya/chrome/Default/Session Storage/MANIFEST-000001
-2018/06/27-22:32:28.855 233019 Level-0 table #5: started
-2018/06/27-22:32:28.861 233019 Level-0 table #5: 126546 bytes OK
-2018/06/27-22:32:28.862 233019 Delete type=0 #3
+2018/06/28-15:45:56.552 33027 Reusing MANIFEST /Users/daniel/Documents/GitHub/UnicornX_Website/.laya/chrome/Default/Session Storage/MANIFEST-000001
+2018/06/28-15:45:56.553 33027 Recovering log #4
+2018/06/28-15:45:56.553 33027 Reusing old log /Users/daniel/Documents/GitHub/UnicornX_Website/.laya/chrome/Default/Session Storage/000004.log 
+2018/06/28-21:20:21.330 106295 Level-0 table #8: started
+2018/06/28-21:20:21.331 106295 Level-0 table #8: 17114 bytes OK
+2018/06/28-21:20:21.332 106295 Delete type=0 #4
+2018/06/28-22:27:24.631 106295 Compacting 1@1 + 1@2 files
+2018/06/28-22:27:24.641 106295 Generated table #9@1: 156 keys, 6566 bytes
+2018/06/28-22:27:24.641 106295 Compacted 1@1 + 1@2 files => 6566 bytes
+2018/06/28-22:27:24.641 106295 compacted to: files[ 0 0 1 0 0 0 0 ]
+2018/06/28-22:27:24.641 106295 Delete type=2 #5
+2018/06/28-22:27:24.642 106295 Delete type=2 #8
+2018/06/28-23:03:27.882 106295 Level-0 table #11: started
+2018/06/28-23:03:27.890 106295 Level-0 table #11: 17405 bytes OK
+2018/06/28-23:03:27.892 106295 Delete type=0 #7
+2018/06/29-13:40:15.735 106295 Compacting 1@1 + 1@2 files
+2018/06/29-13:40:15.737 106295 Generated table #12@1: 260 keys, 12023 bytes
+2018/06/29-13:40:15.737 106295 Compacted 1@1 + 1@2 files => 12023 bytes
+2018/06/29-13:40:15.738 106295 compacted to: files[ 0 0 1 0 0 0 0 ]
+2018/06/29-13:40:15.738 106295 Delete type=2 #9
+2018/06/29-13:40:15.739 106295 Delete type=2 #11
+2018/06/29-13:56:08.234 106295 Level-0 table #14: started
+2018/06/29-13:56:08.235 106295 Level-0 table #14: 22909 bytes OK
+2018/06/29-13:56:08.235 106295 Delete type=0 #10
+2018/06/29-14:05:53.564 106295 Compacting 1@1 + 1@2 files
+2018/06/29-14:05:53.572 106295 Generated table #15@1: 281 keys, 18416 bytes
+2018/06/29-14:05:53.572 106295 Compacted 1@1 + 1@2 files => 18416 bytes
+2018/06/29-14:05:53.573 106295 compacted to: files[ 0 0 1 0 0 0 0 ]
+2018/06/29-14:05:53.573 106295 Delete type=2 #12
+2018/06/29-14:05:53.573 106295 Delete type=2 #14
+2018/06/29-14:50:36.374 106295 Level-0 table #17: started
+2018/06/29-14:50:36.375 106295 Level-0 table #17: 16605 bytes OK
+2018/06/29-14:50:36.376 106295 Delete type=0 #13
+2018/06/29-15:42:04.948 106295 Compacting 1@1 + 1@2 files
+2018/06/29-15:42:04.949 106295 Generated table #18@1: 223 keys, 8667 bytes
+2018/06/29-15:42:04.949 106295 Compacted 1@1 + 1@2 files => 8667 bytes
+2018/06/29-15:42:04.949 106295 compacted to: files[ 0 0 1 0 0 0 0 ]
+2018/06/29-15:42:04.949 106295 Delete type=2 #15
+2018/06/29-15:42:04.950 106295 Delete type=2 #17
+2018/06/29-16:47:54.783 106295 Level-0 table #20: started
+2018/06/29-16:47:54.784 106295 Level-0 table #20: 18646 bytes OK
+2018/06/29-16:47:54.785 106295 Delete type=0 #16
+2018/06/29-17:48:14.382 106295 Compacting 1@1 + 1@2 files
+2018/06/29-17:48:14.383 106295 Generated table #21@1: 214 keys, 8938 bytes
+2018/06/29-17:48:14.383 106295 Compacted 1@1 + 1@2 files => 8938 bytes
+2018/06/29-17:48:14.383 106295 compacted to: files[ 0 0 1 0 0 0 0 ]
+2018/06/29-17:48:14.384 106295 Delete type=2 #18
+2018/06/29-17:48:14.384 106295 Delete type=2 #20
+2018/06/29-21:10:45.442 106295 Level-0 table #23: started
+2018/06/29-21:10:45.448 106295 Level-0 table #23: 17104 bytes OK
+2018/06/29-21:10:45.450 106295 Delete type=0 #19
+2018/06/29-22:56:15.241 106295 Compacting 1@1 + 1@2 files
+2018/06/29-22:56:15.249 106295 Generated table #24@1: 212 keys, 9534 bytes
+2018/06/29-22:56:15.249 106295 Compacted 1@1 + 1@2 files => 9534 bytes
+2018/06/29-22:56:15.250 106295 compacted to: files[ 0 0 1 0 0 0 0 ]
+2018/06/29-22:56:15.251 106295 Delete type=2 #21
+2018/06/29-22:56:15.252 106295 Delete type=2 #23

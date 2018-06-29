@@ -14393,7 +14393,7 @@ declare module laya.device.media {
      *
      * <p>MDN Video链接： <i>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video</i></p>
      */
-    class Video extends Sprite {
+     class Video extends Sprite {
         static MP4: number;
         static OGG: number;
         static CAMERA: number;

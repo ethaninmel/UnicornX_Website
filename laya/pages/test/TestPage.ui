@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":1,
-    "selecteID":456,
+    "selectedBox":487,
+    "selecteID":736,
     "referenceLines":[
         {
             "value":21,
@@ -10,7 +10,7 @@
             "id":1
         },
         {
-            "value":353,
+            "value":349,
             "type":0,
             "id":2
         },
@@ -61,14 +61,13 @@
                     "props":{"y":0,"x":0,"width":1920,"var":"mainpage","height":1080},
                     "nodeParent":667,
                     "label":"Box(mainpage)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":427,
                     "child":[
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
                             "nodeParent":427,
@@ -81,7 +80,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"comp/bg01.PNG"},
                             "nodeParent":427,
@@ -95,7 +93,6 @@
                             "$LOCKED":true
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":443,"x":492,"width":378,"skin":"comp/earth_box.png","sizeGrid":"40,90,32,95","scaleY":2.5,"scaleX":2.5,"height":146},
                             "nodeParent":427,
@@ -108,7 +105,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":197,"x":558,"skin":"comp/title_main.PNG"},
                             "nodeParent":427,
@@ -121,7 +117,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Button",
                             "props":{"y":888,"x":573,"width":265,"stateNum":"3","skin":"comp/button_mainpage.png","labelSize":33,"labelColors":"#00BFFF,#8A2BE2,#FF4500\t","labelBold":true,"label":"Join Whitelist","height":99},
                             "nodeParent":427,
@@ -134,7 +129,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Button",
                             "props":{"y":888,"x":1066,"width":265,"toggle":false,"skin":"comp/button_mainpage.png","labelSize":33,"labelColors":"#00BFFF,#8A2BE2,#FF4500\t","labelBold":true,"label":"Whitepaper","height":99},
                             "nodeParent":427,
@@ -147,7 +141,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":529,"x":868,"skin":"comp/triangle.png","scaleY":0.6,"scaleX":0.6},
                             "nodeParent":427,
@@ -160,7 +153,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":427,"x":576,"skin":"comp/unicorn.png","scaleY":0.7,"scaleX":0.7},
                             "nodeParent":427,
@@ -173,7 +165,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Button",
                             "props":{"y":548,"x":917,"width":41,"visible":true,"var":"button1","height":16},
                             "nodeParent":427,
@@ -1166,7 +1157,7 @@
                             "props":{"y":338,"x":402},
                             "nodeParent":422,
                             "label":"Box",
-                            "isOpen":false,
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -1234,7 +1225,7 @@
                                         },
                                         {
                                             "type":"Label",
-                                            "props":{"y":34,"x":237,"text":"1 ETH =  3300 UCX","fontSize":30,"color":"#0e6bf6","bold":true},
+                                            "props":{"y":34,"x":237,"text":"1 ETH = 3300 UCX","fontSize":30,"color":"#0e6bf6","bold":true},
                                             "nodeParent":494,
                                             "label":"Label",
                                             "isOpen":true,
@@ -1664,13 +1655,14 @@
                     "props":{"y":4520,"x":0,"width":1920,"var":"founder","height":1080},
                     "nodeParent":667,
                     "label":"Box(founder)",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":477,
                     "child":[
                         {
+                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
                             "nodeParent":477,
@@ -1683,6 +1675,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"comp/bg_pure.png"},
                             "nodeParent":477,
@@ -1696,17 +1689,19 @@
                             "$LOCKED":true
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "props":{"y":212,"x":111},
                             "nodeParent":477,
                             "label":"Box",
-                            "isOpen":false,
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
                             "compId":668,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Box",
                                     "props":{"y":3,"x":0,"width":430,"var":"ceo","height":824},
                                     "nodeParent":668,
@@ -1718,22 +1713,27 @@
                                     "compId":531,
                                     "child":[
                                         {
+                                            "x":75,
                                             "type":"Image",
-                                            "props":{"y":14,"x":48,"skin":"comp/member_background.PNG","scaleY":0.9,"scaleX":0.8},
+                                            "props":{"y":30,"x":46,"width":395,"skin":"comp/member_background.PNG","height":685},
                                             "nodeParent":531,
                                             "label":"Image",
+                                            "isOpen":true,
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
                                             "compId":487,
                                             "child":[
-                                                ]
+                                                ],
+                                            "$HIDDEN":false
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "props":{"y":769,"x":143,"skin":"comp/bottom_circle.png","scaleY":0.25,"scaleX":0.25},
                                             "nodeParent":531,
                                             "label":"Image",
+                                            "isOpen":true,
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
@@ -1742,67 +1742,83 @@
                                                 ]
                                         },
                                         {
-                                            "type":"Image",
-                                            "props":{"y":232,"x":58,"skin":"comp/member_yelowLine.PNG"},
+                                            "x":75,
+                                            "type":"Box",
+                                            "props":{"y":-14,"x":58},
                                             "nodeParent":531,
-                                            "label":"Image",
-                                            "isDirectory":false,
+                                            "label":"Box",
+                                            "isOpen":false,
+                                            "isDirectory":true,
                                             "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":488,
+                                            "hasChild":true,
+                                            "compId":721,
                                             "child":[
-                                                ]
-                                        },
-                                        {
-                                            "type":"Label",
-                                            "props":{"y":248,"x":196,"text":"CEO","fontSize":55,"color":"#f6cc8d","bold":true},
-                                            "nodeParent":531,
-                                            "label":"Label",
-                                            "isDirectory":false,
-                                            "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":528,
-                                            "child":[
-                                                ]
-                                        },
-                                        {
-                                            "type":"Label",
-                                            "props":{"y":323,"x":71,"wordWrap":true,"width":347,"text":"Mike Huang graduated from the University of Melbourne, majored in Master of Information Technology. He has deep understanding on data structure and distributed algorithms.\\n\\nHe won the first prize and took the second place in Olympiad in Informatics Competition, and he was qualified to attend Tongji University without the entrance examinations. \\n\\nMr Huang is a Sun Certified Java Developer, an Oracle Certified Administrator (OCA) and an Oracle Certified Professional (OCP). \\n\\nBesides, he is also a musician, he has been invited to Chinese most popular TV music show, Heroes of Remix, to be on the same stage with PSY and Leehom Wang.","leading":1,"height":441,"fontSize":18,"color":"#eee6e6","align":"center"},
-                                            "nodeParent":531,
-                                            "label":"Label",
-                                            "isDirectory":false,
-                                            "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":538,
-                                            "child":[
-                                                ]
-                                        },
-                                        {
-                                            "type":"Image",
-                                            "props":{"y":-14,"x":171,"skin":"comp/Mike.PNG"},
-                                            "nodeParent":531,
-                                            "label":"Image",
-                                            "isDirectory":false,
-                                            "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":542,
-                                            "child":[
-                                                ]
-                                        },
-                                        {
-                                            "type":"Label",
-                                            "props":{"y":166,"x":129,"text":"Mike Huang","fontSize":45,"color":"#efdede","bold":true,"align":"center"},
-                                            "nodeParent":531,
-                                            "label":"Label",
-                                            "isDirectory":false,
-                                            "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":671,
-                                            "child":[
-                                                ]
-                                        }]
+                                                {
+                                                    "type":"Image",
+                                                    "props":{"y":246,"skin":"comp/member_yelowLine.PNG"},
+                                                    "nodeParent":721,
+                                                    "label":"Image",
+                                                    "isDirectory":false,
+                                                    "isAniNode":true,
+                                                    "hasChild":false,
+                                                    "compId":488,
+                                                    "child":[
+                                                        ]
+                                                },
+                                                {
+                                                    "type":"Label",
+                                                    "props":{"y":262,"x":138,"text":"CEO","fontSize":55,"color":"#f6cc8d","bold":true},
+                                                    "nodeParent":721,
+                                                    "label":"Label",
+                                                    "isDirectory":false,
+                                                    "isAniNode":true,
+                                                    "hasChild":false,
+                                                    "compId":528,
+                                                    "child":[
+                                                        ]
+                                                },
+                                                {
+                                                    "type":"Label",
+                                                    "props":{"y":337,"x":13,"wordWrap":true,"width":347,"text":"Mike Huang graduated from the University of Melbourne, majored in Master of Information Technology. He has deep understanding on data structure and distributed algorithms.\\n\\nHe won the first prize and took the second place in Olympiad in Informatics Competition, and he was qualified to attend Tongji University without the entrance examinations. \\n\\nMr Huang is a Sun Certified Java Developer, an Oracle Certified Administrator (OCA) and an Oracle Certified Professional (OCP). \\n\\nBesides, he is also a musician, he has been invited to Chinese most popular TV music show, Heroes of Remix, to be on the same stage with PSY and Leehom Wang.","leading":1,"height":441,"fontSize":18,"color":"#eee6e6","align":"center"},
+                                                    "nodeParent":721,
+                                                    "label":"Label",
+                                                    "isDirectory":false,
+                                                    "isAniNode":true,
+                                                    "hasChild":false,
+                                                    "compId":538,
+                                                    "child":[
+                                                        ]
+                                                },
+                                                {
+                                                    "type":"Image",
+                                                    "props":{"x":113,"skin":"comp/Mike.PNG"},
+                                                    "nodeParent":721,
+                                                    "label":"Image",
+                                                    "isDirectory":false,
+                                                    "isAniNode":true,
+                                                    "hasChild":false,
+                                                    "compId":542,
+                                                    "child":[
+                                                        ]
+                                                },
+                                                {
+                                                    "type":"Label",
+                                                    "props":{"y":180,"x":71,"text":"Mike Huang","fontSize":45,"color":"#efdede","bold":true,"align":"center"},
+                                                    "nodeParent":721,
+                                                    "label":"Label",
+                                                    "isDirectory":false,
+                                                    "isAniNode":true,
+                                                    "hasChild":false,
+                                                    "compId":671,
+                                                    "child":[
+                                                        ]
+                                                }],
+                                            "$HIDDEN":true
+                                        }],
+                                    "$HIDDEN":false
                                 },
                                 {
+                                    "x":60,
                                     "type":"Box",
                                     "props":{"y":7,"x":634,"width":430,"var":"cto","height":824},
                                     "nodeParent":668,
@@ -1814,8 +1830,9 @@
                                     "compId":543,
                                     "child":[
                                         {
+                                            "x":75,
                                             "type":"Image",
-                                            "props":{"y":30,"x":43,"skin":"comp/member_background.PNG","scaleY":0.9,"scaleX":0.8},
+                                            "props":{"y":30,"x":46,"width":398,"skin":"comp/member_background.PNG","height":685},
                                             "nodeParent":543,
                                             "label":"Image",
                                             "isDirectory":false,
@@ -1826,6 +1843,7 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "props":{"y":769,"x":137,"skin":"comp/bottom_circle.png","scaleY":0.25,"scaleX":0.25},
                                             "nodeParent":543,
@@ -1838,6 +1856,7 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "props":{"y":232,"x":58,"skin":"comp/member_yelowLine.PNG"},
                                             "nodeParent":543,
@@ -1850,6 +1869,7 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":248,"x":189,"text":"CTO","fontSize":55,"color":"#f6cc8d","bold":true},
                                             "nodeParent":543,
@@ -1862,6 +1882,7 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":323,"x":72,"wordWrap":true,"width":340,"text":"Ethan Song has achieved his master degree in Information Technology at The University of Melbourne.\\n\\nHe has many years of experience in both IT and game industry. He has developed both MMORPG and CCG kind of game and has deep understanding of distributed systems.\\n\\nHe has been an active blockchain enthusiast since 2016, and has participated in several public chain projects. He has rich experience in blockchain technology and is familiar with cutting-edge technologies in blockchain industry. \\n\\nHe has been recently leading the development of several blockchain games and also other dapps.","leading":1,"height":389,"fontSize":18,"color":"#eee6e6","align":"center"},
                                             "nodeParent":543,
@@ -1874,6 +1895,7 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "props":{"y":-14,"x":171,"skin":"comp/Ethan.PNG"},
                                             "nodeParent":543,
@@ -1886,6 +1908,7 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":167,"x":121,"text":"Ethan Song","fontSize":45,"color":"#efdede","bold":true,"align":"center"},
                                             "nodeParent":543,
@@ -1899,19 +1922,21 @@
                                         }]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Box",
                                     "props":{"y":3,"x":1268,"width":430,"var":"cfo","height":824},
                                     "nodeParent":668,
                                     "label":"Box(cfo)",
-                                    "isOpen":false,
+                                    "isOpen":true,
                                     "isDirectory":true,
                                     "isAniNode":true,
                                     "hasChild":true,
                                     "compId":550,
                                     "child":[
                                         {
+                                            "x":75,
                                             "type":"Image",
-                                            "props":{"y":27,"x":39,"skin":"comp/member_background.PNG","scaleY":0.9,"scaleX":0.8},
+                                            "props":{"y":27,"x":39,"width":398,"skin":"comp/member_background.PNG","height":685},
                                             "nodeParent":550,
                                             "label":"Image",
                                             "isDirectory":false,
@@ -1922,6 +1947,7 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "props":{"y":769,"x":137,"skin":"comp/bottom_circle.png","scaleY":0.25,"scaleX":0.25},
                                             "nodeParent":550,
@@ -1934,6 +1960,7 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "props":{"y":232,"x":58,"skin":"comp/member_yelowLine.PNG"},
                                             "nodeParent":550,
@@ -1946,6 +1973,7 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":248,"x":189,"text":"CFO","fontSize":55,"color":"#f6cc8d","bold":true},
                                             "nodeParent":550,
@@ -1958,6 +1986,7 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":323,"x":75,"wordWrap":true,"width":328,"text":"Daniel Duan earned his bachelor degree with Distinction in Computer Science at RMIT University and master degree in Computing at The University of Melbourne. \\n\\nHe is proficient in designing and developing web applications. He was a IT Manager in a manufacturing company.\\n\\nBesides the field of technology, he has rich experience in the fund management. He was Finance Manager and Investment Advisor in a private equity firm.\\n\\n","leading":3,"height":389,"fontSize":18,"color":"#eee6e6","align":"center"},
                                             "nodeParent":550,
@@ -1970,6 +1999,7 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "props":{"y":-14,"x":171,"skin":"comp/Daniel.PNG"},
                                             "nodeParent":550,
@@ -1982,6 +2012,7 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":166,"x":117,"text":"Daniel Duan","fontSize":45,"color":"#efdede","bold":true,"align":"center"},
                                             "nodeParent":550,
@@ -1993,9 +2024,11 @@
                                             "child":[
                                                 ]
                                         }]
-                                }]
+                                }],
+                            "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":65,"x":807,"skin":"comp/title_founder.PNG","scaleY":1.2,"scaleX":1.2},
                             "nodeParent":477,
@@ -2016,14 +2049,13 @@
                     "props":{"y":5650,"x":0,"width":1920,"var":"team","height":2160},
                     "nodeParent":667,
                     "label":"Box(team)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":674,
                     "child":[
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
                             "nodeParent":674,
@@ -2036,7 +2068,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"comp/bg_for8people.png"},
                             "nodeParent":674,
@@ -2050,7 +2081,6 @@
                             "$LOCKED":true
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":110,"x":681,"skin":"comp/title_teammember.PNG","scaleY":1.2,"scaleX":1.2},
                             "nodeParent":674,
@@ -2063,7 +2093,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":403,"x":1327,"skin":"comp/JiaNan Hu.png"},
                             "nodeParent":674,
@@ -2076,7 +2105,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":403,"x":350,"skin":"comp/ianhuang.PNG"},
                             "nodeParent":674,
@@ -2089,7 +2117,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":403,"x":788,"skin":"comp/Giovanni Chen.PNG"},
                             "nodeParent":674,
@@ -2102,7 +2129,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":996,"x":349,"skin":"comp/1.png"},
                             "nodeParent":674,
@@ -2115,7 +2141,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":996,"x":832,"skin":"comp/2.png"},
                             "nodeParent":674,
@@ -2128,7 +2153,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":996,"x":1301,"skin":"comp/4.png"},
                             "nodeParent":674,
@@ -2141,7 +2165,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":1593,"x":322,"skin":"comp/6.png"},
                             "nodeParent":674,
@@ -2150,6 +2173,18 @@
                             "isAniNode":true,
                             "hasChild":false,
                             "compId":718,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Image",
+                            "props":{"y":1593,"x":835,"skin":"comp/3.png"},
+                            "nodeParent":674,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":720,
                             "child":[
                                 ]
                         }],
@@ -2161,14 +2196,13 @@
                     "props":{"y":7860,"x":0,"width":1920,"var":"advisor","height":1080},
                     "nodeParent":667,
                     "label":"Box(advisor)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":480,
                     "child":[
                         {
-                            "x":45,
                             "type":"EffectAnimation",
                             "props":{"skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
                             "nodeParent":480,
@@ -2181,7 +2215,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"comp/bg_pure.png"},
                             "nodeParent":480,
@@ -2195,7 +2228,6 @@
                             "$LOCKED":true
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":124,"x":804,"skin":"comp/title_advisor.PNG"},
                             "nodeParent":480,
@@ -2208,7 +2240,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":-7365,"x":-2324},
                             "nodeParent":480,
@@ -2220,7 +2251,6 @@
                             "compId":659,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"skin":"comp/Tan.PNG"},
                                     "nodeParent":659,
@@ -2233,7 +2263,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "props":{"y":41,"x":285,"text":"Economist\\nExchange Rate Expert\\nDoctor of Management\\nDoctor of Finance\\nManaging Director of Goldman Sachs ","fontSize":33,"color":"#f6f4f4"},
                                     "nodeParent":659,
@@ -2247,7 +2276,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":248,"x":835,"var":"Anouk"},
                             "nodeParent":480,
@@ -2259,7 +2287,6 @@
                             "compId":677,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"x":10,"skin":"comp/AnoukPinchetti.PNG"},
                                     "nodeParent":677,
@@ -2272,7 +2299,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"y":320,"width":250,"skin":"comp/advisor_line.PNG"},
                                     "nodeParent":677,
@@ -2286,7 +2312,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":669,"x":350,"var":"Kieran"},
                             "nodeParent":480,
@@ -2298,7 +2323,6 @@
                             "compId":678,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"x":10,"skin":"comp/KieranNolan.png"},
                                     "nodeParent":678,
@@ -2311,7 +2335,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"y":320,"width":250,"skin":"comp/advisor_line.PNG"},
                                     "nodeParent":678,
@@ -2325,7 +2348,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":669,"x":1329,"var":"Zhang"},
                             "nodeParent":480,
@@ -2337,7 +2359,6 @@
                             "compId":680,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"skin":"comp/Zhangshuai.png"},
                                     "nodeParent":680,
@@ -2350,7 +2371,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"y":320,"width":250,"skin":"comp/advisor_line.PNG"},
                                     "nodeParent":680,
@@ -2364,7 +2384,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":244,"x":1338,"var":"Jason"},
                             "nodeParent":480,
@@ -2389,7 +2408,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":665,"x":811,"var":"Udaya"},
                             "nodeParent":480,
@@ -2414,7 +2432,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":244,"x":350,"var":"Aaron"},
                             "nodeParent":480,
@@ -2426,7 +2443,6 @@
                             "compId":710,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"skin":"comp/AaronHarwood.PNG"},
                                     "nodeParent":710,
@@ -2703,1375 +2719,6 @@
                         }],
                     "$HIDDEN":false
                 }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":-1419,"x":-3897,"width":715,"var":"why","height":402},
-            "nodeParent":1,
-            "label":"Box(why)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":82,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":0,"x":0,"width":715,"skin":"comp/bg_pure.png","sizeGrid":"30,4,4,4","height":402},
-                    "nodeParent":82,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":287,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"EffectAnimation",
-                    "props":{"var":"whymove","skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
-                    "nodeParent":82,
-                    "label":"EffectAnimation(whymove)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":85,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Box",
-                    "props":{"y":0,"x":0,"width":715,"height":402},
-                    "nodeParent":82,
-                    "label":"Box",
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":129,
-                    "child":[
-                        {
-                            "type":"Button",
-                            "props":{"y":191.5,"x":524,"width":32,"var":"right_arrow","stateNum":1,"skin":"comp/btn_arrow.png","height":75},
-                            "nodeParent":129,
-                            "label":"Button(right_arrow)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":186,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Button",
-                            "props":{"y":191.5,"x":210,"width":32,"var":"left_arrow","stateNum":1,"skin":"comp/btn_arrow.png","scaleX":-1,"height":75},
-                            "nodeParent":129,
-                            "label":"Button(left_arrow)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":218,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":142,"x":373,"width":397,"skin":"comp/upper_circle.png","height":58,"anchorY":0.5,"anchorX":0.5},
-                            "nodeParent":129,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":219,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":330,"x":370,"width":69,"skin":"comp/lower_circle.png","rotation":90,"height":294,"anchorY":0.5,"anchorX":0.5},
-                            "nodeParent":129,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":220,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":229,"x":364,"width":288,"var":"why_card0","skin":"comp/container_panek.png","height":102,"anchorY":0.5,"anchorX":0.5},
-                    "nodeParent":82,
-                    "label":"Image(why_card0)",
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":155,
-                    "child":[
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"y":10,"x":10,"var":"left_dis0","skin":"../laya/icons/components/Animation.png","name":"left_dis","effect":"test/shift_left_dis.efc"},
-                            "nodeParent":155,
-                            "label":"EffectAnimation(left_dis0)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":174,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"y":10,"x":10,"var":"left_down0","skin":"../laya/icons/components/Animation.png","name":"left_down","effect":"test/shift_left_down.efc"},
-                            "nodeParent":155,
-                            "label":"EffectAnimation(left_down0)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":175,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"y":10,"x":10,"var":"right_dis0","skin":"../laya/icons/components/Animation.png","name":"right_dis","effect":"test/shift_right_dis.efc"},
-                            "nodeParent":155,
-                            "label":"EffectAnimation(right_dis0)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":176,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"y":10,"x":10,"var":"right_down0","skin":"../laya/icons/components/Animation.png","name":"right_down","effect":"test/shift_right_down.efc"},
-                            "nodeParent":155,
-                            "label":"EffectAnimation(right_down0)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":177,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"left_app0","skin":"../laya/icons/components/Animation.png","effect":"test/shift_left_app.efc"},
-                            "nodeParent":155,
-                            "label":"EffectAnimation(left_app0)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":202,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"left_up0","skin":"../laya/icons/components/Animation.png","effect":"test/shift_left_up.efc"},
-                            "nodeParent":155,
-                            "label":"EffectAnimation(left_up0)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":203,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"right_app0","skin":"../laya/icons/components/Animation.png","effect":"test/shift_right_app.efc"},
-                            "nodeParent":155,
-                            "label":"EffectAnimation(right_app0)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":204,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"right_up0","skin":"../laya/icons/components/Animation.png","effect":"test/shift_right_up.efc"},
-                            "nodeParent":155,
-                            "label":"EffectAnimation(right_up0)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":205,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"TextArea",
-                            "props":{"y":34,"x":6,"width":276,"text":"The game developers could publish their demos and whitepapers to users in Unicorn ecosystem to raise money by equity financing for their gaming projects.","mouseEnabled":false,"height":60,"fontSize":12,"font":"Microsoft YaHei","editable":false,"color":"#74d8e2","align":"center"},
-                            "nodeParent":155,
-                            "label":"TextArea",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":253,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"TextArea",
-                            "props":{"y":8,"x":7,"width":276,"text":"Crowdfunding","mouseEnabled":false,"height":28,"fontSize":22,"font":"Font_eng","editable":false,"color":"#f4c753","bold":true,"align":"center"},
-                            "nodeParent":155,
-                            "label":"TextArea",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":261,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":229,"x":508,"width":288,"var":"why_card1","skin":"comp/container_panek.png","scaleY":0.8,"scaleX":0.8,"height":102,"anchorY":0.5,"anchorX":0.5,"alpha":0.1},
-                    "nodeParent":82,
-                    "label":"Image(why_card1)",
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":159,
-                    "child":[
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"left_dis1","skin":"../laya/icons/components/Animation.png","name":"left_dis","effect":"test/shift_left_dis.efc"},
-                            "nodeParent":159,
-                            "label":"EffectAnimation(left_dis1)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":165,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"left_down1","skin":"../laya/icons/components/Animation.png","name":"left_down","effect":"test/shift_left_down.efc"},
-                            "nodeParent":159,
-                            "label":"EffectAnimation(left_down1)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":166,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"right_dis1","skin":"../laya/icons/components/Animation.png","name":"right_dis","effect":"test/shift_right_dis.efc"},
-                            "nodeParent":159,
-                            "label":"EffectAnimation(right_dis1)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":167,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"right_down1","skin":"../laya/icons/components/Animation.png","name":"right_down","effect":"test/shift_right_down.efc"},
-                            "nodeParent":159,
-                            "label":"EffectAnimation(right_down1)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":168,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"right_up1","skin":"../laya/icons/components/Animation.png","effect":"test/shift_right_up.efc"},
-                            "nodeParent":159,
-                            "label":"EffectAnimation(right_up1)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":206,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"right_app1","skin":"../laya/icons/components/Animation.png","effect":"test/shift_right_app.efc"},
-                            "nodeParent":159,
-                            "label":"EffectAnimation(right_app1)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":207,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"left_up1","skin":"../laya/icons/components/Animation.png","effect":"test/shift_left_up.efc"},
-                            "nodeParent":159,
-                            "label":"EffectAnimation(left_up1)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":208,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"left_app1","skin":"../laya/icons/components/Animation.png","effect":"test/shift_left_app.efc"},
-                            "nodeParent":159,
-                            "label":"EffectAnimation(left_app1)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":209,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"TextArea",
-                            "props":{"y":34,"x":6,"width":276,"text":"We provide a decentralized exchange for all game coins issued on our platform. Each game has their own cryptocurrency and could be exchanged on Unicorn Platform. ","mouseEnabled":false,"height":60,"fontSize":12,"font":"Microsoft YaHei","editable":false,"color":"#74d8e2","align":"center"},
-                            "nodeParent":159,
-                            "label":"TextArea",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":262,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"TextArea",
-                            "props":{"y":8,"x":6,"width":278,"text":"Assets Exchange","mouseEnabled":false,"height":28,"fontSize":22,"font":"Font_eng","editable":false,"color":"#f4c753","bold":true,"align":"center"},
-                            "nodeParent":159,
-                            "label":"TextArea",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":263,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":229,"x":652,"width":288,"var":"why_card2","skin":"comp/container_panek.png","scaleY":0.64,"scaleX":0.64,"height":102,"anchorY":0.5,"anchorX":0.5,"alpha":0},
-                    "nodeParent":82,
-                    "label":"Image(why_card2)",
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":160,
-                    "child":[
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"y":30,"x":30,"var":"left_dis2","skin":"../laya/icons/components/Animation.png","name":"left_dis","effect":"test/shift_left_dis.efc"},
-                            "nodeParent":160,
-                            "label":"EffectAnimation(left_dis2)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":182,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"y":30,"x":30,"var":"left_down2","skin":"../laya/icons/components/Animation.png","name":"left_down","effect":"test/shift_left_down.efc"},
-                            "nodeParent":160,
-                            "label":"EffectAnimation(left_down2)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":183,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"y":30,"x":30,"var":"right_dis2","skin":"../laya/icons/components/Animation.png","name":"right_dis","effect":"test/shift_right_dis.efc"},
-                            "nodeParent":160,
-                            "label":"EffectAnimation(right_dis2)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":184,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"y":30,"x":30,"var":"right_down2","skin":"../laya/icons/components/Animation.png","name":"right_down","effect":"test/shift_right_down.efc"},
-                            "nodeParent":160,
-                            "label":"EffectAnimation(right_down2)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":185,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"right_up2","skin":"../laya/icons/components/Animation.png","effect":"test/shift_right_up.efc"},
-                            "nodeParent":160,
-                            "label":"EffectAnimation(right_up2)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":214,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"right_app2","skin":"../laya/icons/components/Animation.png","effect":"test/shift_right_app.efc"},
-                            "nodeParent":160,
-                            "label":"EffectAnimation(right_app2)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":215,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"left_up2","skin":"../laya/icons/components/Animation.png","effect":"test/shift_left_up.efc"},
-                            "nodeParent":160,
-                            "label":"EffectAnimation(left_up2)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":216,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"left_app2","skin":"../laya/icons/components/Animation.png","effect":"test/shift_left_app.efc"},
-                            "nodeParent":160,
-                            "label":"EffectAnimation(left_app2)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":217,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"TextArea",
-                            "props":{"y":34,"x":7,"width":275,"text":"Different companies can look up their smart contracts and trust each other, which means they can collaborate better than before on Unicorn Platform.","mouseEnabled":false,"height":60,"fontSize":12,"font":"Microsoft YaHei","editable":false,"color":"#74d8e2","align":"center"},
-                            "nodeParent":160,
-                            "label":"TextArea",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":264,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"TextArea",
-                            "props":{"y":8,"x":9,"width":272,"text":"Collaboration","mouseEnabled":false,"height":28,"fontSize":22,"font":"Font_eng","editable":false,"color":"#f4c753","bold":true,"align":"center"},
-                            "nodeParent":160,
-                            "label":"TextArea",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":265,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":229,"x":220,"width":288,"var":"why_card3","skin":"comp/container_panek.png","scaleY":0.8,"scaleX":0.8,"height":102,"anchorY":0.5,"anchorX":0.5,"alpha":0.1},
-                    "nodeParent":82,
-                    "label":"Image(why_card3)",
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":194,
-                    "child":[
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"left_dis3","skin":"../laya/icons/components/Animation.png","name":"left_dis","effect":"test/shift_left_dis.efc"},
-                            "nodeParent":194,
-                            "label":"EffectAnimation(left_dis3)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":195,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"left_down3","skin":"../laya/icons/components/Animation.png","name":"left_down","effect":"test/shift_left_down.efc"},
-                            "nodeParent":194,
-                            "label":"EffectAnimation(left_down3)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":196,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"right_dis3","skin":"../laya/icons/components/Animation.png","name":"right_dis","effect":"test/shift_right_dis.efc"},
-                            "nodeParent":194,
-                            "label":"EffectAnimation(right_dis3)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":197,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"right_down3","skin":"../laya/icons/components/Animation.png","name":"right_down","effect":"test/shift_right_down.efc"},
-                            "nodeParent":194,
-                            "label":"EffectAnimation(right_down3)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":198,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"left_app3","skin":"../laya/icons/components/Animation.png","effect":"test/shift_left_app.efc"},
-                            "nodeParent":194,
-                            "label":"EffectAnimation(left_app3)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":210,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"left_up3","skin":"../laya/icons/components/Animation.png","effect":"test/shift_left_up.efc"},
-                            "nodeParent":194,
-                            "label":"EffectAnimation(left_up3)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":211,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"right_app3","skin":"../laya/icons/components/Animation.png","effect":"test/shift_right_app.efc"},
-                            "nodeParent":194,
-                            "label":"EffectAnimation(right_app3)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":212,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"var":"right_up3","skin":"../laya/icons/components/Animation.png","effect":"test/shift_right_up.efc"},
-                            "nodeParent":194,
-                            "label":"EffectAnimation(right_up3)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":213,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"TextArea",
-                            "props":{"y":36,"x":9,"width":273,"text":"It gives game developers and small studios a chance to take advantages of cloud service from the blockchain system to build up their game in a fast way.","mouseEnabled":false,"height":60,"fontSize":12,"font":"Microsoft YaHei","editable":false,"color":"#74d8e2","align":"center"},
-                            "nodeParent":194,
-                            "label":"TextArea",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":266,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"TextArea",
-                            "props":{"y":10,"x":5,"width":279,"text":"Framework","mouseEnabled":false,"height":28,"fontSize":22,"font":"Font_eng","editable":false,"color":"#f4c753","bold":true,"align":"center"},
-                            "nodeParent":194,
-                            "label":"TextArea",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":267,
-                            "child":[
-                                ]
-                        }]
-                }],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":-1334,"x":2510,"visible":false,"var":"loading","alpha":1},
-            "nodeParent":1,
-            "label":"Box(loading)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":245,
-            "child":[
-                {
-                    "type":"Rect",
-                    "props":{"y":0,"x":0,"width":715,"lineWidth":1,"height":560,"fillColor":"#000000"},
-                    "nodeParent":245,
-                    "label":"Rect",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":246,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":289,"x":360,"skin":"comp/loading_pic.png","anchorY":0.5,"anchorX":0.4},
-                    "nodeParent":245,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":247,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":265,"x":236,"skin":"comp/Loading.png"},
-                    "nodeParent":245,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":250,
-                    "child":[
-                        ]
-                }],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":-1221,"x":3534,"width":715,"var":"roadmap2","height":402},
-            "nodeParent":1,
-            "label":"Box(roadmap2)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":66,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":0,"x":0,"width":715,"skin":"comp/bg_pure.png","sizeGrid":"30,4,4,4","height":402},
-                    "nodeParent":66,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":291,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Box",
-                    "props":{"width":715,"height":402},
-                    "nodeParent":66,
-                    "label":"Box",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":67,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"EffectAnimation",
-                    "props":{"var":"roadmapmove","skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
-                    "nodeParent":66,
-                    "label":"EffectAnimation(roadmapmove)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":69,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":62,"x":356,"width":21,"skin":"comp/roadmapbar.png","height":294},
-                    "nodeParent":66,
-                    "label":"Image",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":130,
-                    "child":[
-                        {
-                            "type":"Tab",
-                            "props":{"y":30,"var":"roadmap_bar","space":30,"selectedIndex":0,"direction":"vertical","centerX":0.5},
-                            "nodeParent":130,
-                            "label":"Tab(roadmap_bar)",
-                            "isOpen":true,
-                            "isDirectory":true,
-                            "isAniNode":true,
-                            "hasChild":true,
-                            "compId":149,
-                            "child":[
-                                {
-                                    "type":"Button",
-                                    "props":{"y":0,"x":4,"width":30,"var":"road0","stateNum":2,"skin":"comp/btn_selection.png","name":"item0","height":23},
-                                    "nodeParent":149,
-                                    "label":"Button(road0)",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":143,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Button",
-                                    "props":{"y":42,"x":4,"width":30,"var":"road1","stateNum":2,"skin":"comp/btn_selection.png","name":"item1","height":23},
-                                    "nodeParent":149,
-                                    "label":"Button(road1)",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":144,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Button",
-                                    "props":{"y":84,"x":4,"width":30,"var":"road2","stateNum":2,"skin":"comp/btn_selection.png","name":"item2","height":23},
-                                    "nodeParent":149,
-                                    "label":"Button(road2)",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":145,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Button",
-                                    "props":{"y":126,"x":4,"width":30,"var":"road3","stateNum":2,"skin":"comp/btn_selection.png","name":"item3","height":23},
-                                    "nodeParent":149,
-                                    "label":"Button(road3)",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":146,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Button",
-                                    "props":{"y":168,"x":4,"width":30,"var":"road4","stateNum":2,"skin":"comp/btn_selection.png","name":"item4","height":23},
-                                    "nodeParent":149,
-                                    "label":"Button(road4)",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":147,
-                                    "child":[
-                                        ]
-                                }]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":11,"width":32,"var":"roadmap_sec","skin":"comp/selected_bg.png","height":62,"centerX":0.5},
-                            "nodeParent":130,
-                            "label":"Image(roadmap_sec)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":152,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":120,"x":500,"width":151,"skin":"comp/side_deco.png","height":188},
-                    "nodeParent":66,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":142,
-                    "child":[
-                        ]
-                }],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":-1424,"x":-2828,"width":715,"var":"doc","height":402},
-            "nodeParent":1,
-            "label":"Box(doc)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":77,
-            "child":[
-                {
-                    "type":"Box",
-                    "props":{"width":715,"height":402},
-                    "nodeParent":77,
-                    "label":"Box",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":78,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"EffectAnimation",
-                    "props":{"var":"docmove","skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
-                    "nodeParent":77,
-                    "label":"EffectAnimation(docmove)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":80,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":23,"x":1,"width":105,"skin":"comp/sidebar.png","height":343},
-                    "nodeParent":77,
-                    "label":"Image",
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":103,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":71,"x":8,"width":83,"skin":"comp/sidebar_splitline.png","height":2},
-                            "nodeParent":103,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":104,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":123,"x":8,"width":83,"skin":"comp/sidebar_splitline.png","height":2},
-                            "nodeParent":103,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":105,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":175,"x":8,"width":83,"skin":"comp/sidebar_splitline.png","height":2},
-                            "nodeParent":103,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":106,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":227,"x":8,"width":83,"skin":"comp/sidebar_splitline.png","height":2},
-                            "nodeParent":103,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":107,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":279,"x":8,"width":83,"skin":"comp/sidebar_splitline.png","height":2},
-                            "nodeParent":103,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":108,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":126,"x":0,"width":104,"skin":"comp/selected_sidebar.png","height":49},
-                            "nodeParent":103,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":109,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":137,"x":517,"width":54,"skin":"comp/lower_circle.png","skewX":0,"pivotX":0,"height":232,"anchorY":0},
-                    "nodeParent":77,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":110,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":137,"x":260,"width":54,"skin":"comp/lower_circle.png","skewX":0,"scaleX":-1,"pivotX":0,"height":232,"anchorY":0},
-                    "nodeParent":77,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":114,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":166,"x":271,"width":46,"skin":"comp/message_box.png","height":20,"anchorY":0.5},
-                    "nodeParent":77,
-                    "label":"Image",
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":115,
-                    "child":[
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"skin":"../laya/icons/components/Animation.png","playEvent":"mouseover","effect":"test/expand_right.efc"},
-                            "nodeParent":115,
-                            "label":"EffectAnimation",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":120,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"skin":"../laya/icons/components/Animation.png","playEvent":"mouseout","effect":"test/collaspe_right.efc"},
-                            "nodeParent":115,
-                            "label":"EffectAnimation",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":126,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":246,"x":506,"width":46,"skin":"comp/message_box.png","scaleX":-1,"pivotX":0,"height":20,"anchorY":0.5},
-                    "nodeParent":77,
-                    "label":"Image",
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":116,
-                    "child":[
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"skin":"../laya/icons/components/Animation.png","playEvent":"mouseover","effect":"test/expand_left.efc"},
-                            "nodeParent":116,
-                            "label":"EffectAnimation",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":125,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"skin":"../laya/icons/components/Animation.png","playEvent":"mouseout","effect":"test/collaspe_left.efc"},
-                            "nodeParent":116,
-                            "label":"EffectAnimation",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":127,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":332,"x":267,"width":46,"skin":"comp/message_box.png","height":20,"anchorY":0.5},
-                    "nodeParent":77,
-                    "label":"Image",
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":117,
-                    "child":[
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"skin":"../laya/icons/components/Animation.png","playEvent":"mouseover","effect":"test/expand_right.efc"},
-                            "nodeParent":117,
-                            "label":"EffectAnimation",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":121,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"EffectAnimation",
-                            "props":{"skin":"../laya/icons/components/Animation.png","playEvent":"mouseout","effect":"test/collaspe_right.efc"},
-                            "nodeParent":117,
-                            "label":"EffectAnimation",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":128,
-                            "child":[
-                                ]
-                        }]
-                }],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":-1313,"x":-1926,"width":715,"var":"term","height":402},
-            "nodeParent":1,
-            "label":"Box(term)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":72,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":130,"x":552,"width":121,"skin":"comp/side_deco.png","height":150,"alpha":0.8},
-                    "nodeParent":72,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":102,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Box",
-                    "props":{"width":715,"height":402},
-                    "nodeParent":72,
-                    "label":"Box",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":73,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"EffectAnimation",
-                    "props":{"var":"termmove","skin":"../laya/icons/components/Animation.png","name":"move","effect":"test/moveup.efc"},
-                    "nodeParent":72,
-                    "label":"EffectAnimation(termmove)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":75,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":107,"x":200,"width":431,"skin":"comp/earth_bg.png","height":216},
-                    "nodeParent":72,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":91,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":23,"x":1,"width":105,"skin":"comp/sidebar.png","height":343},
-                    "nodeParent":72,
-                    "label":"Image",
-                    "isOpen":null,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":94,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":71,"x":8,"width":83,"skin":"comp/sidebar_splitline.png","height":2},
-                            "nodeParent":94,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":96,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":123,"x":8,"width":83,"skin":"comp/sidebar_splitline.png","height":2},
-                            "nodeParent":94,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":97,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":175,"x":8,"width":83,"skin":"comp/sidebar_splitline.png","height":2},
-                            "nodeParent":94,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":98,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":227,"x":8,"width":83,"skin":"comp/sidebar_splitline.png","height":2},
-                            "nodeParent":94,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":99,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":279,"x":8,"width":83,"skin":"comp/sidebar_splitline.png","height":2},
-                            "nodeParent":94,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":100,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":126,"x":0,"width":104,"skin":"comp/selected_sidebar.png","height":49},
-                            "nodeParent":94,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":101,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Box",
-                    "props":{"y":64,"x":500,"var":"frame1"},
-                    "nodeParent":72,
-                    "label":"Box(frame1)",
-                    "isOpen":null,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":273,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":27,"x":1,"width":186,"text":"Universal Account","height":23,"fontSize":13,"font":"Font_eng","color":"#06acf9","bold":true,"align":"center"},
-                            "nodeParent":273,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":269,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"skin":"comp/frame.png"},
-                            "nodeParent":273,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":272,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Box",
-                    "props":{"y":158,"x":492},
-                    "nodeParent":72,
-                    "label":"Box",
-                    "isOpen":null,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":274,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":27,"x":1,"width":186,"text":"Crowdfunding System","height":23,"fontSize":13,"font":"Font_eng","color":"#06acf9","bold":true,"align":"center"},
-                            "nodeParent":274,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":275,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"skin":"comp/frame.png"},
-                            "nodeParent":274,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":276,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Box",
-                    "props":{"y":161,"x":143},
-                    "nodeParent":72,
-                    "label":"Box",
-                    "isOpen":null,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":280,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":27,"x":1,"width":186,"text":"Framework","height":23,"fontSize":13,"font":"Font_eng","color":"#06acf9","bold":true,"align":"center"},
-                            "nodeParent":280,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":281,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"skin":"comp/frame.png"},
-                            "nodeParent":280,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":282,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Box",
-                    "props":{"y":257,"x":151},
-                    "nodeParent":72,
-                    "label":"Box",
-                    "isOpen":null,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":283,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":27,"x":1,"width":186,"text":"Assets Exchange","height":23,"fontSize":13,"font":"Font_eng","color":"#06acf9","bold":true,"align":"center"},
-                            "nodeParent":283,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":284,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":-2,"x":-2,"skin":"comp/frame.png"},
-                            "nodeParent":283,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":285,
-                            "child":[
-                                ]
-                        }]
-                }],
-            "$HIDDEN":false
         },
         {
             "x":15,
@@ -6549,6 +5196,14 @@
                 }],
             "name":"ani3",
             "id":11,
+            "frameRate":24,
+            "action":2
+        },
+        {
+            "nodes":[
+                ],
+            "name":"ani1_founder",
+            "id":12,
             "frameRate":24,
             "action":2
         }]

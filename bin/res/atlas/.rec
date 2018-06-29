@@ -5,12 +5,13 @@ R 39B957DA texture.png
 D comp
 P 31ED95AD 1.png
 P 39CA262E 2.png
+P 4D5375E0 3.png
 P 906B7344 4.png
 P AACE6901 6.png
 P 5D5AC047 AaronHarwood.PNG
 R BED0883E advisor_line.PNG
-P F5495880 advisorinfo_bg.PNG
-P 9F120C2D advisorinfo_frame.PNG
+R F5495880 advisorinfo_bg.PNG
+R 9F120C2D advisorinfo_frame.PNG
 P D2CAC20F AnoukPinchetti.PNG
 R 8B7D1C81 bar_back.PNG
 P 8F051D34 bar_jianchen.PNG
@@ -20,7 +21,7 @@ R B214AEE0 bg01.PNG
 R C1616859 bg02.PNG
 P F3009E61 bg_countdown.PNG
 R 78A913A4 bg_for8people.png
-P 77EC766A bg_pure.png
+R 77EC766A bg_pure.png
 R 3E04CE61 bg_roadmap.PNG
 R E9932018 bg_sky.png
 P A2AF89AB bitcointalk.png
@@ -93,12 +94,12 @@ R 55F5420B roadmap_R2.png
 R BD253B38 roadmapbar.png
 P 56B15F6B roadmapcircle.png
 P 7A184DAF roadmapcircle_selected.png
-P 95994377 selected_bg.png
-P F1CE4142 selected_sidebar.png
-P BE879C7B side_container_panel_left.png
+R 95994377 selected_bg.png
+R F1CE4142 selected_sidebar.png
+R BE879C7B side_container_panel_left.png
 R 22ADA18D side_deco.png
 R 44C099B5 sidebar.png
-P C907EB7A sidebar_splitline.png
+R C907EB7A sidebar_splitline.png
 P E9891A98 steemit.png
 P 93706220 Tan.PNG
 P C0C5F02D telegram.png

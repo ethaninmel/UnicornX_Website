@@ -9,16 +9,16 @@ import Rectangle=Laya.Rectangle;
 class TestUI extends ui.test.TestPageUI {
 	public curtabpanel:Laya.Box;
 	//public moveani:ui.test.moveupUI[]=[this.move,this.termmove,this.docmove,this.whymove,this.roadmapmove];
-	public why_card_curindex=0;
-	public why_cards:Laya.Image[]=[this.why_card0,this.why_card1,this.why_card2,this.why_card3];
-	public leftdises:ui.test.shift_left_disUI[]=[this.left_dis0,this.left_dis1,this.left_dis2,this.left_dis3];
-	public leftdowns:ui.test.shift_left_downUI[]=[this.left_down0,this.left_down1,this.left_down2,this.left_down3];
-	public rightdises:ui.test.shift_right_disUI[]=[this.right_dis0,this.right_dis1,this.right_dis2,this.right_dis3];
-	public rightdowns:ui.test.shift_left_disUI[]=[this.right_down0,this.right_down1,this.right_down2,this.right_down3];
-	public leftapps:ui.test.shift_left_disUI[]=[this.left_app0,this.left_app1,this.left_app2,this.left_app3];
-	public leftups:ui.test.shift_left_downUI[]=[this.left_up0,this.left_up1,this.left_up2,this.left_up3];
-	public rightapps:ui.test.shift_right_disUI[]=[this.right_app0,this.right_app1,this.right_app2,this.right_app3];
-	public rightups:ui.test.shift_left_disUI[]=[this.right_up0,this.right_up1,this.right_up2,this.right_up3];
+	// public why_card_curindex=0;
+	// public why_cards:Laya.Image[]=[this.why_card0,this.why_card1,this.why_card2,this.why_card3];
+	// public leftdises:ui.test.shift_left_disUI[]=[this.left_dis0,this.left_dis1,this.left_dis2,this.left_dis3];
+	// public leftdowns:ui.test.shift_left_downUI[]=[this.left_down0,this.left_down1,this.left_down2,this.left_down3];
+	// public rightdises:ui.test.shift_right_disUI[]=[this.right_dis0,this.right_dis1,this.right_dis2,this.right_dis3];
+	// public rightdowns:ui.test.shift_left_disUI[]=[this.right_down0,this.right_down1,this.right_down2,this.right_down3];
+	// public leftapps:ui.test.shift_left_disUI[]=[this.left_app0,this.left_app1,this.left_app2,this.left_app3];
+	// public leftups:ui.test.shift_left_downUI[]=[this.left_up0,this.left_up1,this.left_up2,this.left_up3];
+	// public rightapps:ui.test.shift_right_disUI[]=[this.right_app0,this.right_app1,this.right_app2,this.right_app3];
+	// public rightups:ui.test.shift_left_disUI[]=[this.right_up0,this.right_up1,this.right_up2,this.right_up3];
 
 	public currentTokensale:number = 1;
 	
@@ -118,6 +118,8 @@ class TestUI extends ui.test.TestPageUI {
 			this.stage.on(Laya.Event.MOUSE_DOWN, this, this.onDrag);
 		}
 
+
+	
 		
 
 		Laya.loader.load("test/effect.part",Laya.Handler.create(this, this.onAssetsLoaded), null, Laya.Loader.JSON);
@@ -254,8 +256,11 @@ class TestUI extends ui.test.TestPageUI {
 	private HtmlDemo():void{
 			//window.open("http://google.com", "myWindow","width=800,height=600,top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=n o, status=no");
 			
-            var div:GameDialog=new GameDialog();
+            // var div:GameDialog=new GameDialog();
+			// div.popup(true);
+			var div:VideoDialog=new VideoDialog();
 			div.popup(true);
+			
 	}
 
 
@@ -451,9 +456,9 @@ class TestUI extends ui.test.TestPageUI {
 		
 	}
 
-	private loadingScene(){
-		this.loading.alpha=0;
-	}
+	// private loadingScene(){
+	// 	this.loading.alpha=0;
+	// }
 	private onMousewheel(e: laya.events.Event):void{
 		var newy:number;
 		if (e.delta>0){
@@ -468,52 +473,52 @@ class TestUI extends ui.test.TestPageUI {
 				return;
 			this.page.y=newy;
 		}
-		this.menu.y=-this.y;
+		//this.menu.y=-this.y;
 	}
-	private rightcard(index:number):number{
-		if ((index+1)==this.why_cards.length){
-			return 0;
-		} else{
-			return index+1;
-		}
+	// private rightcard(index:number):number{
+	// 	if ((index+1)==this.why_cards.length){
+	// 		return 0;
+	// 	} else{
+	// 		return index+1;
+	// 	}
 
-	}
-	private leftcard(index:number):number{
-		if ((index-1)<0){
-			return this.why_cards.length-1;
-		} else{
-			return index-1;
-		}
+	// }
+	// private leftcard(index:number):number{
+	// 	if ((index-1)<0){
+	// 		return this.why_cards.length-1;
+	// 	} else{
+	// 		return index-1;
+	// 	}
 
-	}
-    private  onLink(data:any):void{
-            // TODO Auto Generated method stub
-        Laya.Browser.window.open(data);
-		console.log("a");
-    }
-	private onBtnArrowClick(dir:number):void{
-		this.why_cards[this.why_card_curindex].mouseEnabled=false;
-		if (dir==1){
-			this.rightdowns[this.why_card_curindex].play(0,false);
-			this.rightdises[this.rightcard(this.why_card_curindex)].play(0,false);
-			this.leftups[this.leftcard(this.why_card_curindex)].play(0,false);
-			var tempcurindex=this.leftcard(this.why_card_curindex);
-			this.leftapps[this.leftcard(tempcurindex)].play(0,false);
-			this.why_card_curindex=tempcurindex;
-			this.why_cards[this.why_card_curindex].mouseEnabled=true;
-		}else{
-			this.leftdowns[this.why_card_curindex].play(0,false);
-			this.leftdises[this.leftcard(this.why_card_curindex)].play(0,false);
-			this.rightups[this.rightcard(this.why_card_curindex)].play(0,false);
-			var tempcurindex=this.rightcard(this.why_card_curindex);
-			this.rightapps[this.rightcard(tempcurindex)].play(0,false);
-			this.why_card_curindex=tempcurindex;
-			this.why_cards[this.why_card_curindex].mouseEnabled=true;
-		}
-	}
-	private onBtnRoadClick(pos:number):void{
-		this.roadmap_sec.y=11+(this.roadmap_bar.space+this.road0.height)*pos;
-	}
+	// }
+    // private  onLink(data:any):void{
+    //         // TODO Auto Generated method stub
+    //     Laya.Browser.window.open(data);
+	// 	console.log("a");
+    // }
+	// private onBtnArrowClick(dir:number):void{
+	// 	this.why_cards[this.why_card_curindex].mouseEnabled=false;
+	// 	if (dir==1){
+	// 		this.rightdowns[this.why_card_curindex].play(0,false);
+	// 		this.rightdises[this.rightcard(this.why_card_curindex)].play(0,false);
+	// 		this.leftups[this.leftcard(this.why_card_curindex)].play(0,false);
+	// 		var tempcurindex=this.leftcard(this.why_card_curindex);
+	// 		this.leftapps[this.leftcard(tempcurindex)].play(0,false);
+	// 		this.why_card_curindex=tempcurindex;
+	// 		this.why_cards[this.why_card_curindex].mouseEnabled=true;
+	// 	}else{
+	// 		this.leftdowns[this.why_card_curindex].play(0,false);
+	// 		this.leftdises[this.leftcard(this.why_card_curindex)].play(0,false);
+	// 		this.rightups[this.rightcard(this.why_card_curindex)].play(0,false);
+	// 		var tempcurindex=this.rightcard(this.why_card_curindex);
+	// 		this.rightapps[this.rightcard(tempcurindex)].play(0,false);
+	// 		this.why_card_curindex=tempcurindex;
+	// 		this.why_cards[this.why_card_curindex].mouseEnabled=true;
+	// 	}
+	// }
+	// private onBtnRoadClick(pos:number):void{
+	// 	this.roadmap_sec.y=11+(this.roadmap_bar.space+this.road0.height)*pos;
+	// }
 	// private onBtnPageClick(page:Laya.Box,pagemove:ui.test.moveupUI,bg:string):void{
 	// 	var i:number;
 	// 	for (i=0;i <this.moveani.length;i++){
