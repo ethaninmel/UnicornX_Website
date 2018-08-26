@@ -1,4 +1,4 @@
-.laya/chrome/*
+.laya/chrome/
 *.log
 *.old
 *.store
