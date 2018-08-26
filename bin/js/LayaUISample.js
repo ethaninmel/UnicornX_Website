@@ -31,24 +31,14 @@ var TestUI = /** @class */ (function (_super) {
         // public rightapps:ui.test.shift_right_disUI[]=[this.right_app0,this.right_app1,this.right_app2,this.right_app3];
         // public rightups:ui.test.shift_left_disUI[]=[this.right_up0,this.right_up1,this.right_up2,this.right_up3];
         _this.currentTokensale = 1;
-        _this.pageLength = -9330;
-        Laya.init(1920, 1080, WebGL);
-        //设置适配模式
-        Laya.stage.width = 1920;
-        Laya.stage.height = 1080;
-        Laya.stage.scaleMode = Laya.Stage.SCALE_EXACTFIT;
-        //设置横竖屏
-        Laya.stage.screenMode = Stage.SCREEN_HORIZONTAL;
-        //设置水平对齐
-        Laya.stage.alignH = "center";
-        //设置垂直对齐
-        Laya.stage.alignV = "middle";
+        _this.pageLength = -10467;
         _this.menu.zOrder = 1;
         //this.onBtnPageClick(this.why,this.whymove,"comp/bg.png");
         //console.log(this.mask.x);
         //console.log(this.bar_head.x);
         console.log();
-        UIConfig.closeDialogOnSide = false;
+        //弹出框外侧关闭
+        //UIConfig.closeDialogOnSide = false;
         _this.stage.on(Laya.Event.MOUSE_WHEEL, _this, _this.onMousewheel);
         // this.tab_lan.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.language,this.move,"comp/bg.png"]);
         // this.tab_roadmap.on(Laya.Event.CLICK,this,this.onBtnPageClick,[this.roadmap,this.roadmapmove,"comp/bg_pure.png"]);
@@ -62,6 +52,13 @@ var TestUI = /** @class */ (function (_super) {
         _this.tab_advisor.on(Laya.Event.CLICK, _this, _this.onNavClick, ["advisor"]);
         _this.tab_team.on(Laya.Event.CLICK, _this, _this.onNavClick, ["team"]);
         _this.tab_partner.on(Laya.Event.CLICK, _this, _this.onNavClick, ["partner"]);
+        _this.btn_why.on(Laya.Event.CLICK, _this, _this.onNavClick, ["why"]);
+        _this.btn_tokensale.on(Laya.Event.CLICK, _this, _this.onNavClick, ["tokensale"]);
+        _this.btn_roadmap.on(Laya.Event.CLICK, _this, _this.onNavClick, ["roadmap"]);
+        _this.btn_founder.on(Laya.Event.CLICK, _this, _this.onNavClick, ["founder"]);
+        _this.btn_advisor.on(Laya.Event.CLICK, _this, _this.onNavClick, ["advisor"]);
+        _this.btn_team.on(Laya.Event.CLICK, _this, _this.onNavClick, ["team"]);
+        _this.btn_partner.on(Laya.Event.CLICK, _this, _this.onNavClick, ["partner"]);
         //this.tab_term.on(Laya.Event.CLICK,this,this.onNavClick,["term"]);
         //this.tab_doc.on(Laya.Event.CLICK,this,this.onNavClick,["doc"]);
         // this.road0.on(Laya.Event.CLICK,this,this.onBtnRoadClick,[0]);
@@ -79,8 +76,8 @@ var TestUI = /** @class */ (function (_super) {
         _this.phase4.on(Laya.Event.CLICK, _this, _this.switchTokensale, [4]);
         Laya.timer.loop(1000, _this, _this.countdown);
         _this.roadmap.on(Laya.Event.CLICK, _this, _this.roadmapAction);
-        _this.page.on(Laya.Event.CLICK, _this, _this.dragStart);
-        _this.page.on(Laya.Event.CLICK, _this, _this.dragStop);
+        // this.page.on(Laya.Event.CLICK,this,this.dragStart);
+        // this.page.on(Laya.Event.CLICK,this,this.dragStop);
         _this.button1.on(Laya.Event.CLICK, _this, _this.HtmlDemo);
         _this.Aaron.on(Laya.Event.CLICK, _this, _this.openDesc, [0]);
         _this.Anouk.on(Laya.Event.CLICK, _this, _this.openDesc, [1]);
@@ -94,10 +91,46 @@ var TestUI = /** @class */ (function (_super) {
         //this.stage.on(Laya.Event.MOUSE_DOWN, this, this.onDragDown);
         if (laya.utils.Browser.onMobile) {
             _this.stage.on(Laya.Event.MOUSE_DOWN, _this, _this.onDrag);
+            _this.people.y += 100;
+            _this.row1.y -= 50;
+            _this.row2.y += 80;
+            //this.stage.on(Laya.Event.CLICK, this, this.onClick);
         }
+        // if(this.page.y <= -4620){
+        // 	var maskr: any = this.mask.getChildByName("mask") as any;
+        // }
+        //this.mask.graphics.
         Laya.loader.load("test/effect.part", Laya.Handler.create(_this, _this.onAssetsLoaded), null, Laya.Loader.JSON);
+        _this.telegram.on(Laya.Event.CLICK, _this, _this.openLink);
         return _this;
     }
+    TestUI.prototype.openLink = function () {
+        window.open("https://t.me/UnicornXofficial", "_blank");
+    };
+    TestUI.prototype.onClick = function () {
+        var click = Laya.stage.mouseY;
+        if (click < 504) {
+            if (this.page.y + 1130 <= 0) {
+                if (this.page.y == this.pageLength) {
+                    this.page.y = -9040;
+                }
+                else {
+                    this.page.y += 1130;
+                }
+            }
+            else {
+                this.page.y = 0;
+            }
+        }
+        else if (click >= 504) {
+            if (this.page.y - 1130 >= this.pageLength) {
+                this.page.y -= 1130;
+            }
+            else {
+                this.page.y = this.pageLength;
+            }
+        }
+    };
     TestUI.prototype.onAssetsLoaded = function (settings) {
         this.sp = new Laya.Particle2D(settings);
         this.sp.emitter.start();
@@ -109,7 +142,7 @@ var TestUI = /** @class */ (function (_super) {
     };
     TestUI.prototype.onDrag = function (start) {
         this.startY = Laya.stage.mouseY;
-        this.stage.on(Laya.Event.MOUSE_MOVE, this, this.onDragComplete);
+        //this.stage.on(Laya.Event.MOUSE_MOVE, this, this.onDragComplete);
         Laya.stage.on(Laya.Event.MOUSE_UP, this, this.onMouseUp);
         Laya.stage.on(Laya.Event.MOUSE_OUT, this, this.onMouseUp);
     };
@@ -126,9 +159,34 @@ var TestUI = /** @class */ (function (_super) {
         }
     };
     TestUI.prototype.onMouseUp = function () {
-        this.stage.off(Laya.Event.MOUSE_MOVE, this, this.onDragComplete);
+        //this.stage.off(Laya.Event.MOUSE_MOVE, this, this.onDragComplete);
+        this.onDragMove();
         Laya.stage.off(Laya.Event.MOUSE_UP, this, this.onMouseUp);
         Laya.stage.off(Laya.Event.MOUSE_OUT, this, this.onMouseUp);
+    };
+    TestUI.prototype.onDragMove = function () {
+        var move = Laya.stage.mouseY - this.startY;
+        if (move > 0) {
+            if (this.page.y + 1130 <= 0) {
+                if (this.page.y == this.pageLength) {
+                    this.page.y = -9040;
+                }
+                else {
+                    this.page.y += 1130;
+                }
+            }
+            else {
+                this.page.y = 0;
+            }
+        }
+        else if (move < 0) {
+            if (this.page.y - 1130 >= this.pageLength) {
+                this.page.y -= 1130;
+            }
+            else {
+                this.page.y = this.pageLength;
+            }
+        }
     };
     TestUI.prototype.onDragDown = function () {
         if (laya.utils.Browser.onMobile) {
@@ -155,6 +213,7 @@ var TestUI = /** @class */ (function (_super) {
         }
     };
     TestUI.prototype.openDesc = function (index) {
+        //this.stage.off(Laya.Event.CLICK, this, this.onClick);
         var desc1;
         var desc2;
         var image;
@@ -200,6 +259,7 @@ var TestUI = /** @class */ (function (_super) {
                 break;
         }
         new AdvisorDialog(image, desc1, desc2).popup();
+        //this.stage.on(Laya.Event.CLICK, this, this.onClick);
     };
     TestUI.prototype.HtmlDemo = function () {
         //window.open("http://google.com", "myWindow","width=800,height=600,top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=n o, status=no");
@@ -207,6 +267,21 @@ var TestUI = /** @class */ (function (_super) {
         // div.popup(true);
         var div = new VideoDialog();
         div.popup(true);
+        // var iframe = Laya.Browser.document.createElement("iframe");
+        // iframe.style.position = "absolute";//设置布局定位。这个不能少。
+        // iframe.style.zIndex = 100;//设置层级
+        // iframe.style.left = 0;
+        // iframe.style.top = 0;
+        // iframe.style.margin = "auto"; 
+        // iframe.style.width= "800px";
+        // iframe.style.height="500px";
+        // iframe.style.overflow="auto";
+        // iframe.style.top = 0; 
+        // iframe.style.left = 0; 
+        // iframe.style.bottom = 0; 
+        // iframe.style.right = 0;
+        // iframe.src = "res/pitch.mp4";
+        // Laya.Browser.document.body.appendChild(iframe);
     };
     TestUI.prototype.dragStart = function () {
     };
@@ -276,7 +351,7 @@ var TestUI = /** @class */ (function (_super) {
         }
     };
     TestUI.prototype.countdown = function () {
-        var time = new Date("2018-07-15").valueOf() - new Date().valueOf();
+        var time = new Date("2018-09-02").valueOf() - new Date().valueOf();
         var day = Math.floor(time / 86400000);
         var hour = Math.floor((time - day * 86400000) / 3600000);
         var minute = Math.floor((time - day * 86400000 - hour * 3600000) / 60000);
@@ -326,6 +401,7 @@ var TestUI = /** @class */ (function (_super) {
         this.roadmap_point4.mouseEnabled = true;
     };
     TestUI.prototype.onNavClick = function (item) {
+        console.log("cecswcwscswc");
         var position = 0;
         switch (item) {
             case "why":
@@ -462,17 +538,32 @@ var TestUI = /** @class */ (function (_super) {
 }(ui.test.TestPageUI));
 //程序入口
 Laya.init(1920, 1080);
+Laya.stage.width = 1920;
+Laya.stage.height = 1080;
+Laya.stage.scaleMode = Laya.Stage.SCALE_EXACTFIT;
+//设置横竖屏
+Laya.stage.screenMode = Stage.SCREEN_HORIZONTAL;
+//设置水平对齐
+Laya.stage.alignH = "center";
+//设置垂直对齐
+Laya.stage.alignV = "middle";
 //激活资源版本控制
 // Laya.ResourceVersion.enable("version.json", Handler.create(null, beginLoad), Laya.ResourceVersion.FILENAME_VERSION);
-Laya.loader.load("res/atlas/comp.atlas", Handler.create(null, onLoaded));
+Laya.loader.load("res/atlas/loading.atlas", Laya.Handler.create(this, this.loading), null);
 var resArray = [
     { url: "res/atlas/ui.atlas", type: Laya.Loader.ATLAS },
     { url: "res/atlas/comp.atlas", type: Laya.Loader.ATLAS }
 ];
-Laya.loader.load(resArray, Laya.Handler.create(this, this.onLoad), null);
+Laya.loader.load(resArray, Laya.Handler.create(this, this.onLoaded), null);
 function onLoaded() {
     //实例UI界面
+    Laya.stage.removeChildByName("loading");
     var testUI = new TestUI();
     Laya.stage.addChild(testUI);
+}
+function loading() {
+    var loading = new Loading();
+    loading.name = "loading";
+    Laya.stage.addChild(loading);
 }
 //# sourceMappingURL=LayaUISample.js.map

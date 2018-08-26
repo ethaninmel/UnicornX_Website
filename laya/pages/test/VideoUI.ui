@@ -2,17 +2,42 @@
     "x":0,
     "type":"Dialog",
     "selectedBox":1,
-    "selecteID":4,
+    "selecteID":1,
     "referenceLines":null,
-    "props":{"width":680,"sceneColor":"#000000","height":400},
+    "props":{"width":680,"var":"video","sceneColor":"#000000","height":400},
     "nodeParent":-1,
-    "label":"Dialog",
+    "label":"Dialog(video)",
     "isOpen":true,
     "isDirectory":true,
     "isAniNode":true,
     "hasChild":true,
     "compId":1,
     "child":[
+        {
+            "x":15,
+            "type":"Sprite",
+            "props":{"y":20,"x":20,"var":"reference"},
+            "nodeParent":1,
+            "label":"Sprite(reference)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":5,
+            "child":[
+                {
+                    "type":"Rect",
+                    "props":{"width":640,"lineWidth":1,"height":360,"fillColor":"#CCCCCC"},
+                    "nodeParent":5,
+                    "label":"Rect",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":6,
+                    "child":[
+                        ]
+                }]
+        },
         {
             "x":15,
             "type":"Image",

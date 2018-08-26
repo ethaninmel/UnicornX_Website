@@ -23,30 +23,23 @@ class TestUI extends ui.test.TestPageUI {
 	public currentTokensale:number = 1;
 	
 
-	public pageLength:number = -9330;
+	public pageLength:number = -10467;
 
 	public startY:number;
 
 	public sp: Laya.Particle2D;
 	constructor() {
 		super();
-		Laya.init(1920, 1080, WebGL);
-			//设置适配模式
-			Laya.stage.width=1920;
-			Laya.stage.height=1080;
-			Laya.stage.scaleMode = Laya.Stage.SCALE_EXACTFIT;
-			//设置横竖屏
-			Laya.stage.screenMode = Stage.SCREEN_HORIZONTAL;
-			//设置水平对齐
-			Laya.stage.alignH = "center";
-			//设置垂直对齐
-			Laya.stage.alignV = "middle";
+			
 		this.menu.zOrder=1;
 		//this.onBtnPageClick(this.why,this.whymove,"comp/bg.png");
 		//console.log(this.mask.x);
 		//console.log(this.bar_head.x);
 		console.log();
-		UIConfig.closeDialogOnSide = false;
+		
+		
+		//弹出框外侧关闭
+		//UIConfig.closeDialogOnSide = false;
 
 
 		this.stage.on(Laya.Event.MOUSE_WHEEL, this, this.onMousewheel);
@@ -64,6 +57,14 @@ class TestUI extends ui.test.TestPageUI {
 		this.tab_advisor.on(Laya.Event.CLICK,this,this.onNavClick,["advisor"]);
 		this.tab_team.on(Laya.Event.CLICK,this,this.onNavClick,["team"]);
 		this.tab_partner.on(Laya.Event.CLICK,this,this.onNavClick,["partner"]);
+
+		this.btn_why.on(Laya.Event.CLICK,this,this.onNavClick,["why"]);
+		this.btn_tokensale.on(Laya.Event.CLICK,this,this.onNavClick,["tokensale"]);		
+		this.btn_roadmap.on(Laya.Event.CLICK,this,this.onNavClick,["roadmap"]);
+		this.btn_founder.on(Laya.Event.CLICK,this,this.onNavClick,["founder"]);
+		this.btn_advisor.on(Laya.Event.CLICK,this,this.onNavClick,["advisor"]);
+		this.btn_team.on(Laya.Event.CLICK,this,this.onNavClick,["team"]);
+		this.btn_partner.on(Laya.Event.CLICK,this,this.onNavClick,["partner"]);
 
 		//this.tab_term.on(Laya.Event.CLICK,this,this.onNavClick,["term"]);
 		//this.tab_doc.on(Laya.Event.CLICK,this,this.onNavClick,["doc"]);
@@ -92,8 +93,8 @@ class TestUI extends ui.test.TestPageUI {
 
 
 
-		this.page.on(Laya.Event.CLICK,this,this.dragStart);
-		this.page.on(Laya.Event.CLICK,this,this.dragStop);
+		// this.page.on(Laya.Event.CLICK,this,this.dragStart);
+		// this.page.on(Laya.Event.CLICK,this,this.dragStop);
 
 
 
@@ -116,16 +117,58 @@ class TestUI extends ui.test.TestPageUI {
 		//this.stage.on(Laya.Event.MOUSE_DOWN, this, this.onDragDown);
 		if(laya.utils.Browser.onMobile){
 			this.stage.on(Laya.Event.MOUSE_DOWN, this, this.onDrag);
+
+			this.people.y += 100;
+			this.row1.y -= 50;
+			this.row2.y += 80;
+			//this.stage.on(Laya.Event.CLICK, this, this.onClick);
 		}
 
 
-	
-		
+		// if(this.page.y <= -4620){
+		// 	var maskr: any = this.mask.getChildByName("mask") as any;
+			
+		// }
+		//this.mask.graphics.
 
 		Laya.loader.load("test/effect.part",Laya.Handler.create(this, this.onAssetsLoaded), null, Laya.Loader.JSON);
+
+
+
+
+		this.telegram.on(Laya.Event.CLICK,this,this.openLink);
 		
     }
 
+	openLink():void{
+		window.open("https://t.me/UnicornXofficial", "_blank");
+	}
+
+	onClick():void{
+		var click:number = Laya.stage.mouseY;
+		if(click<504){
+			if(this.page.y+1130<=0){
+				if(this.page.y==this.pageLength){
+					this.page.y = -9040;
+				}
+				else{
+					this.page.y += 1130;
+				}
+				
+			}
+			else{
+				this.page.y = 0;
+			}
+		}
+		else if(click>=504){
+			if(this.page.y-1130>=this.pageLength){
+				this.page.y -= 1130;
+			}
+			else{
+				this.page.y = this.pageLength;
+			}
+		}
+	}
  
     onAssetsLoaded(settings):void{
         this.sp = new Laya.Particle2D(settings);
@@ -141,7 +184,7 @@ class TestUI extends ui.test.TestPageUI {
 
 	private onDrag(start:number):void{
 		this.startY = Laya.stage.mouseY;
-		this.stage.on(Laya.Event.MOUSE_MOVE, this, this.onDragComplete);
+		//this.stage.on(Laya.Event.MOUSE_MOVE, this, this.onDragComplete);
 		Laya.stage.on(Laya.Event.MOUSE_UP, this, this.onMouseUp);
         Laya.stage.on(Laya.Event.MOUSE_OUT, this, this.onMouseUp);
 	}
@@ -161,10 +204,38 @@ class TestUI extends ui.test.TestPageUI {
 	}
 
 	private onMouseUp():void{
-		this.stage.off(Laya.Event.MOUSE_MOVE, this, this.onDragComplete);
+		//this.stage.off(Laya.Event.MOUSE_MOVE, this, this.onDragComplete);
+		this.onDragMove();
 		Laya.stage.off(Laya.Event.MOUSE_UP, this, this.onMouseUp);
         Laya.stage.off(Laya.Event.MOUSE_OUT, this, this.onMouseUp);
 	}
+
+	private onDragMove():void{
+		var move = Laya.stage.mouseY - this.startY;
+		if(move>0){
+			if(this.page.y+1130<=0){
+				if(this.page.y==this.pageLength){
+					this.page.y = -9040;
+				}
+				else{
+					this.page.y += 1130;
+				}
+				
+			}
+			else{
+				this.page.y = 0;
+			}
+		}
+		else if(move<0){
+			if(this.page.y-1130>=this.pageLength){
+				this.page.y -= 1130;
+			}
+			else{
+				this.page.y = this.pageLength;
+			}
+		}
+	}
+
 
 	private onDragDown():void{
 		if(laya.utils.Browser.onMobile){
@@ -197,6 +268,7 @@ class TestUI extends ui.test.TestPageUI {
 	}
 
 	private openDesc(index:number):void{
+		//this.stage.off(Laya.Event.CLICK, this, this.onClick);
 		var desc1: string;
 		var desc2: string;
 		var image: string;
@@ -251,6 +323,7 @@ class TestUI extends ui.test.TestPageUI {
 		}
 
 		new AdvisorDialog(image,desc1,desc2).popup();
+		//this.stage.on(Laya.Event.CLICK, this, this.onClick);
 	}
 
 	private HtmlDemo():void{
@@ -258,8 +331,26 @@ class TestUI extends ui.test.TestPageUI {
 			
             // var div:GameDialog=new GameDialog();
 			// div.popup(true);
+
 			var div:VideoDialog=new VideoDialog();
 			div.popup(true);
+
+			// var iframe = Laya.Browser.document.createElement("iframe");
+			// iframe.style.position = "absolute";//设置布局定位。这个不能少。
+			// iframe.style.zIndex = 100;//设置层级
+			// iframe.style.left = 0;
+			// iframe.style.top = 0;
+			// iframe.style.margin = "auto"; 
+			// iframe.style.width= "800px";
+			// iframe.style.height="500px";
+			// iframe.style.overflow="auto";
+			// iframe.style.top = 0; 
+			// iframe.style.left = 0; 
+			// iframe.style.bottom = 0; 
+			// iframe.style.right = 0;
+			// iframe.src = "res/pitch.mp4";
+			// Laya.Browser.document.body.appendChild(iframe);
+
 			
 	}
 
@@ -349,7 +440,7 @@ class TestUI extends ui.test.TestPageUI {
 	}
 
 	private countdown() {
-		var time = new Date("2018-07-15").valueOf() - new Date().valueOf();		
+		var time = new Date("2018-09-02").valueOf() - new Date().valueOf();		
 		var day = Math.floor(time/86400000);
 		var hour = Math.floor((time-day*86400000)/3600000);
 		var minute = Math.floor((time-day*86400000-hour*3600000)/60000);
@@ -405,7 +496,7 @@ class TestUI extends ui.test.TestPageUI {
 		this.roadmap_point4.mouseEnabled = true;
 	}
 
-	private onNavClick(item:string){
+	private onNavClick(item:string){console.log("cecswcwscswc");
 		var position:number = 0;
 		switch(item){
 			case "why":
@@ -552,9 +643,21 @@ class TestUI extends ui.test.TestPageUI {
 
 //程序入口
 Laya.init(1920, 1080);
+Laya.stage.width=1920;
+Laya.stage.height=1080;
+Laya.stage.scaleMode = Laya.Stage.SCALE_EXACTFIT;
+//设置横竖屏
+Laya.stage.screenMode = Stage.SCREEN_HORIZONTAL;
+//设置水平对齐
+Laya.stage.alignH = "center";
+//设置垂直对齐
+Laya.stage.alignV = "middle";
 //激活资源版本控制
 // Laya.ResourceVersion.enable("version.json", Handler.create(null, beginLoad), Laya.ResourceVersion.FILENAME_VERSION);
-Laya.loader.load("res/atlas/comp.atlas", Handler.create(null, onLoaded));
+
+
+
+Laya.loader.load("res/atlas/loading.atlas",Laya.Handler.create(this,this.loading),null);
 
 
  var resArray:Array<any>=[
@@ -562,13 +665,19 @@ Laya.loader.load("res/atlas/comp.atlas", Handler.create(null, onLoaded));
 			{url:"res/atlas/comp.atlas",type:Laya.Loader.ATLAS}
             
         ];
-        Laya.loader.load(resArray,Laya.Handler.create(this,this.onLoad),null);
+        Laya.loader.load(resArray,Laya.Handler.create(this,this.onLoaded),null);
 
 
 function onLoaded(): void {
 	//实例UI界面
+	Laya.stage.removeChildByName("loading");
 	var testUI: TestUI = new TestUI();
 	Laya.stage.addChild(testUI);
 }
 
 
+function loading(): void {
+	var loading: Loading = new Loading();
+	loading.name = "loading";
+	Laya.stage.addChild(loading);
+}

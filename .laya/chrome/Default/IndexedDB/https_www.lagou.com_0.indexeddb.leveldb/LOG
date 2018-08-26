@@ -1,3 +1,9 @@
-2018/06/29-15:44:02.927 199467 Reusing MANIFEST /Users/daniel/Documents/GitHub/UnicornX_Website/.laya/chrome/Default/IndexedDB/https_www.lagou.com_0.indexeddb.leveldb/MANIFEST-000001
-2018/06/29-15:44:02.927 199467 Recovering log #7
-2018/06/29-15:44:02.941 199467 Reusing old log /Users/daniel/Documents/GitHub/UnicornX_Website/.laya/chrome/Default/IndexedDB/https_www.lagou.com_0.indexeddb.leveldb/000007.log 
+2018/08/21-23:25:46.988 76803 Reusing MANIFEST /Users/daniel/Documents/GitHub/UnicornX_Website/.laya/chrome/Default/IndexedDB/https_www.lagou.com_0.indexeddb.leveldb/MANIFEST-000001
+2018/08/21-23:25:46.988 76803 Recovering log #7
+2018/08/21-23:25:46.994 76803 Reusing old log /Users/daniel/Documents/GitHub/UnicornX_Website/.laya/chrome/Default/IndexedDB/https_www.lagou.com_0.indexeddb.leveldb/000007.log 
+2018/08/23-23:17:48.002 119947 Compacting 1@1 + 1@2 files
+2018/08/23-23:17:48.019 119947 Generated table #10@1: 28 keys, 1359069 bytes
+2018/08/23-23:17:48.019 119947 Compacted 1@1 + 1@2 files => 1359069 bytes
+2018/08/23-23:17:48.022 119947 compacted to: files[ 0 0 1 0 0 0 0 ]
+2018/08/23-23:17:48.022 119947 Delete type=2 #5
+2018/08/23-23:17:48.023 119947 Delete type=2 #8
