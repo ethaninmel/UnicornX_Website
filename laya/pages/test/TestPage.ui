@@ -2685,14 +2685,13 @@
                     "props":{"y":11250,"x":0,"var":"media","height":297},
                     "nodeParent":667,
                     "label":"Box(media)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":619,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"comp/links_container.png"},
                             "nodeParent":619,
@@ -2706,7 +2705,6 @@
                             "$LOCKED":true
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":52,"x":319,"skin":"comp/bitcointalk.png"},
                             "nodeParent":619,
@@ -2719,7 +2717,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":60,"x":524,"skin":"comp/fb.png"},
                             "nodeParent":619,
@@ -2732,7 +2729,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":57,"x":744,"skin":"comp/github.png"},
                             "nodeParent":619,
@@ -2745,7 +2741,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":53,"x":935,"skin":"comp/ig.png"},
                             "nodeParent":619,
@@ -2758,7 +2753,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":56,"x":1156,"skin":"comp/medium.png"},
                             "nodeParent":619,
@@ -2771,7 +2765,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":59,"x":1355,"skin":"comp/reddit.png"},
                             "nodeParent":619,
@@ -2784,7 +2777,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":70,"x":1539,"skin":"comp/steemit.png"},
                             "nodeParent":619,
@@ -2797,7 +2789,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":174,"x":316,"skin":"comp/telegram.png"},
                             "nodeParent":619,
@@ -2809,7 +2800,6 @@
                             "compId":627,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Button",
                                     "props":{"y":-14,"x":-25,"width":157,"var":"telegram","height":113,"alpha":0},
                                     "nodeParent":627,
@@ -2823,7 +2813,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":184,"x":539,"skin":"comp/twitter.png"},
                             "nodeParent":619,
@@ -2836,7 +2825,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":172,"x":740,"skin":"comp/wechat.png"},
                             "nodeParent":619,
@@ -2849,7 +2837,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":181,"x":956,"skin":"comp/weibo.png"},
                             "nodeParent":619,
@@ -2862,7 +2849,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":196,"x":1154,"skin":"comp/yoku.png"},
                             "nodeParent":619,
@@ -2875,7 +2861,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":173,"x":1344,"skin":"comp/youtube.png"},
                             "nodeParent":619,

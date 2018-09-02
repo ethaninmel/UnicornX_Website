@@ -12,4 +12,6 @@
    <item name="comp/selected_bg.png" type="Image" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="comp/sidebar_splitline.png" type="Image" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="comp/unicorn.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="comp/title_main.PNG" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="comp/bg01.PNG" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
 </res>
